@@ -1,0 +1,62 @@
+/* GENERAL*/
+
+*{
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+body{
+  background-image: url('../images/fondo.jpg');
+  background-size: cover;
+} 
+
+/* ul{
+  list-style: none;
+  display: inline;
+  position: relative;
+  bottom: -70%;
+} */
+
+
+/* HEADER */
+
+
+header .nav{
+  display: flex;
+  flex-wrap: wrap; 
+}
+
+header ul{
+  list-style: none;
+  
+   
+}
+
+header img{
+  width: 50%;  
+  
+}
+
+header {
+  background-color: seashell;
+  width: 100%;
+  margin: 10px;
+}
+
+/* */
+.imgbody{
+  width: 100%;
+}
+
+
+/* FOOTER */
+
+footer img{
+  width: 150px;
+}
+
+footer{
+  margin: 10px;
+  background-color:  rosybrown;
+}
+
