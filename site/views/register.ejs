@@ -1,34 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registrarse</title>
+    <script src="https://kit.fontawesome.com/8c7b135ad9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="stylesheets/register.css">
 </head>
 <body>
-    <h1>register</h1>
-
     <header class="container">
         <div class="row">
-           <div class="col-4">
-             <ul class="btn-group">
-               <li><a class="btn btn-outline-light text-dark" href="">Carta</a></li>
-               <li><a class="btn btn-outline-light text-dark" href="">Eventos</a></li>
-               <li><a class="btn btn-outline-light text-dark" href="">Sucursales</a></li>
-             </ul>
+           <div class="col-4 logo">
+             <a href="index.ejs"><img src="images/COMIDITA.jpg" alt=""></a>
            </div>
-             <div class="col-4">
-               <a href="index.ejs"><img src="images/COMIDITA.jpg" alt=""></a>
-             </div>
-           <div class="col-4">
-             <ul class="btn-group">
-               <li><a class="btn btn-outline-light text-dark" href="#footer">Contacto</a></li>
-               <li><a class="btn btn-outline-light text-dark" href="register">Registrarse</a></li>
-               <li><a class="btn btn-outline-light text-dark" href="">Entrar</a></li>
-             </ul>
-            </div>
-           </div>
+          <div class="col-8 navegacion">
+            <ul>
+              <li><a class="btn btn-dangerk" href="">Registrate</a></li>
+              <li><a class="btn btn-dangerk" href="index.ejs">Salir</a></li>
+            </ul>
+          </div>                       
+         </div>
      </header>
+     <form action="" class="container">
+        <div class="row">
+          <div class="row col-6 formulario">
+           <h1>Registrarse</h1>             
+               
+           <input type="text" placeholder="Nombre Completo">    
+           <input type="email" name="" id="" placeholder="Email">   
+           <div>
+            <button type="submit">Registarse</button>
+            <button type="reset">Cancelar</button>
+           </div>
+            
+          </div>
+        </div>
+     </form>
+     <footer id="footer" class="container">
+      <div class="row">
+        <div class="col-4 contacto">
+          <h3>Contacto</h3>
+          <p>Telefono: 1234567890</p>
+          <p>Email: comidita@gmail.com</p>
+        </div>
+        <div class="col-4">
+          <img src="images/COMIDITA.jpg" alt="">
+        </div>
+        <div class="col-4 redes">
+          <i class="fab fa-facebook-square"></i>
+          <i class="fab fa-instagram-square"></i>
+          <i class="fab fa-twitter"></i>
+        </div>
+      </div>
+    </footer> 
+
+
+
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
