@@ -8,22 +8,33 @@
 body{
   background-color: rgba(234, 197, 187);
   font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
 } 
 
 /* HEADER */
 
 header{
 background-color: rgba(216, 67, 23);
+border: solid 1px gray;
 }
 
 header .navegacion{
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-end;
+  align-items: flex-end; 
+}
+
+header ul{
+  display: contents;
 }
 
 header ul li{
   display: inline;
+}
+header a{
+  color: black;
+  text-decoration: none;
 }
 
 header img{
@@ -33,17 +44,27 @@ header img{
 }
 
 /* */
+section .carousel{
+  margin-top: 20px;
+}
 
-section img{
-  margin-top: 20px;  
+section .carousel-inner{
+  border: solid 2px bl;
+}
+
+section .row .texto{
+  display: flex;
+  align-items: center;
 }
 
 section h2{
   margin-top: 20px;
+  text-align: center;
 }
 
 section p{
   margin-top: 10px;
+  text-align: center;
 }
 
 section .imgbody{
@@ -56,6 +77,7 @@ section .imgbody{
  footer{
   background-color: rgb(216, 67, 23);
   margin-top: 20px;
+  border: solid 1px gray;
  }
 
  footer img{
@@ -70,14 +92,28 @@ section .imgbody{
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
- 
-  
+  justify-content: center;  
  }
 
  footer .redes{
   font-size: 50px;
   display: flex;
   flex-wrap: wrap;
-  align-items: center; 
+  align-items: center;
+ }
+
+ .redes a{
+   color: black;
+ }
+
+ .redes .facebook:hover{
+   color: #385898;
+ }
+
+ .redes .twitter:hover{
+   color: rgb(29,161,242);
+ }
+
+ .redes .instagram:hover{
+   color: rgb(182, 12, 35);
  }

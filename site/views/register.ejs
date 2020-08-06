@@ -12,23 +12,25 @@
     <header class="container">
         <div class="row">
            <div class="col-4 logo">
-             <a href="index.ejs"><img src="images/COMIDITA.jpg" alt=""></a>
+             <a href="index"><img src="images/COMIDITA.jpg" alt=""></a>
            </div>
           <div class="col-8 navegacion">
             <ul>
-              <li><a class="btn btn-dangerk" href="">Registrate</a></li>
-              <li><a class="btn btn-dangerk" href="index.ejs">Salir</a></li>
+              <li><a href="index">Volver</a></li>
             </ul>
           </div>                       
          </div>
      </header>
-     <form action="" class="container">
+     <form action="" method="POST" class="container">
         <div class="row">
           <div class="row col-6 formulario">
            <h1>Registrarse</h1>             
-               
-           <input type="text" placeholder="Nombre Completo">    
-           <input type="email" name="" id="" placeholder="Email">   
+            <label for="">Nombre y Apellido</label>  
+           <input type="text" placeholder="Juan" required="true">   
+           <label for="">Email</label> 
+           <input type="email" name="" id="" placeholder="comidita@gmail.com" required="true">   
+           <label for="">Contraseña</label>
+           <input type="password" name="" id="" placeholder="comidta12" required='true'>   
            <div>
             <button type="submit">Registarse</button>
             <button type="reset">Cancelar</button>
@@ -36,7 +38,8 @@
             
           </div>
         </div>
-     </form>
+     </form> 
+     
      <footer id="footer" class="container">
       <div class="row">
         <div class="col-4 contacto">
@@ -48,9 +51,9 @@
           <img src="images/COMIDITA.jpg" alt="">
         </div>
         <div class="col-4 redes">
-          <i class="fab fa-facebook-square"></i>
-          <i class="fab fa-instagram-square"></i>
-          <i class="fab fa-twitter"></i>
+        <a href="" class="facebook"><i class="fab fa-facebook-square"></i></a>
+        <a href="" class="instagram"><i class="fab fa-instagram-square"></i></a>
+        <a href="" class="twitter"><i class="fab fa-twitter"></i></a>
         </div>
       </div>
     </footer> 
