@@ -6,7 +6,7 @@
 }
 
 body{
-  background-color: rgba(234, 197, 187);
+  background-image: url('https://i.pinimg.com/originals/ae/94/48/ae94481e07fd39a444cb27a03c31d621.jpg');
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   text-transform: uppercase;
@@ -15,21 +15,35 @@ body{
 /* HEADER */
   
 header {
-  background-color: rgb(215, 82, 28);  
-  border: solid 1px gray;
+  background-color: rgb(216, 67, 23);  
+  border: solid 1px black;
 }
 
 header ul li{
  list-style: none;
+ padding: 0px 8px;
 }
 
 .navegacion li{
   margin-right: 2%;
 }
 
+header ul li:hover{
+  border: solid 0.5px black;
+  border-radius: 4px;
+  background-color: black;
+  padding: 0px 8px;
+ }
+
 header a{
   text-decoration: none;
   color: black;
+}
+
+header a:hover{
+  text-decoration-line: none;
+  color: white;
+  background-color: black;
 }
 
 header .navegacion{
@@ -48,7 +62,9 @@ header .logo{
 }
 
 .logo img{
-  width: 50%;
+  width: 30%;
+  border-radius: 90%;
+  border: solid 1px black;
 }
 
 /* Form */
@@ -63,8 +79,11 @@ form .row{
 
 form .formulario{
   justify-content: center;
-  background-color: rgb(25, 174, 233);
   margin-top: 50px;
+  border-radius: 5px;
+  border: solid 1px black;
+  background-image: url('https://i.pinimg.com/originals/ad/ab/41/adab41ec5b5f829e01ac27a7dd9fdfd2.jpg');
+  color: white;
 }
 
 form label{
@@ -79,21 +98,31 @@ form button{
   margin: 10px 20px;
   padding: 5px 20px;
   border: none;
+  font-weight: bolder;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
 }
 
+form button:hover{
+  background-color: white;
+  color: black;
+}
 /* Footer */
 footer{
-  background-color: rgb(215, 82, 28);
+  background-color: rgb(216, 67, 23);
   margin-top: -75px;
-  border: solid 1px gray;
+  border: solid 1px black;
  }
 
  footer img{
-  width: 50%;
+  width: 30%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
+  border-radius: 90%;
+  border: solid 1px black;
  }
 
  footer .contacto{

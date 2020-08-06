@@ -6,7 +6,7 @@
 }
 
 body{
-  background-color: rgba(234, 197, 187);
+  background-image: url('https://i.pinimg.com/originals/ae/94/48/ae94481e07fd39a444cb27a03c31d621.jpg');
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   text-transform: uppercase;
@@ -16,7 +16,7 @@ body{
 
 header{
 background-color: rgba(216, 67, 23);
-border: solid 1px gray;
+border: solid 1px black;
 }
 
 header .navegacion{
@@ -31,16 +31,31 @@ header ul{
 
 header ul li{
   display: inline;
+  padding: 0px 8px;
 }
+
+header ul li:hover{
+  border: solid 0.5px black;
+  border-radius: 4px;
+  background-color: black;
+  padding: 0px 8px;
+}
+
 header a{
   color: black;
-  text-decoration: none;
+}
+
+header a:hover{
+  text-decoration-line: none;
+  color: white;  
 }
 
 header img{
-  width: 50%;
+  width: 30%;
   display: flex;
   align-items: center;
+  border-radius: 90%;
+  border: solid 1px black;
 }
 
 /* */
@@ -49,7 +64,7 @@ section .carousel{
 }
 
 section .carousel-inner{
-  border: solid 2px bl;
+  border: solid 2px gray;
 }
 
 section .row .texto{
@@ -60,11 +75,13 @@ section .row .texto{
 section h2{
   margin-top: 20px;
   text-align: center;
+  color: white;
 }
 
 section p{
   margin-top: 10px;
   text-align: center;
+  color: white;
 }
 
 section .imgbody{
@@ -77,15 +94,17 @@ section .imgbody{
  footer{
   background-color: rgb(216, 67, 23);
   margin-top: 20px;
-  border: solid 1px gray;
+  border: solid 1px black;
  }
 
  footer img{
-  width: 50%;
+  width: 30%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
+  border-radius: 90%;
+  border: solid 1px black;
  }
 
  footer .contacto{
