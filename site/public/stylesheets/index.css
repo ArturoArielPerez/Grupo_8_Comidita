@@ -12,33 +12,10 @@ body{
   text-transform: uppercase;
 } 
 
-/* HEADER */
-
 header{
-background-color: rgba(216, 67, 23);
-border: solid 1px black;
-}
-
-header .navegacion{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end; 
-}
-
-header ul{
-  display: contents;
-}
-
-header ul li{
-  display: inline;
-  padding: 0px 8px;
-}
-
-header ul li:hover{
-  border: solid 0.5px black;
-  border-radius: 4px;
-  background-color: black;
-  padding: 0px 8px;
+  background-color: rgba(216, 67, 23);
+  border: solid 1px black;
+  
 }
 
 header a{
@@ -50,54 +27,29 @@ header a:hover{
   color: white;  
 }
 
-header img{
-  width: 30%;
-  display: flex;
-  align-items: center;
-  border-radius: 90%;
-  border: solid 1px black;
+.redes a{
+  color: black;
 }
 
-/* */
-section .carousel{
-  margin-top: 20px;
+.redes .facebook:hover{
+  color: #385898;
 }
 
-section .carousel-inner{
-  border: solid 2px gray;
+.redes .twitter:hover{
+  color: rgb(29,161,242);
 }
 
-section .row .texto{
-  display: flex;
-  align-items: center;
+.redes .instagram:hover{
+  color: rgb(182, 12, 35);
 }
 
-section h2{
-  margin-top: 20px;
-  text-align: center;
-  color: white;
-}
-
-section p{
-  margin-top: 10px;
-  text-align: center;
-  color: white;
-}
-
-section .imgbody{
-  width: 100%;
-  border: solid 2px gray;
-}
-
-
-/* Footer */
- footer{
+footer{
   background-color: rgb(216, 67, 23);
   margin-top: 20px;
   border: solid 1px black;
- }
+}
 
- footer img{
+footer img{
   width: 30%;
   display: flex;
   flex-wrap: wrap;
@@ -105,34 +57,237 @@ section .imgbody{
   justify-content: center;
   border-radius: 90%;
   border: solid 1px black;
- }
+}
 
- footer .contacto{
+footer .contacto{
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;  
- }
+}
 
- footer .redes{
+footer .redes{
   font-size: 50px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+}
+
+@media(min-width:769px){
+  /* HEADER */
+
+  header .navegacion{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end; 
+  }
+
+  header ul{
+    display: contents;
+    font-size: 73%;
+  }
+
+  header ul li{
+    display: inline;
+    padding: 0px 8px;
+  }
+
+  header ul li:hover{
+    border: solid 0.5px black;
+    border-radius: 4px;
+    background-color: black;
+    padding: 0px 8px;
+  }
+
+  header img{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    border-radius: 90%;
+    border: solid 1px black;
+  }
+
+  /* */
+  section .carousel{
+    margin-top: 20px;
+  }
+
+  section .carousel-inner{
+    border: solid 2px gray;
+  }
+
+  section .row .texto{
+    display: flex;
+    align-items: center;
+  }
+
+  section h2{
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+  }
+
+  section p{
+    margin-top: 10px;
+    text-align: center;
+    color: white;
+  }
+
+  section .imgbody{
+    width: 100%;
+    border: solid 2px gray;
+  }
+
+  
+}
+@media(min-width: 571px) and (max-width: 768px) {
+  /* Header */
+  header img{
+   width: 40%;
+   border-radius: 90%;
+   border: solid 1px black;
+   display: flex;
+  }
+
+  header .navegacion{
+    display: flex;
+    align-items: flex-end;
+    font-size: 65%;
  }
 
- .redes a{
-   color: black;
- }
+ header ul{
+ display: contents;
+}
 
- .redes .facebook:hover{
-   color: #385898;
- }
+  header ul li{
+  list-style: none;
+  }
 
- .redes .twitter:hover{
-   color: rgb(29,161,242);
- }
+  header ul li:hover{
+    border: solid 0.5px black;
+    border-radius: 4px;
+    background-color: black;
+  }
+  /**/
 
- .redes .instagram:hover{
-   color: rgb(182, 12, 35);
+  section .imgbody{
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  section h2{
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+  }
+
+  section p{
+    font-size: x-small;
+    color: white;
+    text-align: center;
+  }
+
+  /*Footer*/
+
+  footer{
+    padding: 0px 15px;
+  }
+
+  footer .contacto{
+   font-size: 54%;
+   }
+
+  footer .contacto p{
+     margin: 2px 0px;
+   }
+
+  footer img{
+     width: 40%;
+   }
+
+  footer .contacto h3{
+     margin-top: 2px;
+     font-size: 140%;
+   }
+
+  footer .redes{
+     font-size: 175%;
+   }
+}
+
+@media(max-width:570px){
+  /*Header*/
+  header img{
+    width: 20%;
+    border-radius: 90%;
+    display: flex;
+   }
+ 
+   header .navegacion{
+     font-size: 65%;
+     display: grid;
+     order: 1;
+
+  }
+ 
+  header ul{
+   display: contents;
  }
+ 
+   header ul li{
+   list-style: none;
+   }
+ 
+   header ul li:hover{
+     border: solid 0.5px black;
+     border-radius: 4px;
+     background-color: black;
+   }
+  /**/
+  .imgbody {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  section h2{
+    text-align: center;
+    color: white;
+    font-size: 100%;
+    margin-top: 15px;
+  }
+
+  section p{
+    text-align: center;
+    color: white;
+    font-size: 50%;
+  }
+
+
+  /*Footer*/
+
+  footer .contacto{
+   font-size: 54%;
+   }
+
+  footer .contacto p{
+     margin: 2px 0px;
+   }
+
+  footer img{
+     width: 20%;
+     margin-top: 1px;
+   }
+
+   footer .order{
+     order: -1;
+   }
+
+  footer .contacto h3{
+     margin-top: 2px;
+     font-size: 140%;
+    }
+
+  footer .redes{
+     font-size: 175%;
+   }
+}
