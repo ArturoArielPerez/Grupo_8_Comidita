@@ -188,31 +188,30 @@ footer .redes{
   }
 
   /*Footer*/
-
   footer{
     padding: 0px 15px;
   }
 
   footer .contacto{
-   font-size: 54%;
-   }
+    font-size: 54%;
+    }
 
-  footer .contacto p{
-     margin: 2px 0px;
-   }
+    footer .contacto p{
+      margin: 2px 0px;
+    }
 
   footer img{
      width: 40%;
    }
 
-  footer .contacto h3{
-     margin-top: 2px;
-     font-size: 140%;
-   }
+   footer .contacto h3{
+    margin-top: 2px;
+    font-size: 140%;
+  }
 
   footer .redes{
-     font-size: 175%;
-   }
+    font-size: 175%;
+  }
 }
 
 @media(max-width:570px){

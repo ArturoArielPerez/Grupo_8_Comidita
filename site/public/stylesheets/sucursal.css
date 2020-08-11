@@ -57,6 +57,8 @@
   }
   
   footer .contacto{
+    text-align: center;
+    display: flex;
     flex-direction: column;
     justify-content: center;  
   }
@@ -125,8 +127,38 @@
         border: solid 1px black;
       }
     
+    /*Section */
+    section .sucursal{
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      color: white;
+      align-self: center;
+      }
   
-    /* */
+      section h1{
+          display: flex;
+          justify-content: center;
+          color: white;
+          margin-top: 20px;
+          margin-bottom: 30px;
+          font-weight: bold;
+      }
+  
+      section h4{
+          text-align: center;
+      }
+  
+      section p{
+          font-size: 100%;
+      }
+  
+      section .mapa iframe{
+          width: 100%;
+          margin-bottom: 20px;
+          border: solid 1px black;
+      }
+  
    
   }
   @media(min-width: 571px) and (max-width: 768px) {
@@ -215,6 +247,7 @@
     section .mapa iframe{
         width: 100%;
         margin-bottom: 20px;
+        border: solid 1px black;
     }
 
     /*Footer*/
@@ -329,6 +362,7 @@
     section .mapa iframe{
         width: 100%;
         margin-bottom: 20px;
+        border: solid 1px black;
     }
 
     /* Footer */
