@@ -14,8 +14,7 @@ body{
 
 header{
   background-color: rgba(216, 67, 23);
-  border: solid 1px black;
-  
+  border: solid 1px black; 
 }
 
 header a{
@@ -73,7 +72,7 @@ footer .redes{
   align-items: center;
 }
 
-@media(min-width:769px){
+@media(min-width:768px){
   /* HEADER */
 
   header .navegacion{
@@ -95,7 +94,7 @@ footer .redes{
   header ul li:hover{
     border: solid 0.5px black;
     border-radius: 4px;
-    background-color: black;
+    background-color: rgb(248, 87, 38);
     padding: 0px 8px;
   }
 
@@ -166,7 +165,7 @@ footer .redes{
   header ul li:hover{
     border: solid 0.5px black;
     border-radius: 4px;
-    background-color: black;
+    background-color: rgb(248, 87, 38);
   }
   /**/
 
@@ -219,6 +218,7 @@ footer .redes{
   header img{
     width: 20%;
     border-radius: 90%;
+    border: solid 1px black;
     display: flex;
    }
  
@@ -240,7 +240,7 @@ footer .redes{
    header ul li:hover{
      border: solid 0.5px black;
      border-radius: 4px;
-     background-color: black;
+     background-color: rgb(248, 87, 38);
    }
   /**/
   .imgbody {

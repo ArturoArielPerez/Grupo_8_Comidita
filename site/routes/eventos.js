@@ -3,7 +3,7 @@ var router = express.Router();
 
 
 router.get('/', function(req, res, next) {
-  res.render('sucursal', { title: 'Sucursal' });
+  res.render('eventos', { title: 'eventos' });
 });
 
 module.exports = router;
