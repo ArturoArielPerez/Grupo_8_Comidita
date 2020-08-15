@@ -6,7 +6,7 @@
     
 }
 body{
-    background-image: url("../estilo/imagenes/fodoformulario.jpg");
+    background-image: url("images/fodoformulario.jpg");
     background-color: rgb(255, 238, 202);
     padding-bottom: 0px;
     padding-top: 0px;
@@ -70,7 +70,7 @@ h1{
     
 }
 .formulario{
-    background-image: url("../estilo/imagenes/fondoformulario.jpg");
+    background-image: url("images/fondoformulario.jpg");
     position: relative;
     transform: translatex(14%);
     

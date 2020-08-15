@@ -11,6 +11,8 @@ const productDetailRouter = require('./routes/productDetail');
 const registerRouter = require('./routes/register');
 const sucursalRouter = require('./routes/sucursal');
 const eventosRouter = require('./routes/eventos');
+const catalogoRouter = require('./routes/catalogo');
+const formularioRouter = require('./routes/formulario');
 var usersRouter = require('./routes/users');
 
 var app = express();
@@ -32,6 +34,8 @@ app.use('/productDetail', productDetailRouter);
 app.use('/register', registerRouter);
 app.use('/sucursal',sucursalRouter);
 app.use('/eventos', eventosRouter);
+app.use('/catalogo', catalogoRouter);
+app.use('/formulario', formularioRouter);
 
 app.use('/users', usersRouter);
 

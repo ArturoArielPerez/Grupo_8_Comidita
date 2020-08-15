@@ -10,6 +10,67 @@ body{
   text-transform: uppercase;
 } 
 
+header{
+  background-color: rgba(216, 67, 23);
+  border: solid 1px black;
+  
+}
+
+header a{
+  color: black;
+}
+
+header a:hover{
+  text-decoration-line: none;
+  color: white;  
+}
+
+.redes a{
+  color: black;
+}
+
+.redes .facebook:hover{
+  color: #385898;
+}
+
+.redes .twitter:hover{
+  color: rgb(29,161,242);
+}
+
+.redes .instagram:hover{
+  color: rgb(182, 12, 35);
+}
+
+footer{
+  background-color: rgb(216, 67, 23);
+  margin-top: 20px;
+  border: solid 1px black;
+}
+
+footer img{
+  width: 30%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 90%;
+  border: solid 1px black;
+}
+
+footer .contacto{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+}
+
+footer .redes{
+  font-size: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 @media(min-width:768px){
 
   /* HEADER */
