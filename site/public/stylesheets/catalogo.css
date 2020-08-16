@@ -4,6 +4,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 body{
+    
     max-width: 100%;
     max-height: 1010px;
     
@@ -66,7 +67,7 @@ body{
 /*CATALOGO*/
 
 .catalogo{
-    background-color: cadetblue;
+    background-image: url('https://i.pinimg.com/originals/ae/94/48/ae94481e07fd39a444cb27a03c31d621.jpg');
     width: 100%;
     height: 1080px;
     display: flex; 

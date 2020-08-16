@@ -13,7 +13,9 @@ body{
 } 
 
 header{
-  background-color: rgba(216, 67, 23);
+  /*background-color: rgba(216, 67, 23);*/
+  /*agrego color Brown al background*/
+  background-color:brown;
   border: solid 1px black; 
 }
 

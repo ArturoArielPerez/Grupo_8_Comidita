@@ -9,8 +9,10 @@
     text-transform: uppercase;
   }
 
-  header{
-    background-color: rgba(216, 67, 23);
+  header{/*
+    Cambio de color al background 
+    background-color: rgba(216, 67, 23);*/
+    background-color: brown;
     border: solid 1px black;
     
   }
@@ -41,7 +43,10 @@
   }
   
   footer{
-    background-color: rgb(216, 67, 23);
+    /*
+    Cambio de color al background 
+    background-color: rgba(216, 67, 23);*/
+    background-color: brown;
     margin-top: 20px;
     border: solid 1px black;
   }
@@ -74,7 +79,10 @@
     /* HEADER */
   
     header {
-        background-color: rgb(216, 67, 23);  
+        /*
+        Cambio de color al background 
+        background-color: rgba(216, 67, 23);*/
+        background-color: brown;  
         border: solid 1px black;
       }
     
@@ -191,7 +199,10 @@
   @media(min-width: 571px) and (max-width: 768px) {
     /* Header */
     header {
-        background-color: rgb(216, 67, 23);  
+      /*
+      Cambio de color al background 
+      background-color: rgba(216, 67, 23);*/
+      background-color: brown;
         border: solid 1px black;
       }
     
@@ -307,7 +318,10 @@ color: black;
   
 footer{
  padding: 0px 15px;
- background-color: rgb(216, 67, 23);  
+ /*
+ Cambio de color al background 
+ background-color: rgba(216, 67, 23);*/
+ background-color: brown;  
  border: solid 1px black;
 }
 footer .contacto{
@@ -336,7 +350,10 @@ footer .redes{
     /* HEADER */
     
     header {
-      background-color: rgb(216, 67, 23);  
+      /*
+      Cambio de color al background 
+      background-color: rgba(216, 67, 23);*/
+      background-color: brown;  
       border: solid 1px black;
     }
   
@@ -447,7 +464,10 @@ footer .redes{
 
     /* Footer */
     footer{
-      background-color: rgb(216, 67, 23);
+      /*
+      Cambio de color al background 
+      background-color: rgba(216, 67, 23);*/
+      background-color: brown;
       margin-top: -43px;
       border: solid 1px black;
       margin-top: 30px;
