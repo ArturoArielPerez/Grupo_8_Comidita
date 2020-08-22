@@ -4,23 +4,27 @@
     <meta charset="UTF-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    
+    <title>Carta</title>
+    <script src="https://kit.fontawesome.com/8c7b135ad9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">    
     <link rel="stylesheet" href="stylesheets/catalogo.css">
-    <title>Catalogo</title>
+    
 </head>
 <body>
-  <section
-  class="home">
-  <div class="in-flex">
-    <!--CABEZA DE LA PAGINA-->
-
-    <header class="cabezera">
-        <div class="logo">
-            <a href="/"><img src="images/COMIDITA.jpg" alt="loguito"></a>
-        </div>
-    </header>
+  <header class="container-fluid">
+    <div class="row">
+       <div class="col-lg-4 col-md-4 col-12 logo">
+         <a href="/"><img src="images/COMIDITA.jpg" alt=></a>
+       </div>
+      <div class="col-lg-4 col-md-4 col-sm-2 navegacion">
+        <ul>
+          <li><a href="/">Volver</a></li>
+          <li><a href=""><i class="fas fa-cart-arrow-down"></i></a></li>
+          
+        </ul>
+      </div>                       
+     </div>
+ </header>
 
     <!--NAV DE MENU-->
     <nav class="menu col-sm-12">
@@ -141,19 +145,25 @@
       
 
         <!--FIN DE LAS CAJAS-->
-    </aside>
-    <footer>
-      <div class="pie">          
-        <ul>
-            <li><h2>Contacto</h2></li>
-            <li>Telefono: 4321-8765</li>
-            <li>Email: comidita@gmail.com</li>
-            
-        </ul>
+    <footer id="footer" class="container-fluid">
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-10 contacto">
+          <h3>Contacto</h3>
+          <p>Telefono: 1234567890</p>
+          <p>Email: comidita@gmail.com</p>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-10 order">
+          <img src="images/COMIDITA.jpg" alt="">
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-10 redes">
+          <a href="" class="facebook"><i class="fab fa-facebook-square"></i></a>
+          <a href="" class="instagram"><i class="fab fa-instagram-square"></i></a>
+          <a href="" class="twitter"><i class="fab fa-twitter"></i></a>
+        </div>
       </div>
-    </footer>
-  </div>
-  </section>
+  </footer>
+  
+  
 
     <!--Script de bootstraps-->
    
