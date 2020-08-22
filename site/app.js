@@ -13,6 +13,7 @@ const sucursalRouter = require('./routes/sucursal');
 const eventosRouter = require('./routes/eventos');
 const formRouter = require('./routes/form');
 const catalogoRouter = require('./routes/catalogo');
+const loginRouter = require('./routes/login');
 var usersRouter = require('./routes/users');
 
 var app = express();
@@ -36,6 +37,7 @@ app.use('/sucursal',sucursalRouter);
 app.use('/eventos', eventosRouter);
 app.use('/catalogo',catalogoRouter);
 app.use('/form', formRouter);
+app.use('/login', loginRouter);
 
 app.use('/users', usersRouter);
 

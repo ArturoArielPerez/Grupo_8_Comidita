@@ -9,9 +9,7 @@
     text-transform: uppercase;
   }
 
-  header{/*
-    Cambio de color al background 
-    background-color: rgba(216, 67, 23);*/
+  header{
     background-color: brown;
     border: solid 1px black;
     

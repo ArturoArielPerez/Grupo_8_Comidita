@@ -41,7 +41,10 @@
   }
   
   footer{
-    background-color: rgb(216, 67, 23);
+    /*
+    Cambio de color al background 
+    background-color: rgba(216, 67, 23);*/
+    background-color: brown;
     margin-top: 20px;
     border: solid 1px black;
   }
@@ -74,7 +77,10 @@
     /* HEADER */
   
     header {
-        background-color: rgb(216, 67, 23);  
+        /*
+        Cambio de color al background 
+        background-color: rgba(216, 67, 23);*/
+        background-color: brown;  
         border: solid 1px black;
       }
     
@@ -126,44 +132,59 @@
         border: solid 1px black;
       }
     
-    /*Section */
-    section .sucursal{
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-      color: white;
-      align-self: center;
+    /* Form */
+    form .row{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-self: center;
+        height: 120vh;
       }
-  
-      section h1{
-          display: flex;
-          justify-content: center;
-          color: white;
-          margin-top: 20px;
-          margin-bottom: 30px;
-          font-weight: bold;
+    
+      form .formulario{
+        justify-content: center;
+        margin-top: 120px;
+        border-radius: 5px;
+        border: solid 1px black;
+        background-image: url('https://i.pinimg.com/originals/ad/ab/41/adab41ec5b5f829e01ac27a7dd9fdfd2.jpg');
+        color: white;
       }
-  
-      section h4{
-          text-align: center;
+
+      form i{
+        font-size:600%;
       }
-  
-      section p{
-          font-size: 100%;
+    
+      form label{
+        display: contents;
       }
-  
-      section .mapa iframe{
-          width: 100%;
-          margin-bottom: 20px;
-          border: solid 1px black;
+    
+      form input{
+        margin-bottom: 8px;
       }
-  
+    
+      form button{
+        margin: 10px 20px;
+        padding: 5px 50px;
+        border: none;
+        font-weight: bolder;
+        background-color: black;
+        color: white;
+        border-radius: 5px;
+      }
+    
+      form button:hover{
+        background-color: white;
+        color: black;
+      }
    
   }
   @media(min-width: 571px) and (max-width: 768px) {
     /* Header */
     header {
-        background-color: brown;  
+      /*
+      Cambio de color al background 
+      background-color: rgba(216, 67, 23);*/
+      background-color: brown;
         border: solid 1px black;
       }
     
@@ -216,72 +237,90 @@
         border: solid 1px black;
       }
     
-   /* section */
-   section .sucursal{
+   /* Form */
+   form .row{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    color: white
-    }
+    align-self: center;
+    height: 120vh;
+  }
 
-    section h1{
-        display: flex;
-        justify-content: center;
-        font-size: 130%;
-        color: white;
-        margin-top: 20px;
-        font-weight: bold;
-    }
+  form .formulario{
+    justify-content: center;
+    margin-top: 100px;
+    border-radius: 5px;
+    border: solid 1px black;
+    background-image: url('https://i.pinimg.com/originals/ad/ab/41/adab41ec5b5f829e01ac27a7dd9fdfd2.jpg');
+    color: white;
+  }
 
-    section h4{
-        font-size: 100%;
-        text-align: center;
-    }
+  form i{
+    font-size:450%;
+  }
 
-    section p{
-        font-size: 80%;
-    }
+  form label{
+    display: contents;
+  }
 
-    section .mapa iframe{
-        width: 100%;
-        margin-bottom: 20px;
-        border: solid 1px black;
-    }
+  form input{
+    margin-bottom: 8px;
+  }
 
+  form button{
+    margin: 10px 20px;
+    padding: 5px 40px;
+    border: none;
+    font-weight: bolder;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+  }
+
+  form button:hover{
+    background-color: white;
+    color: black;
+  }
     /*Footer*/
   
-    footer{
-      padding: 0px 15px;
-      background-color: rgb(216, 67, 23);  
-      border: solid 1px black;
-    }
-    footer .contacto{
-        font-size: 54%;
-        }
+footer{
+ padding: 0px 15px;
+ /*
+ Cambio de color al background 
+ background-color: rgba(216, 67, 23);*/
+ background-color: brown;  
+ border: solid 1px black;
+}
+footer .contacto{
+ font-size: 54%;
+}
      
-       footer .contacto p{
-          margin: 2px 0px;
-        }
+footer .contacto p{
+ margin: 2px 0px;
+}
      
-       footer img{
-          width: 40%;
-        }
+footer img{
+ width: 40%;
+}
      
-       footer .contacto h3{
-          margin-top: 2px;
-          font-size: 140%;
-        }
+footer .contacto h3{
+ margin-top: 2px;
+ font-size: 140%;
+}
      
-       footer .redes{
-          font-size: 175%;
-        }
+footer .redes{
+    font-size: 175%;
+}
   }
   
 @media(max-width:570px){
     /* HEADER */
     
     header {
-      background-color: rgb(216, 67, 23);  
+      /*
+      Cambio de color al background 
+      background-color: rgba(216, 67, 23);*/
+      background-color: brown;  
       border: solid 1px black;
     }
   
@@ -331,40 +370,53 @@
       display: block;
     }
   
-    /* section */
-    section .sucursal{
+    /* Form */
+    form .row{
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
-        color: white
-    }
-    section h1{
-        display: flex;
+        align-self: center;
+        height: 65vh;
+      }
+    
+      form .formulario{
         justify-content: center;
-        font-size: 130%;
-        color: white;
-        margin-top: 20px;
-        font-weight: bold;
-    }
-
-    section h4{
-        font-size: 100%;
-        text-align: center;
-    }
-
-    section p{
-        font-size: 80%;
-    }
-
-    section .mapa iframe{
-        width: 100%;
-        margin-bottom: 20px;
+        margin-top: 60px;
+        border-radius: 5px;
         border: solid 1px black;
-    }
+        background-image: url('https://i.pinimg.com/originals/ad/ab/41/adab41ec5b5f829e01ac27a7dd9fdfd2.jpg');
+        color: white;
+      }
+
+      form i{
+        font-size:300%;
+      }
+    
+      form label{
+        display: contents;
+      }
+    
+      form input{
+        margin-bottom: 8px;
+      }
+    
+      form button{
+        margin: 5px 10px;
+        padding: 5px 20px;
+        border: none;
+        background-color: black;
+        color: white;
+        border-radius: 5px;
+      }
+    
+      form button:hover{
+        background-color: white;
+        color: black;
+      }
 
     /* Footer */
     footer{
-      background-color: rgb(216, 67, 23);
+      background-color: brown;
       margin-top: -43px;
       border: solid 1px black;
       margin-top: 30px;
