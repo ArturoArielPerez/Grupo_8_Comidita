@@ -43,3 +43,15 @@ Pensamos en usar la siguiente paleta de colores: [http://https://colorhunt.co/pa
 
 - Arial, Verdana, Tahoma
 
+## Mockups.
+
+- **https://github.com/ArturoArielPerez/Grupo_8_Comidita/blob/master/wireframe/Boceto-1.pdf**
+
+- **https://github.com/ArturoArielPerez/Grupo_8_Comidita/blob/master/wireframe/Formulario.pdf**
+
+## Tablero de Trello.
+
+- **https://trello.com/b/GELgcwfT/ecommerce-project**
+
+
+

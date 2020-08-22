@@ -406,13 +406,8 @@ body{
     */
 /*CATALOGO*/
 
-<<<<<<< HEAD
 /* .catalogo{
     background-color: cadetblue;
-=======
-.catalogo{
-    background-image: url('https://i.pinimg.com/originals/ae/94/48/ae94481e07fd39a444cb27a03c31d621.jpg');
->>>>>>> 2bf7c1ef8edd6c17bc607f5cd99e5186c682a34b
     width: 100%;
     height: 1080px;
     display: flex; 
