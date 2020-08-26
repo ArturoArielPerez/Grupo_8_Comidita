@@ -1,0 +1,26 @@
+.card{
+    margin-top: 100px;
+}
+
+footer{
+    margin-top: 100px;
+}
+
+.carrito{
+    position: relative;
+    color: black;
+   font-size: 150%;
+}
+
+h2{
+    text-align: center;
+    color: white;
+}
+
+.detalle{
+    height: 50vh;
+}
+
+.titulo{
+    text-align: center;
+}

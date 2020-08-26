@@ -1,37 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>COMIDITA´S</title>
-
-  <script src="https://kit.fontawesome.com/8c7b135ad9.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="stylesheets/index.css">
-</head>
+<%- include('partials/head') %> 
 <body>
-  <header class="container-fluid">
-     <div class="row">
-      <div class="col-lg-4 col-md-4 col-12 navegacion">
-        <ul>
-          <li><a href="/catalogo">Carta</a></li>
-          <li><a href="/eventos">Eventos</a></li>
-          <li><a href="/sucursal">Sucursales</a></li>
-        </ul>
-      </div>
-        <div class="col-lg-4 col-md-4 col-sm-4 col-12">
-          <a href="/"><img src="images/COMIDITA.jpg" alt=""></a>
-        </div>
-      <div class="col-lg-4 col-md-4 col-12 navegacion">
-        <ul>
-          <li><a href="#footer">Contacto</a></li>
-          <li><a href="/register">Registrarse</a></li>
-          <li><a href="/login">Entrar</a></li>
-        </ul>
-      </div>
-     </div> 
-  </header>
+  <%- include('partials/header') %>
+
+  <div class="sticky-top"><a href="/products/cart" class="carrito"><i class="fas fa-cart-arrow-down"></i></a></div> 
+
+
     <section class="container">
       <article class="row">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -42,13 +17,13 @@
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="images/burger2.jpg" class="d-block w-100" alt="...">
+              <img src="/images/burger2.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-              <img src="images/Espaguetis-Salmon-queso.jpg" class="d-block w-100" alt="...">
+              <img src="/images/Espaguetis-Salmon-queso.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-              <img src="images/variedad-postres.jpg" class="d-block w-100" alt="...">
+              <img src="/images/variedad-postres.jpg" class="d-block w-100" alt="...">
             </div>
           </div>
           <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -74,39 +49,21 @@
     <section class="container">
       <div class="row">
         <article class="col-lg-4 col-md-4 col-12">
-          <img src="images/burger1.jpg" alt="" class="imgbody">
+          <img src="/images/burger1.jpg" alt="" class="imgbody">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, hic.</p>
         </article>
         <article class="col-lg-4 col-md-4 col-12">
-          <img src="images/pizza1.jpg" alt="" class="imgbody">
+          <img src="/images/pizza1.jpg" alt="" class="imgbody">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, iusto.</p>
         </article>
         <article class="col-lg-4 col-md-4 col-sm-12">
-          <img src="images/pastas1.jpg" alt="" class="imgbody">
+          <img src="/images/pastas1.jpg" alt="" class="imgbody">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, natus.</p>
         </article>
       </div>
     </section>
-  <footer id="footer" class="container-fuid">
-    <div class="row">
-      <div class="col-lg-4 col-md-4 col-sm-12 contacto">
-        <h3>Contacto</h3>
-        <p>Telefono: 1234567890</p>
-        <p>Email: comidita@gmail.com</p>
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-10 order">
-        <img src="images/COMIDITA.jpg" alt="">
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-10 redes">
-        <a href="" class="facebook"><i class="fab fa-facebook-square"></i></a>
-        <a href="" class="instagram"><i class="fab fa-instagram-square"></i></a>
-        <a href="" class="twitter"><i class="fab fa-twitter"></i></a>
-      </div>
-    </div>
-  </footer>
-
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+      <%- include('partials/footer') %>
+    
 </body>
 </html>
