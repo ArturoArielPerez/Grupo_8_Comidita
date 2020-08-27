@@ -3,8 +3,8 @@
 @import 'productDetail.css';
 @import 'productCart.css';
 @import 'login.css';
+@import 'carta.css';
 @import 'productAdd.css';
-@import 'form.css';
 * {
     box-sizing: border-box;
     margin: 0 auto;

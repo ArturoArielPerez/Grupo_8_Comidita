@@ -5,7 +5,5 @@ module.exports = {
     vistaL: function(req, res) {
         res.render('login');
     },
-    vistaF: function(req, res) {
-        res.render('form');
-    }
+    
 }

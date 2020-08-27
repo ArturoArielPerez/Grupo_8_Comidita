@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('partials/head') %> 
+<body>
+  <%- include('partials/header') %> 
+
+    <!--NAV DE MENU-->
+    <div class="shadow-lg p-3 mb-5 bg-white rounded titulo">
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <a href="#pasta"><button type="button" class="btn btn-secondary">Pasta</button></a>
+        <a href="#pizza"><button type="button" class="btn btn-secondary">pizzas</button></a>
+        <a href="#hamburguesa"><button type="button" class="btn btn-secondary">hamburguesa</button></a>
+        <a href="#postre"><button type="button" class="btn btn-secondary">Postres</button></a>
+        <a href="#bebida"><button type="button" class="btn btn-secondary">Bebidas</button></a>
+    </div> 
+          
+    </div>
+    <!--CATALOGO-->
+    <div class="shadow-lg p-3 mb-5 bg-white rounded titulo" id="pasta">Pastas</div>
+
+<% productos.forEach(producto => { %>
+      <% if(producto.categoria == 'pastas') {%> 
+    <div class="media container">
+      <img src="<%- producto.imagen %>" class="align-self-center mr-3" alt="...">
+      <div class="media-body">
+        <a href="/products/detail/<%= producto.id %>"><h5 class="mt-0">Center-aligned media</h5></a>
+        <p class="mb-0">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+
+      </div>
+    </div>
+    <% } %>
+    <% }) %>
+
+    <div class="shadow-lg p-3 mb-5 bg-white rounded titulo" id="pizza">Pizzas</div>
+
+    <% productos.forEach(producto => { %>
+      <% if(producto.categoria == 'pizzas') {%> 
+        <div class="media container">
+          <img src='<%- producto.imagen %> ' class="align-self-center mr-3" alt="...">
+          <div class="media-body">
+            <a href="/products/detail/<%= producto.id %>"><h5 class="mt-0">Center-aligned media</h5></a>
+            <p class="mb-0">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+
+          </div>
+        </div>
+      <% } %>
+    <% }) %>
+
+    <div class="shadow-lg p-3 mb-5 bg-white rounded titulo" id="hamburguesa">Hamburguesas</div>
+
+    <% productos.forEach(producto => { %>
+      <% if(producto.categoria == 'hamburguesa') {%> 
+
+    <div class="media container">
+      <img src="<%- producto.imagen %>" class="align-self-center mr-3" alt="...">
+      <div class="media-body">
+        <a href="/products/detail/<%= producto.id %>"><h5 class="mt-0">Center-aligned media</h5></a>
+        <p class="mb-0">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+
+      </div>
+    </div>
+    <% } %>
+    <% }) %>
+
+    <div class="shadow-lg p-3 mb-5 bg-white rounded titulo" id="postre">Postres</div>
+
+    <% productos.forEach(producto => { %>
+      <% if(producto.categoria == 'postre') {%> 
+    <div class="media container">
+      <img src="<%- producto.imagen %>" class="align-self-center mr-3" alt="...">
+      <div class="media-body">
+        <a href="/products/detail/<%= producto.id %>"><h5 class="mt-0">Center-aligned media</h5></a>
+        <p class="mb-0">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+
+      </div>
+    </div>
+    <% } %>
+    <% }) %>
+
+    <div class="shadow-lg p-3 mb-5 bg-white rounded titulo" id="bebida">Bebidas</div>
+
+    <% productos.forEach(producto => { %>
+      <% if(producto.categoria == 'bebida') {%> 
+    <div class="media container">
+      <img src="<%- producto.imagen %>" class="align-self-center mr-3" alt="...">
+      <div class="media-body">
+        <a href="/products/detail/<%= producto.id %>"><h5 class="mt-0">Center-aligned media</h5></a>
+        <p class="mb-0">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+
+      </div>
+    </div>
+    <% } %>
+    <% }) %>
+
+ 
+
+  <%- include('partials/footer') %> 
+    
+</body>
+</html>

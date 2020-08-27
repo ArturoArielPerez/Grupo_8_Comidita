@@ -6,23 +6,26 @@
 <body>
   <%- include('partials/header') %>
   <div class="sticky-top"><a href="/products/cart" class="carrito"><i class="fas fa-cart-arrow-down"></i></a></div> 
-  <div class="shadow-lg p-3 mb-5 bg-white rounded titulo">carrito de Compras</div> 
+  <div class="shadow-lg p-3 mb-5 bg-white rounded titulo">Detalle del producto</div> 
   
     <div class="card mb-3" style="max-width: 70%;">
       <div class="row no-gutters detalle">
         <div class="col-lg-4 col-md-4">
-          <img src="/images/burger1.jpg" class="card-img" alt="...">
+          <img src="<%= product.imagen %> " class="card-img" alt="...">
         </div>
         <div class="col-lg-8 col-md-8">
           <div class="card-body">
-            <h5 class="card-title">Hamburgusa al vapor</h5>
+            <h5 class="card-title"><%- product.comida %> </h5>
   
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, ipsa!</p>
-            <p class="card-text"><small class="text-muted">$900</small></p>
+            <p><%= product.descripcion %> </p>
+            <p class="card-text"><small class="text-muted">$<%= product.precio %> </small></p>
   
             <input type="number" name="" id="cantidad" value="0">
   
-            <button type="button" class="btn btn-primary btn-sm"><i class="fas fa-cart-arrow-down"></i> agregar al carrito</button>
+            <button type="button" class="btn btn-primary"><i class="fas fa-cart-arrow-down"></i> Agragar al carrito</button>
+            <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Eliminar</button>
+            <button type="button" class="btn btn-info"><i class="fas fa-edit"> Editar</i></button>
+
           </div>
         </div>
       </div>
