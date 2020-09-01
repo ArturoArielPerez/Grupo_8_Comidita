@@ -1,30 +1,234 @@
-[{"id":1,"comida":"pizza especial","descripcion":"Closed fracture of coronoid process of ulna","categoria":"pizzas","imagen":"/images/pizza1.jpg","precio":83},
-{"id":2,"comida":"Chaddy","descripcion":"Acquired spondylolisthesis","categoria":"pizzas","imagen":"/images/pizza2.jpg","precio":92},
-{"id":3,"comida":"Terra","descripcion":"Crushing injury of multiple sites of trunk","categoria":"pizzas","imagen":"/images/pizza3.jpg","precio":58},
-{"id":4,"comida":"Alexandro","descripcion":"Benign neoplasm of kidney, except pelvis","categoria":"pizzas","imagen":"/images/pizza5.jpg","precio":23},
-{"id":5,"comida":"Phaidra","descripcion":"Paranoid state, simple","categoria":"pizzas","imagen":"/images/image-not-found.png","precio":7},
-{"id":6,"comida":"Reilly","descripcion":"Other fall from one level to another in water","categoria":"pizzas","imagen":"/images/image-not-found.png","precio":60},
-{"id":7,"comida":"Rica","descripcion":"Hereditary hemorrhagic telangiectasia","categoria":"pizzas","imagen":"/images/image-not-found.png","precio":71},
-{"id":8,"comida":"Lovell","descripcion":"Intermittent esotropia, monocular","categoria":"pastas","imagen":"/images/image-not-found.png","precio":97},
-{"id":9,"comida":"Brier","descripcion":"Other motor vehicle nontraffic accident of other and unspecified nature injuring pedestrian","categoria":"pastas","imagen":"/images/image-not-found.png","precio":65},
-{"id":10,"comida":"Nonna","descripcion":"Cauda equina syndrome without mention of neurogenic bladder","categoria":"pastas","imagen":"/images/image-not-found.png","precio":86},
-{"id":11,"comida":"Vlad","descripcion":"Infection of esophagostomy","categoria":"pastas","imagen":"/images/image-not-found.png","precio":62},
-{"id":12,"comida":"Hortense","descripcion":"Left heart failure","categoria":"pastas","imagen":"/images/image-not-found.png","precio":40},
-{"id":13,"comida":"Lianne","descripcion":"Legally induced abortion, complicated by metabolic disorder, incomplete","categoria":"pastas","imagen":"/images/image-not-found.png","precio":43},
-{"id":14,"comida":"Katharyn","descripcion":"Other and unspecified disorder of breast associated with childbirth, delivered, with mention of postpartum complication","categoria":"pastas","imagen":"/images/image-not-found.png","precio":21},
-{"id":15,"comida":"Jacquette","descripcion":"Closed fracture of vault of skull with subarachnoid, subdural, and extradural hemorrhage, with prolonged [more than 24 hours] loss of consciousness, without return to pre-existing conscious level","categoria":"hamburguesa","imagen":"/images/image-not-found.png","precio":84},
-{"id":16,"comida":"Delphine","descripcion":"Late effects of cerebrovascular disease, speech and language deficit, unspecified","categoria":"hamburguesa","imagen":"/images/image-not-found.png","precio":19},
-{"id":17,"comida":"Noll","descripcion":"Request for expert evidence","categoria":"hamburguesa","imagen":"/images/image-not-found.png","precio":3},
-{"id":18,"comida":"Luce","descripcion":"Full-thickness skin loss [third degree, not otherwise specified] of scapular region","categoria":"hamburguesa","imagen":"/images/image-not-found.png","precio":82},
-{"id":20,"comida":"Vail","descripcion":"Other specified bacterial infections in conditions classified elsewhere and of unspecified site, other gram-negative organisms","categoria":"postre","imagen":"/images/image-not-found.png","precio":41},
-{"id":21,"comida":"Bron","descripcion":"Other specified pre-operative examination","categoria":"postre","imagen":"/images/image-not-found.png","precio":91},
-{"id":22,"comida":"Dorree","descripcion":"Traumatic pneumothorax without mention of open wound into thorax","categoria":"postre","imagen":"/images/image-not-found.png","precio":51},
-{"id":23,"comida":"Abbie","descripcion":"Pathological resorption, internal","categoria":"postre","imagen":"/images/image-not-found.png","precio":70},
-{"id":24,"comida":"Ringo","descripcion":"Traumatic cataract, unspecified","categoria":"postre","imagen":"/images/image-not-found.png","precio":89},
-{"id":25,"comida":"Kenton","descripcion":"Arthropathy associated with helminthiasis, shoulder region","categoria":"bebida","imagen":"/images/image-not-found.png","precio":24},
-{"id":26,"comida":"Paxton","descripcion":"Injury to ovarian vein","categoria":"bebida","imagen":"/images/image-not-found.png","precio":43},
-{"id":19,"comida":"Fields","descripcion":"Hereditary spherocytosis","categoria":"hamburguesa","imagen":"/images/image-not-found.png","precio":15},
-{"id":27,"comida":"Lori","descripcion":"Functional disturbances following cardiac surgery","categoria":"bebida","imagen":"/images/image-not-found.png","precio":88},
-{"id":28,"comida":"Franz","descripcion":"Other retinoschisis and retinal cysts","categoria":"bebida","imagen":"/images/image-not-found.png","precio":17},
-{"id":29,"comida":"Chane","descripcion":"Lesion of plantar nerve","categoria":"bebida","imagen":"/images/image-not-found.png","precio":7},
-{"id":30,"comida":"Lorene","descripcion":"Closed fractures involving skull or face with other bones, with other and unspecified intracranial hemorrhage, with prolonged [more than 24 hours] loss of consciousness, without return to pre-existing conscious level","categoria":"bebida","imagen":"/images/image-not-found.png","precio":74}]
+[
+    {
+        "id": 2,
+        "nombre": "Chaddy",
+        "descripcion": "Acquired spondylolisthesis",
+        "categoria": "pizzas",
+        "imagen": "/images/pizza2.jpg",
+        "precio": 92
+    },
+    {
+        "id": 3,
+        "nombre": "Terra",
+        "descripcion": "Crushing injury of multiple sites of trunk",
+        "categoria": "pizzas",
+        "imagen": "/images/pizza3.jpg",
+        "precio": 58
+    },
+    {
+        "id": 4,
+        "nombre": "Alexandro",
+        "descripcion": "Benign neoplasm of kidney, except pelvis",
+        "categoria": "pizzas",
+        "imagen": "/images/pizza5.jpg",
+        "precio": 23
+    },
+    {
+        "id": 5,
+        "nombre": "Phaidra",
+        "descripcion": "Paranoid state, simple",
+        "categoria": "pizzas",
+        "imagen": "/images/image-not-found.png",
+        "precio": 7
+    },
+    {
+        "id": 6,
+        "nombre": "Reilly",
+        "descripcion": "Other fall from one level to another in water",
+        "categoria": "pizzas",
+        "imagen": "/images/image-not-found.png",
+        "precio": 60
+    },
+    {
+        "id": 7,
+        "nombre": "Rica",
+        "descripcion": "Hereditary hemorrhagic telangiectasia",
+        "categoria": "pizzas",
+        "imagen": "/images/image-not-found.png",
+        "precio": 71
+    },
+    {
+        "id": 9,
+        "nombre": "Brier",
+        "descripcion": "Other motor vehicle nontraffic accident of other and unspecified nature injuring pedestrian",
+        "categoria": "pastas",
+        "imagen": "/images/image-not-found.png",
+        "precio": 65
+    },
+    {
+        "id": 10,
+        "nombre": "Nonna",
+        "descripcion": "Cauda equina syndrome without mention of neurogenic bladder",
+        "categoria": "pastas",
+        "imagen": "/images/image-not-found.png",
+        "precio": 86
+    },
+    {
+        "id": 11,
+        "nombre": "Vlad",
+        "descripcion": "Infection of esophagostomy",
+        "categoria": "pastas",
+        "imagen": "/images/image-not-found.png",
+        "precio": 62
+    },
+    {
+        "id": 12,
+        "nombre": "Hortense",
+        "descripcion": "Left heart failure",
+        "categoria": "pastas",
+        "imagen": "/images/image-not-found.png",
+        "precio": 40
+    },
+    {
+        "id": 14,
+        "nombre": "Katharyn",
+        "descripcion": "Other and unspecified disorder of breast associated with childbiron",
+        "categoria": "pastas",
+        "imagen": "/images/image-not-found.png",
+        "precio": 21
+    },
+    {
+        "id": 15,
+        "nombre": "Jacquette",
+        "descripcion": "Closed fracture of vault of skull with subarachnoid, subdural, and extradural",
+        "categoria": "hamburguesa",
+        "imagen": "/images/image-not-found.png",
+        "precio": 84
+    },
+    {
+        "id": 16,
+        "nombre": "Delphine",
+        "descripcion": "Late effects of cerebrovascular disease, speech and language deficit, unspecified",
+        "categoria": "hamburguesa",
+        "imagen": "/images/image-not-found.png",
+        "precio": 19
+    },
+    {
+        "id": 17,
+        "nombre": "Noll",
+        "descripcion": "Request for expert evidence",
+        "categoria": "hamburguesa",
+        "imagen": "/images/image-not-found.png",
+        "precio": 3
+    },
+    {
+        "id": 18,
+        "nombre": "Luce",
+        "descripcion": "Full-thickness skin loss [third degree, not otherwise specified] of scapular region",
+        "categoria": "hamburguesa",
+        "imagen": "/images/image-not-found.png",
+        "precio": 82
+    },
+    {
+        "id": 20,
+        "nombre": "Vail",
+        "descripcion": "Other specified bacterial infections in conditions ",
+        "categoria": "postre",
+        "imagen": "/images/image-not-found.png",
+        "precio": 41
+    },
+    {
+        "id": 21,
+        "nombre": "Bron",
+        "descripcion": "Other specified pre-operative examination",
+        "categoria": "postre",
+        "imagen": "/images/image-not-found.png",
+        "precio": 91
+    },
+    {
+        "id": 22,
+        "nombre": "Dorree",
+        "descripcion": "Traumatic pneumothorax without mention of open wound into thorax",
+        "categoria": "postre",
+        "imagen": "/images/image-not-found.png",
+        "precio": 51
+    },
+    {
+        "id": 23,
+        "nombre": "Abbie",
+        "descripcion": "Pathological resorption, internal",
+        "categoria": "postre",
+        "imagen": "/images/image-not-found.png",
+        "precio": 70
+    },
+    {
+        "id": 24,
+        "nombre": "Ringo",
+        "descripcion": "Traumatic cataract, unspecified",
+        "categoria": "postre",
+        "imagen": "/images/image-not-found.png",
+        "precio": 89
+    },
+    {
+        "id": 25,
+        "nombre": "Kenton",
+        "descripcion": "Arthropathy associated with helminthiasis, shoulder region",
+        "categoria": "bebida",
+        "imagen": "/images/image-not-found.png",
+        "precio": 24
+    },
+    {
+        "id": 26,
+        "nombre": "Paxton",
+        "descripcion": "Injury to ovarian vein",
+        "categoria": "bebida",
+        "imagen": "/images/image-not-found.png",
+        "precio": 43
+    },
+    {
+        "id": 19,
+        "nombre": "Fields",
+        "descripcion": "Hereditary spherocytosis",
+        "categoria": "hamburguesa",
+        "imagen": "/images/image-not-found.png",
+        "precio": 15
+    },
+    {
+        "id": 27,
+        "nombre": "Lori",
+        "descripcion": "Functional disturbances following cardiac surgery",
+        "categoria": "bebida",
+        "imagen": "/images/image-not-found.png",
+        "precio": 88
+    },
+    {
+        "id": 28,
+        "nombre": "Franz",
+        "descripcion": "Other retinoschisis and retinal cysts",
+        "categoria": "bebida",
+        "imagen": "/images/image-not-found.png",
+        "precio": 17
+    },
+    {
+        "id": 29,
+        "nombre": "Chane",
+        "descripcion": "Lesion of plantar nerve",
+        "categoria": "bebida",
+        "imagen": "/images/image-not-found.png",
+        "precio": 7
+    },
+    {
+        "id": 30,
+        "nombre": "Lorene",
+        "descripcion": "Closed bones, with other and unspecified intracranial hemorrhage, with prolonged [more than 24 hours] loss",
+        "categoria": "bebida",
+        "imagen": "/images/image-not-found.png",
+        "precio": 74
+    },
+    {
+        "id": 31,
+        "nombre": "napolitana",
+        "precio": 5000,
+        "categoria": "pizza",
+        "descripcion": "sabrosa",
+        "imagen": "default-image.png"
+    },
+    {
+        "id": 32,
+        "nombre": "napolitana",
+        "precio": 5000,
+        "categoria": "pizzas",
+        "descripcion": "sabrosa",
+        "imagen": "default-image.png"
+    }
+]

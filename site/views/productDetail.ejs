@@ -15,17 +15,22 @@
         </div>
         <div class="col-lg-8 col-md-8">
           <div class="card-body">
-            <h5 class="card-title"><%- product.comida %> </h5>
+            <h5 class="card-title"><%- product.nombre %> </h5>
   
             <p><%= product.descripcion %> </p>
             <p class="card-text"><small class="text-muted">$<%= product.precio %> </small></p>
   
             <input type="number" name="" id="cantidad" value="0">
-  
+            <br>
+            <br>
             <button type="button" class="btn btn-primary"><i class="fas fa-cart-arrow-down"></i> Agragar al carrito</button>
-            <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Eliminar</button>
-            <button type="button" class="btn btn-info"><i class="fas fa-edit"> Editar</i></button>
-
+            <form action="/products/<%= product.id %>?_method=DELETE " method="POST">
+              <button type="submit" class="btn btn-danger"> Eliminar</button>
+            </form>
+            
+              <a href="/products/<%= product.id %>/edit" class="btn btn-info"> Editar</a>
+            
+            
           </div>
         </div>
       </div>

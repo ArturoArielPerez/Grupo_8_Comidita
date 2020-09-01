@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('partials/head') %>
+
+    <body>
+
+        <%- include('partials/header') %>
+<br>
+        <div class="shadow-lg p-3 mb-5 bg-white rounded titulo">Editar Producto</div> 
+        <div class="container">
+            <section class="addProduct">
+                <div class="row productos">
+                    <div class="col-12">
+                        <div class="contenido text-left">
+                            <div class="row">
+                                <div class="col-12 col-md-7 col-xl-8 formulario">
+                                  <div class="">
+                                            <h5 class="mb-3">Datos del Producto</h5>
+                                            <form action="/products/<%= producto.id %> /edit?_method=PUT " method="POST" enctype="multipart/form-data">
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput1">Categoría</label>
+                                                    <input type="text" class="form-control" id="exampleFormControlInput1" value="<%= producto.categoria %> " name="categoria">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput1">Titulo de la publicación</label>
+                                                    <input value="<%= producto.nombre %> " type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="nombre">
+                                                </div>
+
+                                                <div class="form-row">
+                                                    <div class="col">
+                                                        <label for="">Precio</label>
+                                                        <input value="<%= producto.precio %> " type="number" class="form-control" name="precio">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group mt-3">
+                                                    <label for="exampleFormControlTextarea1">Descripción</label>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="descripcion"> <%= producto.descripcion %> </textarea>
+                                                </div>
+                                                <div class="form-group mt-3">
+                                                    <label for="">Elija una imagen</label>
+                                                    <input value="<%= producto.imagen %> " type="file" class="form-control" name='imagen'>
+                                                </div>
+                                                <div class="mt-5 mr-5 d-flex justify-content-end">
+                                                    <button type="reset" class="btn btn-secondary mr-3">Borrar</button>
+                                                    <button type="submit" class="btn btn-primary" >Publicar</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                       
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+       <%- include('partials/footer') %>
+
+    </body>
+
+</html>

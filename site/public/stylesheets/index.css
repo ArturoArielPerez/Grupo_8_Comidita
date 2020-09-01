@@ -21,6 +21,10 @@ header a{
   color: black;
 }
 
+.imgpresenrtacion{
+  width: 50%;
+}
+
 header a:hover{
   text-decoration-line: none;
   color: white;  
