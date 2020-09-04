@@ -18,18 +18,19 @@
             <h5 class="card-title"><%- product.nombre %> </h5>
   
             <p><%= product.descripcion %> </p>
+            
             <p class="card-text"><small class="text-muted">$<%= product.precio %> </small></p>
   
             <input type="number" name="" id="cantidad" value="0">
             <br>
             <br>
-            <button type="button" class="btn btn-primary"><i class="fas fa-cart-arrow-down"></i> Agragar al carrito</button>
+            <div class="botones">
+              <button type="button" class="btn btn-primary"><i class="fas fa-cart-arrow-down"></i> Agragar al carrito</button>
             <form action="/products/<%= product.id %>?_method=DELETE " method="POST">
               <button type="submit" class="btn btn-danger"> Eliminar</button>
-            </form>
-            
-              <a href="/products/<%= product.id %>/edit" class="btn btn-info"> Editar</a>
-            
+            </form>            
+              <a href="/products/<%= product.id %>/edit" class="btn btn-info"> Editar</a>  
+            </div>        
             
           </div>
         </div>

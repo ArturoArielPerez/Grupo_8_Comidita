@@ -1,7 +1,53 @@
-img{
-    margin-top: 25px;
+@import 'style.css';
+
+@media(min-width:769px) {
+
+.card{
+    border: solid 1px black;
+
 }
+
+
 .titulo{
     text-align: center;
 }
+      
+.card-img{
+    margin-top: 20px;
+    border: solid 1px black;
+}
 
+.comprar{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+}
+
+}
+
+@media(min-width: 571px) and (max-width: 768px) {
+.card{
+    border: solid 1px black;
+}
+        
+        
+.titulo{
+    text-align: center;
+}
+              
+.card-img{
+    margin-top: 20px;
+    border: solid 1px black;
+}
+        
+.comprar{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+}
+        
+}
+
+@media(max-width:570px){
+
+}

@@ -10,14 +10,24 @@ module.exports ={
             return producto.id == id
         });
 
-        res.render('productDetail', {product : producto[0]});
+        res.render('productDetail', {
+            product : producto[0],
+            title: 'Detalle del Producto',
+            css: 'productDetail.css'
+        });
     },
     listarProductos:function(req,res){
-        res.render('carta',{productos : productos});
+        res.render('carta',{
+            productos : productos,
+            title: 'Carta',
+            css: 'carta.css'
+        });
     },
     agregar:function(req,res){
     
         res.render('productAdd', {
+            title: 'agregar Producto',
+            css: 'productAdd.css'
         });
     },
     publicar: function(req,res,next){
@@ -67,7 +77,9 @@ module.exports ={
             return producto.id == id
         });
         res.render('productEdit', {
-            producto: resultado[0]
+            producto: resultado[0],
+            title: 'Editar Producto',
+            css: 'productEdit.css'
         });
     },
     editar:function(req,res){
@@ -92,6 +104,10 @@ module.exports ={
         res.redirect('/products/carta');
     },
     vistaCart: function(req,res){
-        res.render('productCart');
+        res.render('productCart',{
+            title: 'Carrito',
+            css: 'productCart.css'
+        }
+        );
          }
 }

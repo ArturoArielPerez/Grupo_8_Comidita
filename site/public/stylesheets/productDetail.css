@@ -1,3 +1,8 @@
+@import 'style.css';
+
+
+@media(min-width:768px){
+
 .card{
     margin-top: 100px;
 }
@@ -17,10 +22,65 @@ h2{
     color: white;
 }
 
+p{
+    font-weight: normal;
+    font-family: serif;
+}
+
 .detalle{
     height: 50vh;
 }
 
+.detalle img{
+    margin: 8px 0px 0px 8px;
+}
+
 .titulo{
     text-align: center;
+}
+
+.botones{
+    display: flex;
+    flex-wrap: wrap;
+} 
+ 
+}
+
+@media(min-width: 571px) and (max-width: 768px) {
+ 
+
+.btn{
+ padding: 5px 5px 5px 5px;
+}
+
+.detalle{
+    height: 55vh;
+}
+
+p{
+    font-weight: normal;
+    font-family: serif;
+}
+
+}
+
+@media(max-width:570px){
+.titulo{
+   text-align: center;
+ }
+
+.botones{
+    display: flex;
+    flex-direction: column;
+ } 
+
+.btn{
+    margin-top: 10px;
+} 
+
+p{
+    font-weight: normal;
+    font-family: serif;
+}
+
 }
