@@ -1,11 +1,15 @@
 @import 'style.css';
 
-
-@media(min-width:768px){
+img{
+    border: solid 1px gray;
+}
 
 .card{
     margin-top: 100px;
+    border: solid 1px black;
 }
+
+@media(min-width:768px){
 
 footer{
     margin-top: 100px;
@@ -13,8 +17,9 @@ footer{
 
 .carrito{
     position: relative;
+    left: 95%;
     color: black;
-   font-size: 150%;
+    font-size: 150%;
 }
 
 h2{
@@ -67,6 +72,12 @@ p{
 @media(max-width:570px){
 .titulo{
    text-align: center;
+ }
+
+ .card-img{
+     width: 75%;
+     margin-left: 12%;
+     margin-top: 10px;
  }
 
 .botones{

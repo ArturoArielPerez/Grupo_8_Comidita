@@ -13,23 +13,20 @@
   } 
   
   header{
-    background-color:rgb(216, 67, 23);
+    background-color: #17a2b8!important;
     border: solid 1px black; 
   }
-  
-  header a{
+
+  .carrito{
+    position: relative;
+    left: 95%;
     color: black;
-  }
+    font-size: 150%;
+}
   
   .imgpresenrtacion{
     width: 50%;
   }
-  
-  header a:hover{
-    text-decoration-line: none;
-    color: white;  
-  }
-  
   .redes a{
     color: black;
   }

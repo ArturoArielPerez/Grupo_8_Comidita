@@ -109,5 +109,17 @@ module.exports ={
             css: 'productCart.css'
         }
         );
-         }
+    },
+    Sucursal: function(req,res){
+        res.render('sucursal', {
+            title: 'Sucursales',
+            css: 'sucursal.css'
+        });
+    },
+    eventos: function(req,res){
+        res.render('eventos', {
+            title: 'Eventos',
+            css: 'eventos.css'
+        });
+    }
 }

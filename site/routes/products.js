@@ -29,6 +29,9 @@ router.put('/:id/edit',upload.any(), controller.editar);
 router.delete('/:id',controller.eliminar);
 router.get('/cart', controller.vistaCart);
 
+router.get('/sucursal', controller.Sucursal);
+router.get('/eventos', controller.eventos);
+
 
 
 module.exports = router;

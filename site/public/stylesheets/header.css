@@ -1,27 +1,13 @@
+.navbar-light .navbar-nav .nav-link{
+  color: black;
+}
+.navbar-light .navbar-nav .nav-link:hover{
+  color: white;
+}
 @media(min-width:768px){
-    /* HEADER */
-  
-    header .navegacion{
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-end; 
-    }
-  
-    header ul{
-      display: contents;
-      font-size: 73%;
-    }
-  
-    header ul li{
-      display: inline;
-      padding: 0px 8px;
-    }
-  
-  
+    /* HEADER */   
     header img{
-      width: 30%;
-      display: flex;
-      align-items: center;
+      width: 50%;
       border-radius: 90%;
       border: solid 1px black;
     }
@@ -30,27 +16,12 @@
  @media(min-width: 571px) and (max-width: 768px) {
     /* Header */
     header img{
-     width: 40%;
+     width: 20%;
      border-radius: 90%;
      border: solid 1px black;
      display: flex;
      align-items: center;
     }
-  
-    header .navegacion{
-      display: flex;
-      align-items: flex-end;
-      font-size: 65%;
-   }
-  
-   header ul{
-   display: contents;
-  }
-  
-    header ul li{
-    list-style: none;
-    }
-  
  
  }
 
@@ -63,21 +34,4 @@
       display: flex;
      }
    
-     header .navegacion{
-       font-size: 65%;
-       display: grid;
-       order: 1;
-  
-    }
-   
-    header ul{
-     display: contents;
-   }
-   
-     header ul li{
-     list-style: none;
-     }
-   
-     
-
  }

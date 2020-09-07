@@ -1,6 +1,6 @@
 @media(min-width:768px){
   footer{
-    background-color: rgb(216, 67, 23);
+    background-color: #17a2b8!important;
     margin-top: 20px;
     border: solid 1px black;
   }
@@ -62,7 +62,7 @@
     /*Footer*/
 
     footer{
-      background-color: rgb(216, 67, 23);
+      background-color: #17a2b8!important;
       margin-top: 20px;
       border: solid 1px black;
     }

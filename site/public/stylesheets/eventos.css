@@ -1,136 +1,6 @@
-*{
-    box-sizing: border-box;
-    margin: 0 auto;
-  }
-  body{
-    background-image: url('https://i.pinimg.com/originals/ae/94/48/ae94481e07fd39a444cb27a03c31d621.jpg');
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-
-  header{
-    background-color: brown;
-    border: solid 1px black;
-    
-  }
-  
-  header a{
-    color: black;
-  }
-  
-  header a:hover{
-    text-decoration-line: none;
-    color: white;  
-  }
-  
-  .redes a{
-    color: black;
-  }
-  
-  .redes .facebook:hover{
-    color: #385898;
-  }
-  
-  .redes .twitter:hover{
-    color: rgb(29,161,242);
-  }
-  
-  .redes .instagram:hover{
-    color: rgb(182, 12, 35);
-  }
-  
-  footer{
-    /*
-    Cambio de color al background 
-    background-color: rgba(216, 67, 23);*/
-    background-color: brown;
-    margin-top: 20px;
-    border: solid 1px black;
-  }
-  
-  footer img{
-    width: 30%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    border-radius: 90%;
-    border: solid 1px black;
-  }
-  
-  footer .contacto{
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;  
-  }
-  
-  footer .redes{
-    font-size: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-  }
+@import 'style.css';
 
   @media(min-width:769px){
-    /* HEADER */
-  
-    header {
-        /*
-        Cambio de color al background 
-        background-color: rgba(216, 67, 23);*/
-        background-color: brown;  
-        border: solid 1px black;
-      }
-    
-      header ul li{
-      list-style: none;
-      padding: 0px 8px;
-      }
-    
-      .navegacion li{
-        margin-right: 2%;
-      }
-    
-      header ul li:hover{
-        border: solid 0.5px black;
-        border-radius: 4px;
-        background-color: rgb(248, 87, 38);
-        padding: 0px 8px;
-      }
-    
-      header a{
-        text-decoration: none;
-        color: black;
-      }
-    
-      header a:hover{
-        text-decoration-line: none;
-        color: white;
-      }
-    
-      header .navegacion{
-        display: flex;
-        flex-wrap: wrap;
-        align-items: flex-end; 
-        margin-right: 0px;
-      }
-    
-      header ul{
-        display: contents;
-      }
-    
-    
-      header .logo{
-        margin: 0px 0px;
-      }
-    
-      .logo img{
-        width: 30%;
-        border-radius: 90%;
-        border: solid 1px black;
-      }
     
     /* Form */
     section h1{
@@ -195,64 +65,7 @@
    
   }
   @media(min-width: 571px) and (max-width: 768px) {
-    /* Header */
-    header {
-      /*
-      Cambio de color al background 
-      background-color: rgba(216, 67, 23);*/
-      background-color: brown;
-        border: solid 1px black;
-      }
-    
-      header ul li{
-      list-style: none;
-      padding: 0px 8px;
-      }
-    
-      .navegacion li{
-        margin-right: 2%;
-      }
-    
-      header ul li:hover{
-        border: solid 0.5px black;
-        border-radius: 4px;
-        background-color: rgb(248, 87, 38);
-        padding: 0px 8px;
-      }
-    
-      header a{
-        text-decoration: none;
-        color: black;
-        font-size: 75%;
-      }
-    
-      header a:hover{
-        text-decoration-line: none;
-        color: white;
-      }
-    
-      header .navegacion{
-        display: flex;
-        flex-wrap: wrap;
-        align-items: flex-end; 
-        margin-right: 0px;
-      }
-    
-      header ul{
-        display: contents;
-      }
-    
-    
-      header .logo{
-        margin: 0px 0px;
-      }
-    
-      .logo img{
-        width: 30%;
-        border-radius: 90%;
-        border: solid 1px black;
-      }
-    
+       
    /* Form */
    section h1{
     color: white;
@@ -311,122 +124,35 @@ form button:hover{
 background-color: white;
 color: black;
 }
-   
-    /*Footer*/
-  
-footer{
- padding: 0px 15px;
- /*
- Cambio de color al background 
- background-color: rgba(216, 67, 23);*/
- background-color: brown;  
- border: solid 1px black;
-}
-footer .contacto{
- font-size: 54%;
-}
-     
-footer .contacto p{
- margin: 2px 0px;
-}
-     
-footer img{
- width: 40%;
-}
-     
-footer .contacto h3{
- margin-top: 2px;
- font-size: 140%;
-}
-     
-footer .redes{
-    font-size: 175%;
-}
   }
   
 @media(max-width:570px){
-    /* HEADER */
-    
-    header {
-      /*
-      Cambio de color al background 
-      background-color: rgba(216, 67, 23);*/
-      background-color: brown;  
-      border: solid 1px black;
-    }
-  
-    header ul li{
-    list-style: none;
-    padding: 0px 8px;
-    }
-  
-    header ul li:hover{
-      border: solid 0.5px black;
-      border-radius: 4px;
-      background-color: rgb(248, 87, 38);
-      padding: 0px 8px;
-    }
-  
-    header a{
-      text-decoration: none;
-      color: black;
-      font-size: smaller;
-    }
-  
-    header a:hover{
-      text-decoration-line: none;
-      color: white;
-    }
-  
-    header .navegacion{
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-end; 
-      margin-right: 0px;
-    }
-  
-    header ul{
-      display: contents;
-    }
-  
-  
-    header .logo{
-      margin: 0px 0px;
-    }
-  
-    .logo img{
-      width: 25%;
-      border-radius: 90%;
-      border: solid 1px black;
-      display: block;
-    }
-  
     /* Form */
-    section h1{
-        color: white;
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
+  section h1{
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
     }
 
-    section p{
-        color: white;
-        text-align: center;
+  section p{
+    color: white;
+    text-align: center;
     }
 
-    form{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        align-self: center;
-        background-image: url('https://i.pinimg.com/originals/ad/ab/41/adab41ec5b5f829e01ac27a7dd9fdfd2.jpg');
-        border: solid 1px black;
-        border-radius: 5px;
+  form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-self: center;
+    background-image: url('https://i.pinimg.com/originals/ad/ab/41/adab41ec5b5f829e01ac27a7dd9fdfd2.jpg');
+    border: solid 1px black;
+    border-radius: 5px;
     }
 
-    form label{
-        display: contents;
-        color: white;
+  form label{
+    display: contents;
+    color: white;
     }
       
   form input{
@@ -440,9 +166,9 @@ footer .redes{
   }
  
   form span{
-      display: contents;
-      color: white;
-      margin-left: 0px;
+    display: contents;
+    color: white;
+    margin-left: 0px;
   }
 
   form button{
@@ -459,69 +185,4 @@ footer .redes{
     background-color: white;
     color: black;
   }
-
-    /* Footer */
-    footer{
-      /*
-      Cambio de color al background 
-      background-color: rgba(216, 67, 23);*/
-      background-color: brown;
-      margin-top: -43px;
-      border: solid 1px black;
-      margin-top: 30px;
-    }
-  
-    footer img{
-      width: 20%;
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-      justify-content: center;
-      border-radius: 90%;
-      border: solid 1px black;
-      margin-top: 1px;
-    }
-
-    footer .order{
-      order:-1;
-    }
-
-    footer h3{
-        font-size: 140%;
-    }
-  
-    footer .contacto{
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      font-size: 54%;
-    }
-
-    footer .contacto p{
-        margin: 2px 0px;
-      }
-  
-    footer .redes{
-      font-size: 180%;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center; 
-    }
-  
-    .redes a{
-      color: black;
-    }
-  
-    .redes .facebook:hover{
-      color: #385898;
-    }
-  
-    .redes .twitter:hover{
-      color: rgb(29,161,242);
-    }
-  
-    .redes .instagram:hover{
-      color: rgb(182, 12, 35);
-    } 
 }

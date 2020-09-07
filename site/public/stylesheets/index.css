@@ -1,5 +1,14 @@
 @import 'style.css';
 
+.p-img{
+  color: black;
+  font-weight: normal;
+}
+
+.card{
+  border: solid 1px black;
+}
+
 @media(min-width:768px){
 
   /* */
