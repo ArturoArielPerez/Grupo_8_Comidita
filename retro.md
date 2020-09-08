@@ -2,7 +2,7 @@
 
 ------------
 
-![Sprint 1](/site/public/images/retrospectiva.png)
+![retrospectiva](https://user-images.githubusercontent.com/31910958/92424471-db7d6400-f15a-11ea-8163-131196f9ebdb.png)
 
 ==================================================
 
