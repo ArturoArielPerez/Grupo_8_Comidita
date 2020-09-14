@@ -1,5 +1,5 @@
 const fs = require('fs');
-const productos = require('../data/products.json')
+const productos = require('../data/products')
 const path = require('path');
 
 module.exports ={
@@ -13,21 +13,24 @@ module.exports ={
         res.render('productDetail', {
             product : producto[0],
             title: 'Detalle del Producto',
-            css: 'productDetail.css'
+            css: 'productDetail.css',
+            user:req.session.user
         });
     },
     listarProductos:function(req,res){
         res.render('carta',{
             productos : productos,
             title: 'Carta',
-            css: 'carta.css'
+            css: 'carta.css',
+            user:req.session.user
         });
     },
     agregar:function(req,res){
     
         res.render('productAdd', {
             title: 'agregar Producto',
-            css: 'productAdd.css'
+            css: 'productAdd.css',
+            user:req.session.user
         });
     },
     publicar: function(req,res,next){
@@ -79,7 +82,8 @@ module.exports ={
         res.render('productEdit', {
             producto: resultado[0],
             title: 'Editar Producto',
-            css: 'productEdit.css'
+            css: 'productEdit.css',
+            user:req.session.user
         });
     },
     editar:function(req,res){
@@ -106,20 +110,23 @@ module.exports ={
     vistaCart: function(req,res){
         res.render('productCart',{
             title: 'Carrito',
-            css: 'productCart.css'
+            css: 'productCart.css',
+            user:req.session.user
         }
         );
     },
     Sucursal: function(req,res){
         res.render('sucursal', {
             title: 'Sucursales',
-            css: 'sucursal.css'
+            css: 'sucursal.css',
+            user:req.session.user
         });
     },
     eventos: function(req,res){
         res.render('eventos', {
             title: 'Eventos',
-            css: 'eventos.css'
+            css: 'eventos.css',
+            user:req.session.user
         });
     }
 }
