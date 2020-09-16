@@ -15,6 +15,7 @@ router.get('/login',controller.login);
 router.post('/login',loginValidator,controller.processLogin);
 
 router.get('/logout', controller.logout);
+router.get('/profile', controller.profile);
 
 
 

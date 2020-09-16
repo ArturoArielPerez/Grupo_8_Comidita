@@ -88,18 +88,11 @@
     },
     {
         "id": 12,
-        "nombre": "juan croz",
+        "nombre": "juan cruz",
         "apellido": "martinez",
         "email": "juancruzm@hotmail.com",
         "avatar": "default.png",
         "contraseña": "$2b$10$B7sTWxq/1t9Zm5SKbIu5lOy7zwWBVnyjaO3rhrpJ9tJxKewHR3RQ6"
-    },
-    {
-        "id": 13,
-        "nombre": "Juan",
-        "apellido": "Martinez",
-        "email": "juancruzm19@gmail.com",
-        "avatar": "default.png",
-        "contraseña": "$2b$10$SZ9yiDSauaQKj4DGdBgWgO6p0PCGfcuGOlP1ZPWcR0.I7wkGYE91i"
     }
+
 ]
