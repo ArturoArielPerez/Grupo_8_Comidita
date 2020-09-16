@@ -1,4 +1,5 @@
 const usuarios = require('../data/users');
+const productos = require('../data/products');
 
 const {validationResult, body} = require('express-validator');
 const bcrypt =require('bcrypt');
@@ -65,7 +66,8 @@ module.exports = {
                         id:usuario.id,
                         nick:usuario.nombre + ' ' + usuario.apellido,
                         email:usuario.email,
-                        avatar:usuario.imagen
+                        avatar:usuario.avatar,
+                        rol:usuario.rol
                     }
                 }
             })
@@ -91,6 +93,17 @@ module.exports = {
         }
         res.redirect('/')
 
+    },
+    profile:function(req,res){
+        res.render('profile',{
+            title:"Perfil de Usuario",
+            css:'profile.css',
+            user:req.session.user,
+            productos: productos.filter(producto=>{
+                return producto.categoria != "undefined" 
+            })
+
+        });
     }
 
 }

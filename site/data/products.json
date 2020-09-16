@@ -48,14 +48,6 @@
         "precio": 71
     },
     {
-        "id": 9,
-        "nombre": "Brier P",
-        "descripcion": "Other motor vehicle nontraffic accident of other and unspecified nature injuring pedestrian",
-        "categoria": "pastas",
-        "imagen": "imagen-1599700399107.jpg",
-        "precio": 0
-    },
-    {
         "id": 10,
         "nombre": "Nonna",
         "descripcion": "Cauda equina syndrome without mention of neurogenic bladder",

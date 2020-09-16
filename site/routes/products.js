@@ -5,9 +5,10 @@ var router = express.Router();
 const controller = require('../controller/productController');
 
 const multerProduct = require('../middlewares/multerProduct');
+const session = require('../middlewares/multerSession');
 
 router.get('/carta',controller.listarProductos);
-router.get('/detail/:id', controller.detalle);
+router.get('/detail/:id',controller.detalle);
 
 
 router.get('/create', controller.agregar);
@@ -20,7 +21,7 @@ router.delete('/:id',controller.eliminar);
 router.get('/cart', controller.vistaCart);
 
 router.get('/sucursal', controller.Sucursal);
-router.get('/eventos', controller.eventos);
+router.get('/eventos',session, controller.eventos);
 
 
 
