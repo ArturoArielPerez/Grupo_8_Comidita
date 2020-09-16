@@ -4,4 +4,5 @@ module.exports = function sessionUserCheck(req, res, next) {
     } else {
         res.redirect('/users/login')
     }
+
 }
