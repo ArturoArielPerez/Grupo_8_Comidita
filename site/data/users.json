@@ -1,1 +1,98 @@
-[{"id":1,"nombre":"Cordi","apellido":"Bales","email":"cbales0@wikimedia.org","contraseña":"iC47ijlGq4ZG","imagen":"https://robohash.org/sedquiesse.png?size=50x50&set=set1"},{"id":2,"nombre":"Kimberley","apellido":"Jaspar","email":"kjaspar1@hhs.gov","contraseña":"VEtVXDZm4","imagen":"https://robohash.org/dolormaximevoluptatem.bmp?size=50x50&set=set1"},{"id":3,"nombre":"Kizzie","apellido":"O'Reilly","email":"koreilly2@techcrunch.com","contraseña":"leHWmuFB","imagen":"https://robohash.org/ullamquasieum.bmp?size=50x50&set=set1"},{"id":4,"nombre":"Fanechka","apellido":"Begbie","email":"fbegbie3@answers.com","contraseña":"1R0dhnHq0u","imagen":"https://robohash.org/eiusassumendaeum.jpg?size=50x50&set=set1"},{"id":5,"nombre":"Thibaut","apellido":"Walkden","email":"twalkden4@a8.net","contraseña":"VzT6UOnD","imagen":"https://robohash.org/occaecativelomnis.png?size=50x50&set=set1"},{"id":6,"nombre":"Shirley","apellido":"Rivenzon","email":"srivenzon5@blogspot.com","contraseña":"PhGDhvpKOc0F","imagen":"https://robohash.org/corporisiddolores.bmp?size=50x50&set=set1"},{"id":7,"nombre":"Vitoria","apellido":"Emnoney","email":"vemnoney6@scientificamerican.com","contraseña":"tYBPhh","imagen":"https://robohash.org/estquiamolestiae.jpg?size=50x50&set=set1"},{"id":8,"nombre":"Thedrick","apellido":"Belliss","email":"tbelliss7@pinterest.com","contraseña":"XawR5N","imagen":"https://robohash.org/quianecessitatibuset.jpg?size=50x50&set=set1"},{"id":9,"nombre":"Jeffy","apellido":"Wakerley","email":"jwakerley8@ow.ly","contraseña":"9Ebesy4kg","imagen":"https://robohash.org/excepturiofficiisiure.bmp?size=50x50&set=set1"},{"id":10,"nombre":"Gerta","apellido":"Fautley","email":"gfautley9@csmonitor.com","contraseña":"5yNOdsB4x","imagen":"https://robohash.org/utfugiatfacere.png?size=50x50&set=set1"},{"id":11,"nombre":"arturo","apellido":"perez","email":"ssadas@sad.com","avatar":"avatar-1600125085310.jpg","contraseña":"$2b$10$hC4co7deoJznchnR/E16OO48ekmY4/WRxitk2OHuKmf9BZ81l4HQS","rol":"invitado"},{"id":12,"nombre":"napolitana","apellido":"perez","email":"arturoperez997@gmail.com","avatar":"avatar-1600289515888.jpg","contraseña":"$2b$10$.yZ6QiNNNVkjNy1AEkc9hO70F2ph/aNv32E2wit0mLGWNSNDKNkl2"}]
+[{
+        "id": 1,
+        "nombre": "Cordi",
+        "apellido": "Bales",
+        "email": "cbales0@wikimedia.org",
+        "contraseña": "iC47ijlGq4ZG",
+        "imagen": "https://robohash.org/sedquiesse.png?size=50x50&set=set1"
+    },
+    {
+        "id": 2,
+        "nombre": "Kimberley",
+        "apellido": "Jaspar",
+        "email": "kjaspar1@hhs.gov",
+        "contraseña": "VEtVXDZm4",
+        "imagen": "https://robohash.org/dolormaximevoluptatem.bmp?size=50x50&set=set1"
+    },
+    {
+        "id": 3,
+        "nombre": "Kizzie",
+        "apellido": "O'Reilly",
+        "email": "koreilly2@techcrunch.com",
+        "contraseña": "leHWmuFB",
+        "imagen": "https://robohash.org/ullamquasieum.bmp?size=50x50&set=set1"
+    },
+    {
+        "id": 4,
+        "nombre": "Fanechka",
+        "apellido": "Begbie",
+        "email": "fbegbie3@answers.com",
+        "contraseña": "1R0dhnHq0u",
+        "imagen": "https://robohash.org/eiusassumendaeum.jpg?size=50x50&set=set1"
+    },
+    {
+        "id": 5,
+        "nombre": "Thibaut",
+        "apellido": "Walkden",
+        "email": "twalkden4@a8.net",
+        "contraseña": "VzT6UOnD",
+        "imagen": "https://robohash.org/occaecativelomnis.png?size=50x50&set=set1"
+    },
+    {
+        "id": 6,
+        "nombre": "Shirley",
+        "apellido": "Rivenzon",
+        "email": "srivenzon5@blogspot.com",
+        "contraseña": "PhGDhvpKOc0F",
+        "imagen": "https://robohash.org/corporisiddolores.bmp?size=50x50&set=set1"
+    },
+    {
+        "id": 7,
+        "nombre": "Vitoria",
+        "apellido": "Emnoney",
+        "email": "vemnoney6@scientificamerican.com",
+        "contraseña": "tYBPhh",
+        "imagen": "https://robohash.org/estquiamolestiae.jpg?size=50x50&set=set1"
+    },
+    {
+        "id": 8,
+        "nombre": "Thedrick",
+        "apellido": "Belliss",
+        "email": "tbelliss7@pinterest.com",
+        "contraseña": "XawR5N",
+        "imagen": "https://robohash.org/quianecessitatibuset.jpg?size=50x50&set=set1"
+    },
+    {
+        "id": 9,
+        "nombre": "Jeffy",
+        "apellido": "Wakerley",
+        "email": "jwakerley8@ow.ly",
+        "contraseña": "9Ebesy4kg",
+        "imagen": "https://robohash.org/excepturiofficiisiure.bmp?size=50x50&set=set1"
+    },
+    {
+        "id": 10,
+        "nombre": "Gerta",
+        "apellido": "Fautley",
+        "email": "gfautley9@csmonitor.com",
+        "contraseña": "5yNOdsB4x",
+        "imagen": "https://robohash.org/utfugiatfacere.png?size=50x50&set=set1"
+    },
+    {
+        "id": 11,
+        "nombre": "arturo",
+        "apellido": "perez",
+        "email": "ssadas@sad.com",
+        "avatar": "default.png",
+        "contraseña": "$2b$10$tUba3Wj4RcLazCp5CVbYv.S6muXAS9l52QDdputa4WQcqKAfXgBlW"
+    },
+    {
+        "id": 12,
+        "nombre": "juan cruz",
+        "apellido": "martinez",
+        "email": "juancruzm@hotmail.com",
+        "avatar": "default.png",
+        "contraseña": "$2b$10$B7sTWxq/1t9Zm5SKbIu5lOy7zwWBVnyjaO3rhrpJ9tJxKewHR3RQ6"
+    }
+
+]
