@@ -104,7 +104,6 @@ module.exports ={
 
         fs.writeFileSync(path.join(__dirname, '..', 'data', 'products.json') , productosJSON);
 
-        //res.redirect('products/'+id+'/edit');
         res.redirect('/products/carta');
     },
     vistaCart: function(req,res){

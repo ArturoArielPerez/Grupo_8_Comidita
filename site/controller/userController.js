@@ -95,6 +95,18 @@ module.exports = {
 
     },
     profile:function(req,res){
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
+            usuarios.forEach(usuario=>{
+                if(usuario.nombre && usuario.apellido == req.body.nombre && req.body.apellido){
+                    req.session.usuario = {
+                        id:usuario.id,
+                        nick:usuario.nombre + ' ' + usuario.apellido,
+                        avatar:usuario.avatar,
+                        
+                    }
+                }
+            })
         res.render('profile',{
             title:"Perfil de Usuario",
             css:'profile.css',
@@ -106,4 +118,25 @@ module.exports = {
         });
     }
 
+    },
+    actualizarUser: function (req,res){
+        let id = req.params.id;
+        
+        usuarios.forEach(usuario => {
+            if(usuario.id == id){
+                usuario.id = Number(id);
+                usuario.nombre = req.body.nombre.trim();
+                usuario.apellido = req.body.apellido.trim();
+                usuario.avatar = (req.files[0]? req.files[0].filename : usuario.avatar);
+
+            }
+        });
+        usuarioJSON = JSON.stringify(usuarios);
+
+        fs.writeFileSync(path.join(__dirname, '..', 'data', 'users.json') , usuarioJSON);
+
+        res.redirect('/users/profile');
+    }
+
 }
+
