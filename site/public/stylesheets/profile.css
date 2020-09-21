@@ -1,15 +1,31 @@
 @import 'style.css';
 
-.opciones{
-    background-color: black;
-    padding-bottom: 20px;
-    
+.titulo{
+    text-align: center;
+    color: white;
 }
 
-.nav{
+img{
+   width: 100%;
+}
+
+.card{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: solid 1px gray;
+}
+
+.nav-tabs{
     background-color: whitesmoke;
 }
-
-.text-white{
-    margin-left: 0px;
+ 
+.tab-content{
+    background-color: white ;
 }
+
+.contenido{
+    background-color: white;
+    border: solid 1px black;
+    margin-bottom: 10px;
+}
+

@@ -6,6 +6,9 @@
     color: white;
 }
 
+header .avatar{
+  width: 20%;
+}
 @media(min-width:768px) {
     /* HEADER */
     header img {
