@@ -1,89 +1,88 @@
 @import 'style.css';
-
-.media{
-background-color: rgb(214, 214, 207);
-padding-top: 10px;
-border: solid 1px black;
+.media {
+    background-color: rgb(214, 214, 207);
+    padding-top: 10px;
+    border: solid 1px black;
 }
 
-.titulo-comida{
-  text-align: center;
+.titulo-comida {
+    text-align: center;
 }
 
-a{
-  color: black;
+a {
+    color: black;
 }
 
-a:hover{
-  text-decoration: none;
-  color: rgb(26, 105, 250);
+a:hover {
+    text-decoration: none;
+    color: rgb(26, 105, 250);
 }
 
-p{
-  font-weight: normal;
+p {
+    font-weight: normal;
 }
 
-#bebida{
-  margin-top: 30px;
-}
-#pizza{
-  margin-top: 30px;
-}
-#hamburguesa{
-  margin-top: 30px;
-}
-#postre{
-  margin-top: 30px;
+#bebida {
+    margin-top: 30px;
 }
 
-  @media(min-width:769px){
-     /*Section */
-    .titulo{
-      text-align: center;
-      position: relative;
-      bottom: 36px;
-  }
+#pizza {
+    margin-top: 30px;
+}
 
-    .container img{
-      width: 10%;
-      margin-bottom: 30px;
-      border: solid 1px black;
+#hamburguesa {
+    margin-top: 30px;
+}
+
+#postre {
+    margin-top: 30px;
+}
+
+@media(min-width:769px) {
+    /*Section */
+    .titulo {
+        text-align: center;
+        position: relative;
+        bottom: 36px;
     }
-   
-  }
+    .container img {
+        width: 10%;
+        margin-bottom: 30px;
+        border: solid 1px black;
+    }
+}
+
 @media(min-width: 571px) and (max-width: 768px) {
-    
-   /* section */
-.titulo{
-  text-align: center;
-  position: relative;
-  bottom: 36px;
-}
-
-.container img{
-  width: 10%;
-  margin-bottom: 30px;
-  border: solid 1px black;
-}
-    
-  }
-  
- @media(max-width:570px){
     /* section */
-    .titulo{
-      text-align: center;
-      position: relative;
-      bottom: 36px;
+    .titulo {
+        text-align: center;
+        position: relative;
+        bottom: 36px;
     }
-
-    .container img{
-      width: 30%;
-      margin-bottom: 30px;
-      border: solid 1px black;
+    .container img {
+        width: 10%;
+        margin-bottom: 30px;
+        border: solid 1px black;
     }
-    .btn-secondary{
-      padding: 2px 2px 2px 2px;
+}
+
+@media(max-width:570px) {
+    /* section */
+    .titulo {
+        text-align: center;
+        position: relative;
+        bottom: 36px;
     }
-
-
- }
+    .titulo-comida {
+        padding: 100px;
+        background-color: white;
+    }
+    .container img {
+        width: 30%;
+        margin-bottom: 30px;
+        border: solid 1px black;
+    }
+    .btn-secondary {
+        padding: 2px 2px 2px 2px;
+    }
+}
