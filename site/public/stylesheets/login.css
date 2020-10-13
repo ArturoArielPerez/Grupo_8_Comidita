@@ -1,42 +1,38 @@
-  @import 'style.css';
-.recordatorio{
-  margin-top: 20px;
-  margin-bottom: 10px;
-  text-align: center;
+@import 'style.css';
+.recordatorio {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
 }
-  @media(min-width:769px){
-    
+
+@media(min-width:769px) {
     /* Form */
-    form .row{
+    form .row {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
         align-self: center;
         height: 120vh;
-      }
-    
-      form .formulario{
+    }
+    form .formulario {
         justify-content: center;
-        margin-top: 120px;
-        border-radius: 5px;
+        margin-top: 50px;
+        width: 500px;
+        height: 150px;
         border: solid 1px black;
         background-image: url('https://i.pinimg.com/originals/ad/ab/41/adab41ec5b5f829e01ac27a7dd9fdfd2.jpg');
         color: white;
-      }
-
-      form i{
-        font-size:600%;
-      }
-    
-      form label{
+    }
+    form i {
+        font-size: 600%;
+    }
+    form label {
         display: contents;
-      }
-    
-      form input{
+    }
+    form input {
         margin-bottom: 8px;
-      }
-    
-      form button{
+    }
+    form button {
         margin: 10px 20px;
         padding: 5px 50px;
         border: none;
@@ -44,107 +40,94 @@
         background-color: black;
         color: white;
         border-radius: 5px;
-      }
-    
-      form button:hover{
+    }
+    form button:hover {
         background-color: white;
         color: black;
-      }
-   
-  }
-  @media(min-width: 571px) and (max-width: 768px) {
-   
-   /* Form */
-   form .row{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-self: center;
-    height: 120vh;
-  }
+    }
+}
 
-  form .formulario{
-    justify-content: center;
-    margin-top: 100px;
-    border-radius: 5px;
-    border: solid 1px black;
-    background-image: url('https://i.pinimg.com/originals/ad/ab/41/adab41ec5b5f829e01ac27a7dd9fdfd2.jpg');
-    color: white;
-  }
-
-  form i{
-    font-size:450%;
-  }
-
-  form label{
-    display: contents;
-  }
-
-  form input{
-    margin-bottom: 8px;
-  }
-
-  form button{
-    margin: 10px 20px;
-    padding: 5px 40px;
-    border: none;
-    font-weight: bolder;
-    background-color: black;
-    color: white;
-    border-radius: 5px;
-  }
-
-  form button:hover{
-    background-color: white;
-    color: black;
-  }
-    
-  }
-  
-@media(max-width:570px){
-    
-  
+@media(min-width: 571px) and (max-width: 768px) {
     /* Form */
-    form .row{
+    form .row {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-self: center;
+        height: 120vh;
+    }
+    form .formulario {
+        justify-content: center;
+        margin-top: 100px;
+        width: 300px;
+        height: 150px;
+        border-radius: 5px;
+        border: solid 1px black;
+        background-image: url('https://i.pinimg.com/originals/ad/ab/41/adab41ec5b5f829e01ac27a7dd9fdfd2.jpg');
+        color: white;
+    }
+    form i {
+        font-size: 450%;
+    }
+    form label {
+        display: contents;
+    }
+    form input {
+        margin-bottom: 8px;
+    }
+    form button {
+        margin: 10px 20px;
+        padding: 5px 40px;
+        border: none;
+        font-weight: bolder;
+        background-color: black;
+        color: white;
+        border-radius: 5px;
+    }
+    form button:hover {
+        background-color: white;
+        color: black;
+    }
+}
+
+@media(max-width:570px) {
+    /* Form */
+    form .row {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
         align-self: center;
         height: 65vh;
-      }
-    
-      form .formulario{
+    }
+    form .formulario {
         justify-content: center;
         margin-top: 60px;
+        width: 350px;
+        height: 400px;
         border-radius: 5px;
         border: solid 1px black;
         background-image: url('https://i.pinimg.com/originals/ad/ab/41/adab41ec5b5f829e01ac27a7dd9fdfd2.jpg');
         color: white;
-      }
-
-      form i{
-        font-size:300%;
-      }
-    
-      form label{
+    }
+    form i {
+        font-size: 300%;
+    }
+    form label {
         display: contents;
-      }
-    
-      form input{
+    }
+    form input {
         margin-bottom: 8px;
-      }
-    
-      form button{
+    }
+    form button {
         margin: 5px 10px;
         padding: 5px 20px;
         border: none;
         background-color: black;
         color: white;
         border-radius: 5px;
-      }
-    
-      form button:hover{
+    }
+    form button:hover {
         background-color: white;
         color: black;
-      }
+    }
 }

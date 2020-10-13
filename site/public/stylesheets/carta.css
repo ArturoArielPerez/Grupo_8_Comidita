@@ -7,6 +7,7 @@
 
 .titulo-comida {
     text-align: center;
+    background-color: var(--color-bordo);
 }
 
 a {
@@ -43,7 +44,7 @@ p {
     .titulo {
         text-align: center;
         position: relative;
-        bottom: 36px;
+        bottom: 0px;
     }
     .container img {
         width: 10%;
@@ -57,7 +58,7 @@ p {
     .titulo {
         text-align: center;
         position: relative;
-        bottom: 36px;
+        bottom: 0px;
     }
     .container img {
         width: 10%;
@@ -71,7 +72,7 @@ p {
     .titulo {
         text-align: center;
         position: relative;
-        bottom: 36px;
+        bottom: 0px;
     }
     .titulo-comida {
         padding: 100px;

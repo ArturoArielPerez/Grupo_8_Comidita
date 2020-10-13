@@ -2,11 +2,16 @@
 <html lang="es">
 <%- include('partials/head') %>
 
+
+
     <body>
+
         <%- include('partials/header') %>
+            <!--CARRITO-->
+            <div class="sticky-top bg-dark"><a href="/products/cart" class="carrito"><i class="fas fa-cart-arrow-down mr-4 c-success"></i></a></div>
 
             <!--NAV DE MENU-->
-            <div class="shadow-lg p-3 mb-5 bg-white rounded titulo">
+            <div class="shadow-lg  bg-white p-3 rounded titulo">
                 <div class="btn-group" role="group" aria-label="Basic example">
                     <a href="#pasta"><button type="button" class="btn btn-dark mx-3 ">Pasta</button></a>
                     <a href="#pizza"><button type="button" class="btn btn-dark mx-3 ">pizzas</button></a>
@@ -16,12 +21,14 @@
                 </div>
 
             </div>
+
+            </div>
             <!--CATALOGO-->
-            <div class="shadow-md p-3 mb-5  bg-white rounded titulo-comida" id="pasta">Pastas</div>
+            <div class="shadow-md p-5 col-sm-4 col-md-12 col-lg-6  rounded titulo-comida" id="pasta">Pastas</div>
 
             <% productos.forEach(producto => { %>
                 <% if(producto.categoria == 'pastas') {%>
-                    <div class="media container">
+                    <div class="media container col-lg-6">
                         <img src="<%- producto.imagen %>" class="align-self-center mr-3" alt="...">
                         <div class="media-body">
                             <a href="/products/detail/<%= producto.id %>">
@@ -38,11 +45,11 @@
                     <% } %>
                         <% }) %>
 
-                            <div class="shadow-lg p-3 mb-5 bg-white rounded titulo-comida" id="pizza">Pizzas</div>
+                            <div class="shadow-lg p-5  col-lg-6 rounded titulo-comida" id="pizza">Pizzas</div>
 
                             <% productos.forEach(producto => { %>
                                 <% if(producto.categoria == 'pizzas') {%>
-                                    <div class="media container">
+                                    <div class="media container col-lg-6 ">
                                         <img src='<%- producto.imagen %> ' class="align-self-center mr-3" alt="...">
                                         <div class="media-body">
                                             <a href="/products/detail/<%= producto.id %>">
@@ -59,12 +66,12 @@
                                     <% } %>
                                         <% }) %>
 
-                                            <div class="shadow-lg p-3 mb-5 bg-white rounded titulo-comida" id="hamburguesa">Hamburguesas</div>
+                                            <div class="shadow-lg p-5 col-lg-6 rounded titulo-comida" id="hamburguesa">Hamburguesas</div>
 
                                             <% productos.forEach(producto => { %>
                                                 <% if(producto.categoria == 'hamburguesa') {%>
 
-                                                    <div class="media container">
+                                                    <div class="media container col-lg-6">
                                                         <img src="<%- producto.imagen %>" class="align-self-center mr-3" alt="...">
                                                         <div class="media-body">
                                                             <a href="/products/detail/<%= producto.id %>">
@@ -81,11 +88,11 @@
                                                     <% } %>
                                                         <% }) %>
 
-                                                            <div class="shadow-lg p-3 mb-5 bg-white rounded titulo-comida" id="postre">Postres</div>
+                                                            <div class="shadow-lg p-5  col-lg-6 rounded titulo-comida" id="postre">Postres</div>
 
                                                             <% productos.forEach(producto => { %>
                                                                 <% if(producto.categoria == 'postre') {%>
-                                                                    <div class="media container">
+                                                                    <div class="media container col-lg-6">
                                                                         <img src="<%- producto.imagen %>" class="align-self-center mr-3" alt="...">
                                                                         <div class="media-body">
                                                                             <a href="/products/detail/<%= producto.id %>">
@@ -102,11 +109,11 @@
                                                                     <% } %>
                                                                         <% }) %>
 
-                                                                            <div class="shadow-lg p-3 mb-5 bg-white rounded titulo-comida" id="bebida">Bebidas</div>
+                                                                            <div class="shadow-lg p-5 col-lg-6 rounded titulo-comida" id="bebida">Bebidas</div>
 
                                                                             <% productos.forEach(producto => { %>
                                                                                 <% if(producto.categoria == 'bebida') {%>
-                                                                                    <div class="media container">
+                                                                                    <div class="media container col-lg-6">
                                                                                         <img src="<%- producto.imagen %>" class="align-self-center mr-3" alt="...">
                                                                                         <div class="media-body">
                                                                                             <a href="/products/detail/<%= producto.id %>">

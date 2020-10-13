@@ -1,75 +1,61 @@
-                /* GENERAL*/
-                
-                * {
-                    box-sizing: border-box;
-                    margin: 0 auto;
-                }
-                
-                body {
-                    /*background-image: url('https://i.pinimg.com/originals/ae/94/48/ae94481e07fd39a444cb27a03c31d621.jpg');*/
-                    background-image: url('/images/fondoDos.jpg');
-                    font-weight: bold;
-                    text-transform: uppercase;
-                }
-                
-                header {
-                    background-color: #17a2b8!important;
-                    border: solid 1px black;
-                }
-                
-                .carrito {
-                    position: relative;
-                    left: 95%;
-                    color: black;
-                    font-size: 150%;
-                }
-                
-                .imgpresenrtacion {
-                    width: 50%;
-                }
-                
-                .redes a {
-                    color: black;
-                }
-                
-                .redes .facebook:hover {
-                    color: #385898;
-                }
-                
-                .redes .twitter:hover {
-                    color: rgb(29, 161, 242);
-                }
-                
-                .redes .instagram:hover {
-                    color: rgb(182, 12, 35);
-                }
-                /* footer{
-    background-color: rgb(216, 67, 23);
-    margin-top: 20px;
-    border: solid 1px black;
-  }
-  
-  footer img{
-    width: 30%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    border-radius: 90%;
-    border: solid 1px black;
-  }
-  
-  footer .contacto{
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;  
-  }
-  
-  footer .redes{
-    font-size: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-   */
+    /* GENERAL*/
+    /* PALETA DE COLORES*/
+    
+     :root {
+        --color-bordo: #802528;
+        --color-blanco: #ffffff;
+        --color-negro: #000000;
+        --color-gris: #6e6c6cdc;
+        --colo-crema: rgba(255, 255, 255, 0.678);
+    }
+    
+    * {
+        box-sizing: border-box;
+        margin: auto;
+    }
+    
+    body {
+        /*background-color: var(--color-crema);*/
+        background-image: url('/images/fondoDos.jpg');
+        /*Background-position: center center;
+        Background-size: cover;
+        Background-repeat: no-repeat;
+        */
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    
+    header {
+        /*
+                    background-color: #17a2b8!important;*/
+        background-color: var(--color-bordo);
+        border: solid 1px black;
+    }
+    
+    .carrito {
+        position: absolute;
+        left: 90%;
+        width: 80px;
+        color: rgb(74, 204, 74);
+        font-size: 50px;
+    }
+    
+    .imgpresenrtacion {
+        width: 50%;
+    }
+    
+    .redes a {
+        color: black;
+    }
+    
+    .redes .facebook:hover {
+        color: #385898;
+    }
+    
+    .redes .twitter:hover {
+        color: rgb(29, 161, 242);
+    }
+    
+    .redes .instagram:hover {
+        color: rgb(182, 12, 35);
+    }

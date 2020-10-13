@@ -1,37 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
-<%- include('partials/head') %> 
-<body>
-    <%- include('partials/header') %> 
-     
-     <form action="" method="POST" class="container">
-        <div class="row">
-          <div class="row col-lg-6 col-md-6 col-9 formulario">
+<%- include('partials/head') %>
 
-            <i class="fas fa-user-circle"></i>
+    <body>
+        <%- include('partials/header') %>
 
-            <label for="email">Email</label>  
-           <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<%= (typeof old != 'undefined' && old.email)?old.email:'' %>" placeholder="email" name="email">   
-           <small class="text-danger"><%= (typeof errors != 'undefined' && errors.email)?errors.email.msg: "" %> </small>
+            <form action="" method="POST" class="container">
+                <div class="row">
+                    <div class="row col-sm-12 col-md-8 col-lg-8 formulario">
 
-           <label for="contraseña">Contraseña</label> 
-           <input type="password" name="contraseña" class="form-control" id="exampleInputPassword1">   
-           <small class="text-danger"><%= (typeof errors != 'undefined' && errors.contraseña)?errors.contraseña.msg: "" %> </small>
+                        <i class="fas fa-user-circle"></i>
 
-           <div class="custom-control custom-checkbox recordatorio"> 
-            <input type="checkbox" class="custom-control-input <%= (typeof old != 'undefined' && old.recordatorio)?"is-valid":(typeof errors != 'undefined' && errors.recordatorio)?"is-invalid": ""  %>" id="customCheck1" name="recordatorio">
-            <label class="custom-control-label" for="customCheck1">Recordar</label><br>
-            <small class="text-danger"><%= (typeof errors != 'undefined' && errors.recordatorio)?errors.recordatorio.msg: "" %> </small>
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<%= (typeof old != 'undefined' && old.email)?old.email:'' %>" placeholder="email" name="email">
+                        <small class="text-danger"><%= (typeof errors != 'undefined' && errors.email)?errors.email.msg: "" %> </small>
 
-           </div>
-              
-           <div>
-            <button type="submit" class="btn btn-primary">Login</button>
-           </div>            
-          </div>
-        </div>
-     </form> 
-     
-     <%- include('partials/footer') %> 
-</body>
+                        <label for="contraseña">Contraseña</label>
+                        <input type="password" name="contraseña" class="form-control" id="exampleInputPassword1">
+                        <small class="text-danger"><%= (typeof errors != 'undefined' && errors.contraseña)?errors.contraseña.msg: "" %> </small>
+
+                        <div class="custom-control custom-checkbox recordatorio">
+                            <input type="checkbox" class="custom-control-input <%= (typeof old != 'undefined' && old.recordatorio)?" is-valid ":(typeof errors != 'undefined' && errors.recordatorio)?"is-invalid ": " "  %>" id="customCheck1" name="recordatorio">
+                            <label class="custom-control-label" for="customCheck1">Recordar</label><br>
+                            <small class="text-danger"><%= (typeof errors != 'undefined' && errors.recordatorio)?errors.recordatorio.msg: "" %> </small>
+
+                        </div>
+
+                        <div>
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <%- include('partials/footer') %>
+    </body>
+
 </html>
