@@ -53,5 +53,9 @@ Pensamos en usar la siguiente paleta de colores: [http://https://colorhunt.co/pa
 
 - **https://trello.com/b/GELgcwfT/ecommerce-project**
 
+## Screenshot diagram DB
+
+![comidita-db](https://user-images.githubusercontent.com/31910958/95802165-1717ca80-0cd3-11eb-841f-53ef2261fdfa.png)
+
 
 
