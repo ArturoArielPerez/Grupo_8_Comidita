@@ -23,28 +23,28 @@ module.exports = [
     .isEmail()
     .withMessage('Debes ingresar un email válido'),
 
-    body('email')
-    .custom(function(value) {
-        /* for (let i = 0; i < usuarios.length; i++) {
-            if (usuarios[i].email == value) {
-                return false
-            }
-        }
-        return true */
+    // body('email')
+    // .custom(function(value) {
+    //     /* for (let i = 0; i < usuarios.length; i++) {
+    //         if (usuarios[i].email == value) {
+    //             return false
+    //         }
+    //     }
+    //     return true */
 
-        return db.Users.findOne({
-                where: {
+    //     return db.Users.findOne({
+    //             where: {
 
-                    email: value
-                }
-            })
-            .then(user => {
-                if (user) {
-                    return Promise.reject('Este mail ya esta registrado ')
-                }
-            })
-    }),
-    /* .withMessage('Este mail ya está registrado'), */
+    //                 email: value
+    //             }
+    //         })
+    //         .then(user => {
+    //             if (user) {
+    //                 return Promise.reject('Este mail ya esta registrado ')
+    //             }
+    //         })
+    // }),
+    // /* .withMessage('Este mail ya está registrado'), */
 
     check('contraseña')
     .isLength({

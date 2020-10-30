@@ -17,6 +17,7 @@ module.exports = {
         });
     },
     processRegister: function(req, res) {
+        console.log(req.body)
         let errors = validationResult(req);
 
 
@@ -24,16 +25,15 @@ module.exports = {
 
             db.Users.create({
 
-                nombre: req.body.nombre.trin(),
-                apellido: req.body.apellido.trin(),
-                email: req.body.email.trin(),
-                contraseña: bcrypt.hashSync(req.body.contraseña.trin(), 10),
+                nombre: req.body.nombre.trim(),
+                apellido: req.body.apellido.trim(),
+                email: req.body.email,
+                password: bcrypt.hashSync(req.body.contraseña.trim(), 10),
                 avatar: (req.files[0]) ? req.files[0].filesname : 'default.png',
                 rol: 'user'
             })
-
             .then(result => {
-                    console.log(result);
+                    
                     return res.redirect('/users/login')
 
                 })

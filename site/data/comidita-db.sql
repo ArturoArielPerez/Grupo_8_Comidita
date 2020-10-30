@@ -119,7 +119,7 @@ CREATE TABLE IF NOT EXISTS `comidita-db`.`cart` (
     REFERENCES `comidita-db`.`products` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `id_usuario`
+  CONSTRAINT `id_usuario_c`
     FOREIGN KEY (`id_usuario`)
     REFERENCES `comidita-db`.`users` (`id`)
     ON DELETE NO ACTION

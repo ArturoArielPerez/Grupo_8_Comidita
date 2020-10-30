@@ -46,10 +46,22 @@ module.exports = function(sequelize, dataTypes) {
     }
     let config = {
         tableName: "users",
-        timestamp: true,
-        undersored: true
+        timestamps: true,    
+        underscored: true
 
     }
     const User = sequelize.define(alias, cols, config);
+    // Movie.belongsTo(models.Generos,{
+    //     as : 'genero',
+    //     foreignKey : 'genre_id'
+    // })
+    User.associate = function(models) {
+        User.belongsToMany(models.Products,{
+            as : 'products', // Users.products
+            through : 'cart',//tabla intermedia 
+            foreignKey : 'user_id',//la clave foranea de este modelo en esa tabla intermedia
+            otherKey : 'product_id'//la otra clave foranea del otro modelo en cuestion en esa tabla intermedia
+        })
+    }
     return User;
 }

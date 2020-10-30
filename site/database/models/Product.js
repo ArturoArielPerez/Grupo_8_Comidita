@@ -37,9 +37,21 @@ module.exports = function(sequelize, dataTypes) {
     }
 
     const Product = sequelize.define(alias, cols, config);
+
     Product.associate = function(models) {
         //Pertenece a..
-        Product.belongsTo(models.Category, { as: 'category', foreingKey: 'id_categoria' })
+        Product.belongsTo(models.Categories ,
+             { 
+                 as: 'category', 
+                foreingKey: 'id_categoria'
+             })
+
+        Product.belongsToMany(models.Users,{
+            as : 'users', // Users.products
+            through : 'cart',//tabla intermedia 
+            foreignKey : 'product_id',//la clave foranea de este modelo en esa tabla intermedia
+            otherKey : 'user_id'//la otra clave foranea del otro modelo en cuestion en esa tabla intermedia
+        })
     }
     return Product;
 }
