@@ -88,7 +88,7 @@
                           <div class="tab-pane fade show active " id="productos" role="tabpanel" aria-labelledby="profile-tab">
 
                               <div class="row productos p-4">
-                                  <% productos.forEach(producto => { %>
+                                  
 
                                       <div class="col-12 col-md-3 col-xl-2">
 
@@ -98,21 +98,21 @@
                                                   <a href=""><img src="/images/image-not-found.png " alt=" "></a>
                                               </figure>
 
-                                              <%if (producto.nombre.length > 10) {%>
+                                              
                                                   <p>
-                                                      <%- producto.nombre.slice(0,20) + '...'%>
+                                                     
                                                   </p>
-                                                  <%}%>
+                                                
 
                                                       <div class="d-flex justify-content-around">
-                                                          <form action="/products/delete/<%= producto.id %>?_method=DELETE" method="POST">
+                                                          <form action="/products/delete/?_method=DELETE" method="POST">
                                                               <button class="btn btn-outline-light"> <h4 class="fas fa-trash-alt text-danger"></h4></button>
                                                           </form>
                                                       </div>
                                           </div>
                                       </div>
 
-                                      <% }) %>
+                                  
                               </div>
                               <!--finaliza el row-->
                           </div>

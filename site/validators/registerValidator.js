@@ -1,5 +1,3 @@
-/* const usuarios = require('../data/users'); */
-
 const db = require('../database/models')
 
 const { check, validationResult, body } = require('express-validator');
@@ -25,26 +23,18 @@ module.exports = [
 
     body('email')
     .custom(function(value) {
-        /* for (let i = 0; i < usuarios.length; i++) {
-            if (usuarios[i].email == value) {
-                return false
-            }
-        }
-        return true */
 
-        return db.Users.findOne({
+        return db.Usuarios.findOne({
                 where: {
-
                     email: value
                 }
             })
             .then(user => {
                 if (user) {
-                    return Promise.reject('Este mail ya esta registrado ')
+                    return Promise.reject('Este email ya esta registrado ')
                 }
             })
     }),
-    /* .withMessage('Este mail ya está registrado'), */
 
     check('contraseña')
     .isLength({
