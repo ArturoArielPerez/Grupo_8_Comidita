@@ -10,13 +10,13 @@
                     <div class="row col-sm-12 col-md-8 col-lg-8 formulario">
 
                         <i class="fas fa-user-circle"></i>
-
+ 
                         <label for="email">Email</label>
                         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<%= (typeof old != 'undefined' && old.email)?old.email:'' %>" placeholder="email" name="email">
                         <small class="text-danger"><%= (typeof errors != 'undefined' && errors.email)?errors.email.msg: "" %> </small>
 
                         <label for="contraseña">Contraseña</label>
-                        <input type="password" name="contraseña" class="form-control" id="exampleInputPassword1">
+                        <input type="password" name="contraseña" class="form-control" id="exampleInputPassword1" placeholder='***********************'>
                         <small class="text-danger"><%= (typeof errors != 'undefined' && errors.contraseña)?errors.contraseña.msg: "" %> </small>
 
                         <div class="custom-control custom-checkbox recordatorio">
