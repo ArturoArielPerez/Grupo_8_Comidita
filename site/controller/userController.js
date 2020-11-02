@@ -25,7 +25,7 @@ module.exports = {
                 apellido: req.body.apellido.trim(),
                 email: req.body.email.trim(),
                 contraseña: bcrypt.hashSync(req.body.contraseña.trim(), 10),
-                avatar: (req.files[0]) ? req.files[0].filesname : 'default.png',
+                avatar: (req.files[0]) ? req.files[0].filename : 'image-not-found.png',
                 rol: 'usuario'
             })
 
@@ -111,6 +111,40 @@ module.exports = {
                 })
             })
         }
+    },
+    updateProfile: function(req,res){
+        db.Usuarios.update({
+            avatar: (req.files[0]) ? req.files[0].filename : req.session.user.avatar
+        },
+        {
+            where:{
+                id: req.params.id
+            }
+        }
+        )
+        .then(result =>{
+            console.log(result);
+            return res.redirect('/users/profile');
+        })
+        .catch(error =>{
+            console.log(error);
+        })
+    },
+    delete: function(req,res){
+        if(fs.existsSync('public/images'+req.session.user.avatar)&&req.session.user.avatar != "image-not-found.png"){
+            fs.unlinkSync('public/images'+req.session.user.avatar)
+        }
+        req.session.destroy();
+        if(req.cookies.userComidita){
+            res.cookie('userComidita','',{maxAge:-1});
+        }
+        db.Usuarios.destroy({
+            where:{
+                id:req.params.id
+            }
+        })
+        return res.redirect('/')
     }
+    
 
 }
