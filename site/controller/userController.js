@@ -73,7 +73,7 @@ module.exports = {
                 }
 
                 if (req.body.recordatorio) {
-                    res.cookie('Comidita', req.session.usuario, { maxAge: 1000 * 60 * 2 })
+                    res.cookie('Comidita', req.session.usuario, { maxAge: 1000 * 60 * 10 })
                 }
 
                 res.locals.user = req.session.user;
