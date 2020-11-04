@@ -9,35 +9,39 @@
           <div class="row col-lg-6 col-md-6 col-9 formulario">
            <h1>Registrarse</h1>             
             <label for="nombre">nombre</label>  
-           <input type="text" name="nombre" class="form-control <%= (typeof old != 'undefined' && old.nombre)?"is-valid":(typeof errors != 'undefined' && errors.nombre)?"is-invalid": ""  %>" value="<%= (typeof old != 'undefined' && old.nombre)?old.nombre:'' %>">   
+           <input id="nombre" type="text" name="nombre" class="form-control <%= (typeof old != 'undefined' && old.nombre)?"is-valid":(typeof errors != 'undefined' && errors.nombre)?"is-invalid": ""  %>" value="<%= (typeof old != 'undefined' && old.nombre)?old.nombre:'' %>">   
            <small class="text-danger"><%= (typeof errors != 'undefined' && errors.nombre)?errors.nombre.msg: "" %> </small>
+           <div class="nombre invalid-feedback" id="errorNombre"></div>
 
            <label for="apellido">apellido</label>  
-           <input type="text" name="apellido" class="form-control <%= (typeof old != 'undefined' && old.apellido)?"is-valid":(typeof errors != 'undefined' && errors.apellido)?"is-invalid": ""  %>" value="<%= (typeof old != 'undefined' && old.apellido)?old.apellido:'' %>">   
+           <input type="text" name="apellido" id="apellido" class="form-control <%= (typeof old != 'undefined' && old.apellido)?"is-valid":(typeof errors != 'undefined' && errors.apellido)?"is-invalid": ""  %>" value="<%= (typeof old != 'undefined' && old.apellido)?old.apellido:'' %>">   
            <small class="text-danger"><%= (typeof errors != 'undefined' && errors.apellido)?errors.apellido.msg: "" %> </small>
+           <div class="apellido invalid-feedback" id="errorApellido"></div>
 
            <label for="email">Email</label> 
-           <input type="email" name="email" id="" class="form-control <%= (typeof old != 'undefined' && old.email && !errors.email)?"is-valid":(typeof errors != 'undefined' && errors.email)?"is-invalid": ""  %>" value="<%= (typeof old != 'undefined' && old.email)?old.email:'' %>">
+           <input type="email" name="email" id="email" class="form-control <%= (typeof old != 'undefined' && old.email && !errors.email)?"is-valid":(typeof errors != 'undefined' && errors.email)?"is-invalid": ""  %>" value="<%= (typeof old != 'undefined' && old.email)?old.email:'' %>">
            <small class="text-danger"><%= (typeof errors != 'undefined' && errors.email)?errors.email.msg: "" %> </small>
-
-
+           <div class="email invalid-feedback" id="errorEmail"></div>
 
 
            <label for="contraseña">Contraseña</label>
-           <input type="password" name="contraseña" id="" class="form-control <%= (typeof errors != 'undefined' && errors.contraseña)?"is-invalid": ""  %>"> 
+           <input type="password" name="contraseña" id="contraseña" class="form-control <%= (typeof errors != 'undefined' && errors.contraseña)?"is-invalid": ""  %>"> 
            <small class="text-danger"><%= (typeof errors != 'undefined' && errors.contraseña)?errors.contraseña.msg: "" %> </small>
+           <div class="contraseña invalid-feedback" id="errorContraseña"></div>
 
            
            
            <label for="contraseña2">Repetir Contraseña</label>
-           <input type="password" name="contraseña2" id="" class="form-control <%= (typeof errors != 'undefined' && errors.contraseña2)?"is-invalid": ""  %>">
+           <input type="password" name="contraseña2" id="contraseña2" class="form-control <%= (typeof errors != 'undefined' && errors.contraseña2)?"is-invalid": ""  %>">
            <small class="text-danger"><%= (typeof errors != 'undefined' && errors.contraseña2)?errors.contraseña2.msg: "" %> </small>
+           <div class="contraseña2 invalid-feedback" id="errorContraseña2"></div>
  
            
            
            <label for="avatar">Elija una imagen</label>
-           <input type="file" class="form-control" name='avatar'>
+           <input type="file" class="form-control" name='avatar' id="avatar">
            <small class="text-danger"><%= (typeof errorFormato != 'undefined')?errorFormato: "" %> </small>
+           <div class="avatar invalid-feedback" id="errorAvatar"></div>
           
            <div>
             <button type="submit" class="btn btn-primary">Registrarse</button>
@@ -48,6 +52,8 @@
      </form> 
      
      <%- include('partials/footer') %> 
+     <script src="/scripts/registerValidatorFront.js"></script>
+
 
 </body>
 </html>
