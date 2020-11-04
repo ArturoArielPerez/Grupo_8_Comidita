@@ -75,7 +75,9 @@
                                                 </div>
                                                 <div class="form-group mt-3">
                                                     <label for="">Elija una imagen</label>
-                                                    <input  type="file" class="form-control" name='avatar'>
+                                                    <input  type="file" class="form-control" name='avatar' id="avatar">
+                                                    <small class="text-danger"><%= (typeof errors != 'undefined' && errors.avatar)?errors.avatar.msg: "" %> </small>
+                                                    <div class="avatar invalid-feedback" id="errorAvatar"></div>
                                                 </div>
                                             
                                         </div>
@@ -133,7 +135,7 @@
        
 
     <%- include('partials/footer') %> 
-
+    <script src="/scripts/updateProfileValidatorFront.js"></script>
     
 </body>
 </html>

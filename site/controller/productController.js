@@ -1,5 +1,5 @@
-// const fs = require('fs');
-// const productos = require('../data/products')
+ const fs = require('fs');
+const productos = require('../data/products')
 const path = require('path');
 const { validationResult, body } = require('express-validator');
 const db = require('../database/models')
@@ -138,5 +138,8 @@ module.exports ={
             css: 'eventos.css',
             user:req.session.user
         });
+    },
+    enviarEvento: function(req,res){
+        
     }
 }

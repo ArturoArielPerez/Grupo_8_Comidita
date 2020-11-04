@@ -2,6 +2,7 @@ const qs = function(element){
     return document.querySelector(element)
 }
 
+
 window.addEventListener('load', function(){
 
     let form = qs('form');
@@ -9,12 +10,12 @@ window.addEventListener('load', function(){
     let inputNombre = document.getElementById('nombre');
     let inputApellido = document.getElementById('apellido');
     let inputEmail = document.getElementById('email');
-    let inputContraseña = document.getElementById('contraseña');
-    let inputContraseña2 = document.getElementById('contraseña2');
-
+    let inputTelefono = document.getElementById('telefono');
+    let inputDia = document.getElementById('dia');
+    let inputHorario = document.getElementById('horario');
+    let inputComentario = document.getElementById('comentario');
     let regexEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    let regexContraseña =  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/;
-
+    let regexTelefono = /^([0-9])*$/
 
     inputNombre.addEventListener('keyup', function(){
 
@@ -52,6 +53,26 @@ window.addEventListener('load', function(){
                 errorApellido.innerHTML = ''
                 break;
         }
+    });
+
+    inputTelefono.addEventListener('keyup', function(){
+        switch (true) {
+            case this.value == '':
+                errorTelefono.innerHTML = 'El campo es obligatorio'
+                this.classList.add('is-invalid')                
+                break;
+                case !regexTelefono.test(this.value):
+                    errorTelefono.innerHTML = 'El formato no corresponde'
+                    this.classList.add('is-invalids')
+                case this.value.length < 9:
+                    errorTelefono.innerHTML = 'Debe tener 10 digitos'
+                    this.classList.add('is-invalid')        
+            default:
+                this.classList.remove('is-invalid')
+                this.classList.add('is-valid')
+                errorTelefono.innerHTML = ';'
+                break;
+        }
     })
 
     inputEmail.addEventListener('keyup', function(){
@@ -70,46 +91,58 @@ window.addEventListener('load', function(){
                 errorEmail.innerHTML = ''
                 break;
         }
-    })
-    inputContraseña.addEventListener('keyup', function(){
+    });
+
+
+    inputComentario.addEventListener('keyup', function(){
+
         switch (true) {
             case this.value == '':
-            errorContraseña.innerHTML = 'El campo es obligarorio'
-            this.classList.add('is-invalid')                
+                errorComentario.innerHTML = 'Este campo es obligatorio';
+                this.classList.add('is-invalid'); 
                 break;
-            case!regexContraseña.test(this.value):
-                errorContraseña.innerHTML = 'La contraseña debe tener entre 6 y 12 caracteres, una mayuscula, una minuscula y un número'
-                this.classList.add('is-invalid')
-                break;
+            case this.value.trim().length <= 5:
+                errorComentario.innerHTML = "Tenés que poner al menos 5 caracteres";
+                this.classList.add('is-invalid');                
+                break;         
             default:
                 this.classList.remove('is-invalid')
                 this.classList.add('is-valid')
-                errorContraseña.innerHTML = ''
+                errorComentario.innerHTML = ''
+                break;
+        }
+    });
+
+    inputDia.addEventListener('blur', function(){
+
+        switch (true) {
+            case this.value == '':
+                errorDia.innerHTML = 'El campo es obligatorio. Seleccione un dia.';
+                this.classList.add('is-invalid')                
+                break;        
+            default:
+                this.classList.remove('is-invalid')
+                this.classList.add('is-valid')
+                errorDia.innerHTML = '';
                 break;
         }
     })
 
-    inputContraseña.addEventListener('mouseover', function(){
-        this.setAttribute('title', 'La contraseña debe tener entre 6 y 12 caracteres, una mayuscula, una minuscula y un número')
-    })
+    inputHorario.addEventListener('blur', function(){
 
-    inputContraseña2.addEventListener('keyup', function(){
         switch (true) {
             case this.value == '':
-            errorContraseña2.innerHTML = 'El campo es obligarorio'
-            this.classList.add('is-invalid')                
-                break;
-            case this.value != inputContraseña.value:
-                errorContraseña2.innerHTML = 'Las contraseñas no coinciden. Reitentar'
-                this.classList.add('is-invalid')
-                break;
+                errorHorario.innerHTML = 'El campo es obligatorio. Seleccione un horario.';
+                this.classList.add('is-invalid')                
+                break;        
             default:
                 this.classList.remove('is-invalid')
                 this.classList.add('is-valid')
-                errorContrseña2.innerHTML = ''
+                errorHorario.innerHTML = '';
                 break;
         }
     })
+
 
     form.addEventListener('submit', function(e){
 
@@ -129,4 +162,7 @@ window.addEventListener('load', function(){
             form.submit();
         }
     })
+
+
+
 })

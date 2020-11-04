@@ -25,8 +25,9 @@ router.delete('/:id', sessionUserCheck, controller.eliminar);
 router.get('/cart', sessionUserCheck, controller.vistaCart);
 
 router.get('/sucursal', controller.Sucursal);
-router.get('/eventos', controller.eventos);
 
+router.get('/eventos', controller.eventos);
+router.post('/eventos', controller.enviarEvento);
 
 
 module.exports = router;
