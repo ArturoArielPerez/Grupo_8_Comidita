@@ -19,7 +19,7 @@
                                             <form action="" method="POST" enctype="multipart/form-data">
                                                 <div class="form-group">
                                                     <label for="exampleFormControlInput1">Categoría</label>
-                                                    <input type="text"  id="categoria" class="form-control <%= (typeof old != 'undefined' && old.categoria)?"is-valid":(typeof errors != 'undefined' && errors.categoria)?"is-invalid": ""  %>" value="<%= (typeof old != 'undefined' && old.categoria)?old.categoria:'' %>" name="categoria">
+                                                    <input type="text"  id="categoria" class="form-control <%= (typeof old != 'undefined' && old.categoria)?"is-valid":(typeof errors != 'undefined' && errors.categoria)?"is-invalid": ""  %>" value="<%= (typeof old != 'undefined' && old.categoria)?old.categoria:'' %>" name="id_categoria">
                                                     <small class="text-danger"><%= (typeof errors != 'undefined' && errors.categoria)?errors.categoria.msg: "" %> </small> <div class="categoria invalid-feedback" id="errorCategoria"></div>
                                                 </div>
                                                 <div class="form-group">
@@ -45,8 +45,8 @@
                                                 </div>
                                                 <div class="form-group mt-3">
                                                     <label for="">Elija una imagen</label>
-                                                    <input type="file" id="imagen" class="form-control <%= (typeof old != 'undefined' && old.imagen)?"is-valid":(typeof errors != 'undefined' && errors.imagen)?"is-invalid": ""  %>" value="<%= (typeof old != 'undefined' && old.imagen)?old.imagen:'' %>" name='imagen'>
-                                                    <small class="text-danger"><%= (typeof errors != 'undefined' && errors.imagen)?errors.imagen.msg: "" %> </small>
+                                                    <input type="file" id="imagen" class="form-control <%= (typeof old != 'undefined' && old.imagenes)?"is-valid":(typeof errors != 'undefined' && errors.imagenes)?"is-invalid": ""  %>" value="<%= (typeof old != 'undefined' && old.imagen)?old.imagenes:'' %>" name='imagenes'>
+                                                    <small class="text-danger"><%= (typeof errors != 'undefined' && errors.imagenes)?errors.imagenes.msg: "" %> </small>
                                                     <div class="imagen invalid-feedback" id="errorImagen"></div>
                                                 </div>
                                                 <div class="mt-5 mr-5 d-flex justify-content-end">

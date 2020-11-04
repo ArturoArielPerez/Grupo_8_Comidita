@@ -24,6 +24,10 @@ module.exports = (sequelize, dataTypes)=>{
         imagenes:{
             type: dataTypes.STRING(100),
             allowNull: false
+        },
+        id_categoria:{
+            type: dataTypes.INTEGER(11),
+            allowNull: false
         }
        
     }
@@ -35,6 +39,13 @@ module.exports = (sequelize, dataTypes)=>{
     }
 
     const Producto = sequelize.define(alias, cols, config);
+
+    Producto.associate = function(models){
+        Producto.belongsTo(models.Categorias,{
+            as: 'categorias',
+            foreingKey: 'id'
+        });
+    }
 
     return Producto;
 }

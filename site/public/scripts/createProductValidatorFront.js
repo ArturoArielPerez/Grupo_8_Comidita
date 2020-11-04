@@ -113,7 +113,7 @@ window.addEventListener('load', function(){
             inputImagen.value = '';
             return false;
         }else{
-            this.classList('is-invalid')
+            this.classList.add('is-invalid')
         }
     })
 

@@ -3,7 +3,7 @@ const db = require('../database/models')
 const { check, validationResult, body } = require('express-validator');
 
 module.exports = [
-    check('categoria')
+    check('id_categoria')
     .isLength({
         min: 1
     })

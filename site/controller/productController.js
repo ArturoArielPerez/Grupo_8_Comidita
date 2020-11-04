@@ -1,5 +1,5 @@
-const fs = require('fs');
-const productos = require('../data/products')
+// const fs = require('fs');
+// const productos = require('../data/products')
 const path = require('path');
 const { validationResult, body } = require('express-validator');
 const db = require('../database/models')
@@ -43,11 +43,11 @@ module.exports ={
             
         db.Productos.create({
 
-            categoria: req.body.categoria.trim(),
+            id_categoria: req.body.id_categoria,
             nombre: req.body.nombre.trim(),
             precio: Number(req.body.precio),
             descripcion: req.body.descripcion.trim(),
-            imagen: (req.files[0]) ? req.files[0].filename : ''
+            imagenes: (req.files[0]) ? req.files[0].filename : ''
         })
 
         .then(result => {
