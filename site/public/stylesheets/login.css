@@ -100,7 +100,6 @@
         flex-wrap: wrap;
         flex-direction: column;
         align-self: center;
-        height: 65vh;
     }
     form .formulario {
         justify-content: center;

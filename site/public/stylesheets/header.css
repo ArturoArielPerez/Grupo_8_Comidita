@@ -19,6 +19,7 @@ header .avatar {
     /* HEADER */
     header img {
         width: 50%;
+        display: flex;
         border-radius: 90%;
         border: solid 1px black;
     }
@@ -27,7 +28,7 @@ header .avatar {
 @media(min-width: 571px) and (max-width: 768px) {
     /* Header */
     header img {
-        width: 20%;
+        width: 15%;
         border-radius: 90%;
         border: solid 1px black;
         display: flex;
@@ -37,6 +38,10 @@ header .avatar {
 
 @media(max-width:570px) {
     /*Header*/
+    header{
+        margin-bottom: 20px;
+    }
+
     header img {
         width: 20%;
         border-radius: 90%;

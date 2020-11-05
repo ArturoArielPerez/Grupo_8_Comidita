@@ -1,12 +1,17 @@
 @import 'style.css';
 
 .p-img{
-  color: black;
-  font-weight: normal;
+  color: blue;
+  font-weight: bold;
 }
 
 .card{
   border: solid 1px black;
+}
+
+.card-title{
+  text-align: center;
+    color: green;
 }
 
 @media(min-width:768px){
