@@ -6,18 +6,12 @@ module.exports = (sequelize, dataTypes)=>{
         id:{
             type: dataTypes.INTEGER(11),
             allowNull: false,
-            autoIncrement: true,
             primaryKey: true
         },
         nombre:{
             type: dataTypes.STRING(100),
             allowNull: false
-        },
-        imagen:{
-            type: dataTypes.STRING(100),
-            allowNull: false
         }
-       
     }
 
     let config = {
@@ -26,6 +20,13 @@ module.exports = (sequelize, dataTypes)=>{
     }
 
     const Categoria = sequelize.define(alias, cols, config);
+
+    Categoria.associate = function(models){
+        Categoria.hasMany(models.Productos,{
+            as: 'productos',
+            foreingKey: 'id_categoria'
+        });
+    }
 
     return Categoria;
 }

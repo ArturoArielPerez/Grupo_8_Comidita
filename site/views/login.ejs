@@ -5,19 +5,21 @@
     <body>
         <%- include('partials/header') %>
 
-            <form action="" method="POST" class="container">
+            <form action="" method="POST" class="container" id="formulario">
                 <div class="row">
                     <div class="row col-sm-12 col-md-8 col-lg-8 formulario">
 
                         <i class="fas fa-user-circle"></i>
-
+ 
                         <label for="email">Email</label>
                         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<%= (typeof old != 'undefined' && old.email)?old.email:'' %>" placeholder="email" name="email">
                         <small class="text-danger"><%= (typeof errors != 'undefined' && errors.email)?errors.email.msg: "" %> </small>
+                        <div class="email invalid-feedback" id="errorEmail"></div>
 
                         <label for="contraseña">Contraseña</label>
-                        <input type="password" name="contraseña" class="form-control" id="exampleInputPassword1">
+                        <input type="password" name="contraseña" class="form-control" id="exampleInputPassword1" placeholder='***********************' name="contrseña">
                         <small class="text-danger"><%= (typeof errors != 'undefined' && errors.contraseña)?errors.contraseña.msg: "" %> </small>
+                        <div class="contraseña invalid-feedback" id="errorContraseña"></div>
 
                         <div class="custom-control custom-checkbox recordatorio">
                             <input type="checkbox" class="custom-control-input <%= (typeof old != 'undefined' && old.recordatorio)?" is-valid ":(typeof errors != 'undefined' && errors.recordatorio)?"is-invalid ": " "  %>" id="customCheck1" name="recordatorio">
@@ -34,6 +36,7 @@
             </form>
 
             <%- include('partials/footer') %>
+            <script src="/scripts/loginValidatorFront.js"></script>
     </body>
 
 </html>

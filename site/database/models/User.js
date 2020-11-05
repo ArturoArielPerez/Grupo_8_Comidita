@@ -56,7 +56,7 @@ module.exports = function(sequelize, dataTypes) {
     //     foreignKey : 'genre_id'
     // })
     User.associate = function(models) {
-        User.belongsToMany(models.Products,{
+        User.belongsToMany(models.Productos,{
             as : 'products', // Users.products
             through : 'cart',//tabla intermedia 
             foreignKey : 'user_id',//la clave foranea de este modelo en esa tabla intermedia

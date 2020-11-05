@@ -24,6 +24,10 @@ module.exports = (sequelize, dataTypes)=>{
         imagenes:{
             type: dataTypes.STRING(100),
             allowNull: false
+        },
+        id_categoria:{
+            type: dataTypes.INTEGER(11),
+            allowNull: false
         }
        
     }
@@ -34,28 +38,14 @@ module.exports = (sequelize, dataTypes)=>{
         underscored: true
     }
 
-<<<<<<< HEAD:site/database/models/Product.js
-    const Product = sequelize.define(alias, cols, config);
-
-    Product.associate = function(models) {
-        //Pertenece a..
-        Product.belongsTo(models.Categories ,
-             { 
-                 as: 'category', 
-                foreingKey: 'id_categoria'
-             })
-
-        Product.belongsToMany(models.Users,{
-            as : 'users', // Users.products
-            through : 'cart',//tabla intermedia 
-            foreignKey : 'product_id',//la clave foranea de este modelo en esa tabla intermedia
-            otherKey : 'user_id'//la otra clave foranea del otro modelo en cuestion en esa tabla intermedia
-        })
-    }
-    return Product;
-=======
     const Producto = sequelize.define(alias, cols, config);
 
+    Producto.associate = function(models){
+        Producto.belongsTo(models.Categorias,{
+            as: 'categorias',
+            foreingKey: 'id_categoria'
+        });
+    }
+
     return Producto;
->>>>>>> 07838387a80e2343c7e81ba14fa6edcf2bdc8e6e:site/database/models/Producto.js
 }

@@ -1,6 +1,3 @@
-const usuarios = require('../data/users');
-const productos = require('../data/products');
-
 const db = require('../database/models')
 const { validationResult, body } = require('express-validator');
 const bcrypt = require('bcrypt');
@@ -23,14 +20,14 @@ module.exports = {
 
         if (errors.isEmpty()) {
 
-            db.Users.create({
+            db.Usuarios.create({
 
                 nombre: req.body.nombre.trim(),
                 apellido: req.body.apellido.trim(),
-                email: req.body.email,
-                password: bcrypt.hashSync(req.body.contraseña.trim(), 10),
-                avatar: (req.files[0]) ? req.files[0].filesname : 'default.png',
-                rol: 'user'
+                email: req.body.email.trim(),
+                contraseña: bcrypt.hashSync(req.body.contraseña.trim(), 10),
+                avatar: (req.files[0]) ? req.files[0].filename : 'image-not-found.png',
+                rol: 'usuario'
             })
             .then(result => {
                     
@@ -61,21 +58,28 @@ module.exports = {
     processLogin: function(req, res) {
         let errors = validationResult(req);
         if (errors.isEmpty()) {
-            usuarios.forEach(usuario => {
-                if (usuario.email == req.body.email) {
-                    req.session.user = {
-                        id: usuario.id,
-                        nick: usuario.nombre + ' ' + usuario.apellido,
-                        email: usuario.email,
-                        avatar: usuario.avatar,
-                        rol: usuario.rol
-                    }
+         
+            db.Usuarios.findOne({
+                where:{
+                    email:req.body.email
                 }
             })
-            if (req.body.recordatorio) {
-                res.cookie('Comidita', req.session.usuario, { maxAge: 1000 * 60 * 2 })
-            }
-            return res.redirect('/');
+            .then(user=>{
+                req.session.user = {
+                    id: user.id,
+                    email: user.email,
+                    avatar: user.avatar,
+                    rol: user.rol
+                }
+
+                if (req.body.recordatorio) {
+                    res.cookie('Comidita', req.session.usuario, { maxAge: 1000 * 60 * 10 })
+                }
+
+                res.locals.user = req.session.user;
+                return res.redirect('/');
+            })
+            
         } else {
             return res.render('login', {
                 title: "Ingreso de Usuarios",
@@ -95,16 +99,52 @@ module.exports = {
         res.redirect('/')
 
     },
-    profile: function(req, res) {
-        res.render('profile', {
-            title: 'Perfil de usuario',
-            css: 'profile.css',
-            user: req.session.user,
-            productos: productos.filter(producto => {
-                return producto.categoria != "visited" && producto.categoria != "in-sale"
+    profile:function(req,res){
+        if(req.session.user){
+            db.Usuarios.findByPk(req.session.user.id)
+            .then(user => {
+                res.render('profile',{
+                    title:"Perfil de Usuario",
+                    css:'profile.css',
+                    usuario:user
+        
+                })
             })
+        }
+    },
+    updateProfile: function(req,res){
+        db.Usuarios.update({
+            avatar: (req.files[0]) ? req.files[0].filename : req.session.user.avatar
+        },
+        {
+            where:{
+                id: req.params.id
+            }
+        }
+        )
+        .then(result =>{
+            console.log(result);
+            return res.redirect('/users/profile');
         })
-
+        .catch(error =>{
+            console.log(error);
+        })
+    },
+    delete: function(req,res){
+        if(fs.existsSync('public/images'+req.session.user.avatar)&&req.session.user.avatar != "image-not-found.png"){
+            fs.unlinkSync('public/images'+req.session.user.avatar)
+        }
+        req.session.destroy();
+        if(req.cookies.userComidita){
+            res.cookie('userComidita','',{maxAge:-1});
+        }
+        db.Usuarios.destroy({
+            where:{
+                id:req.params.id
+            }
+        })
+        return res.redirect('/')
     }
+    
 
 }

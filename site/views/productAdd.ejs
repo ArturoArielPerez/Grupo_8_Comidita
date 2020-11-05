@@ -19,26 +19,35 @@
                                             <form action="" method="POST" enctype="multipart/form-data">
                                                 <div class="form-group">
                                                     <label for="exampleFormControlInput1">Categoría</label>
-                                                    <input type="text" class="form-control" id="exampleFormControlInput1" value="" name="categoria">
+                                                    <input type="text"  id="categoria" class="form-control <%= (typeof old != 'undefined' && old.categoria)?"is-valid":(typeof errors != 'undefined' && errors.categoria)?"is-invalid": ""  %>" value="<%= (typeof old != 'undefined' && old.categoria)?old.categoria:'' %>" name="id_categoria">
+                                                    <small class="text-danger"><%= (typeof errors != 'undefined' && errors.categoria)?errors.categoria.msg: "" %> </small> <div class="categoria invalid-feedback" id="errorCategoria"></div>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="exampleFormControlInput1">Titulo de la publicación</label>
-                                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="nombre">
+                                                    <input type="text"  id="nombre" placeholder="" class="form-control <%= (typeof old != 'undefined' && old.nombre)?"is-valid":(typeof errors != 'undefined' && errors.nombre)?"is-invalid": ""  %>" value="<%= (typeof old != 'undefined' && old.nombre)?old.nombre:'' %>" name="nombre">
+                                                    <small class="text-danger"><%= (typeof errors != 'undefined' && errors.nombre)?errors.nombre.msg: "" %> </small>
+                                                    <div class="nombre invalid-feedback" id="errorNombre"></div>
                                                 </div>
 
                                                 <div class="form-row">
                                                     <div class="col">
                                                         <label for="">Precio</label>
-                                                        <input type="number" class="form-control" name="precio">
+                                                        <input type="number" id="precio" class="form-control <%= (typeof old != 'undefined' && old.precio)?"is-valid":(typeof errors != 'undefined' && errors.precio)?"is-invalid": ""  %>" value="<%= (typeof old != 'undefined' && old.precio)?old.precio:'' %>" name="precio">
+                                                        <small class="text-danger"><%= (typeof errors != 'undefined' && errors.precio)?errors.precio.msg: "" %> </small>
+                                                        <div class="precio invalid-feedback" id="errorPrecio"></div>
                                                     </div>
                                                 </div>
                                                 <div class="form-group mt-3">
                                                     <label for="exampleFormControlTextarea1">Descripción</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="descripcion"></textarea>
+                                                    <textarea class="form-control" id="descripcion"  class="form-control <%= (typeof old != 'undefined' && old.descripcion)?"is-valid":(typeof errors != 'undefined' && errors.descripcion)?"is-invalid": ""  %>" value="<%= (typeof old != 'undefined' && old.descripcion)?old.descripcion:'' %>" rows="3" name="descripcion"></textarea>
+                                                    <small class="text-danger"><%= (typeof errors != 'undefined' && errors.descripcion)?errors.descripcion.msg: "" %> </small>
+                                                    <div class="descripcion invalid-feedback" id="errorDescripcion"></div>
                                                 </div>
                                                 <div class="form-group mt-3">
                                                     <label for="">Elija una imagen</label>
-                                                    <input type="file" class="form-control" name='imagen'>
+                                                    <input type="file" id="imagen" class="form-control <%= (typeof old != 'undefined' && old.imagenes)?"is-valid":(typeof errors != 'undefined' && errors.imagenes)?"is-invalid": ""  %>" value="<%= (typeof old != 'undefined' && old.imagen)?old.imagenes:'' %>" name='imagenes'>
+                                                    <small class="text-danger"><%= (typeof errors != 'undefined' && errors.imagenes)?errors.imagenes.msg: "" %> </small>
+                                                    <div class="imagen invalid-feedback" id="errorImagen"></div>
                                                 </div>
                                                 <div class="mt-5 mr-5 d-flex justify-content-end">
                                                     <button type="reset" class="btn btn-secondary mr-3">Borrar</button>
@@ -57,7 +66,7 @@
         </div>
 
        <%- include('partials/footer') %>
-
+       <script src="/scripts/createProductValidatorFront.js"></script>
     </body>
 
 </html>

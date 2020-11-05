@@ -1,6 +1,8 @@
-const fs = require('fs');
+ const fs = require('fs');
 const productos = require('../data/products')
 const path = require('path');
+const { validationResult, body } = require('express-validator');
+const db = require('../database/models')
 
 module.exports ={
     detalle: function(req,res){
@@ -35,27 +37,36 @@ module.exports ={
     },
     publicar: function(req,res,next){
 
-        let lasId = 1;
-        
-        productos.forEach(producto=>{
-            if(producto.id > lasId){
-                lasId = producto.id
-            }
+        let errors = validationResult(req);
+
+        if (errors.isEmpty()) {
+            
+        db.Productos.create({
+
+            id_categoria: req.body.id_categoria,
+            nombre: req.body.nombre.trim(),
+            precio: Number(req.body.precio),
+            descripcion: req.body.descripcion.trim(),
+            imagenes: (req.files[0]) ? req.files[0].filename : ''
         })
-        
-        let newProduct ={
-            id: lasId+1,
-            nombre: req.body.nombre,
-            precio:Number(req.body.precio),
-            categoria: req.body.categoria,
-            descripcion: req.body.descripcion,
-            imagen: (req.files[0])?req.files[0].filename:"default-image.png"
+
+        .then(result => {
+                console.log(result);
+                return res.redirect('/products/carta')
+
+            })
+            .catch(errores => {
+                console.log(errores);
+            })
+        } else {
+            res.render('productAdd', {
+                title: "Carga de productos",
+                css: 'productAdd.css',
+                errors: errors.mapped(),
+                old: req.body,
+                user: req.session.user
+            });
         }
-        productos.push(newProduct);
-
-        fs.writeFileSync(path.join(__dirname, '..', 'data', 'products.json'), JSON.stringify(productos), 'utf-8');
-
-        res.redirect('/products/carta');
 
     },
     eliminar : function(req,res) {
@@ -94,7 +105,7 @@ module.exports ={
                 producto.id = Number(id);
                 producto.nombre = req.body.nombre.trim();
                 producto.precio = Number(req.body.precio);
-                producto.categoria = req.body.categoria.trim();
+                producto.categoria = req.body.categoria,
                 producto.descripcion = req.body.descripcion.trim();
                 producto.imagen = (req.files[0]? req.files[0].filename : producto.imagen);
 
@@ -127,5 +138,8 @@ module.exports ={
             css: 'eventos.css',
             user:req.session.user
         });
+    },
+    enviarEvento: function(req,res){
+        
     }
 }

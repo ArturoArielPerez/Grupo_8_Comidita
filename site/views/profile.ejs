@@ -41,6 +41,10 @@
                                     Editar
                                   </button>
 
+                                  <form action="/users/delete/<%= usuario.id %>?_method=DELETE" method="POST">
+                                    <button type="submit" class="btn-sm btn-danger">Darse de baja</button>
+                                  </form>
+
                                   <!-- Modal -->
                                   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
@@ -51,32 +55,37 @@
                                             <span aria-hidden="true">&times;</span>
                                           </button>
                                         </div>
+                                        <form action="/users/updateProfile/<%= usuario.id %>?_method=PUT  " method="POST" enctype="multipart/form-data">
+
                                         <div class="modal-body">
-                                          <form action=" " method="POST" enctype="multipart/form-data">
                                                 <div class="form-group">
                                                     <label for="exampleFormControlInput1">email</label>
-                                                    <input type="email" class="form-control" id="exampleFormControlInput1" name="email">
+                                                    <input type="email" class="form-control" id="exampleFormControlInput1" name="email" value="<%- usuario.email %> " disabled>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="exampleFormControlInput1">Nombre</label>
-                                                    <input  type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="nombre">
+                                                    <input  type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="nombre" value="<%- usuario.nombre %>" disabled>
                                                 </div>
 
                                                 <div class="form-row">
                                                     <div class="col">
                                                       <label for="exampleFormControlInput1">apellido</label>
-                                                      <input  type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="apellido">
+                                                      <input  type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="apellido" value="<%- usuario.apellido %>" disabled>
                                                     </div>
                                                 </div>
                                                 <div class="form-group mt-3">
                                                     <label for="">Elija una imagen</label>
-                                                    <input  type="file" class="form-control" name='avatar'>
+                                                    <input  type="file" class="form-control" name='avatar' id="avatar">
+                                                    <small class="text-danger"><%= (typeof errors != 'undefined' && errors.avatar)?errors.avatar.msg: "" %> </small>
+                                                    <div class="avatar invalid-feedback" id="errorAvatar"></div>
                                                 </div>
+                                            
                                         </div>
                                         <div class="modal-footer">
-                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                          <button type="button" class="btn btn-primary">Save changes</button>
+                                            <button type="" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                          <button type="submit" class="btn btn-primary">Save changes</button>                                                                                   
                                         </div>
+                                     </form>
                                       </div>
                                     </div>
                                   </div>
@@ -88,7 +97,7 @@
                           <div class="tab-pane fade show active " id="productos" role="tabpanel" aria-labelledby="profile-tab">
 
                               <div class="row productos p-4">
-                                  <% productos.forEach(producto => { %>
+                                  
 
                                       <div class="col-12 col-md-3 col-xl-2">
 
@@ -98,21 +107,21 @@
                                                   <a href=""><img src="/images/image-not-found.png " alt=" "></a>
                                               </figure>
 
-                                              <%if (producto.nombre.length > 10) {%>
+                                              
                                                   <p>
-                                                      <%- producto.nombre.slice(0,20) + '...'%>
+                                                     
                                                   </p>
-                                                  <%}%>
+                                                
 
                                                       <div class="d-flex justify-content-around">
-                                                          <form action="/products/delete/<%= producto.id %>?_method=DELETE" method="POST">
+                                                          <form action="/products/delete/?_method=DELETE" method="POST">
                                                               <button class="btn btn-outline-light"> <h4 class="fas fa-trash-alt text-danger"></h4></button>
                                                           </form>
                                                       </div>
                                           </div>
                                       </div>
 
-                                      <% }) %>
+                                  
                               </div>
                               <!--finaliza el row-->
                           </div>
@@ -126,7 +135,7 @@
        
 
     <%- include('partials/footer') %> 
-
+    <script src="/scripts/updateProfileValidatorFront.js"></script>
     
 </body>
 </html>
