@@ -1,41 +1,40 @@
-module.exports = function(sequelize, dataTypes) {
-    let alias = "Products";
+module.exports = (sequelize, dataTypes)=>{
+
+    let alias = 'Productos';
+
     let cols = {
-        id: {
+        id:{
             type: dataTypes.INTEGER(11),
             allowNull: false,
             autoIncrement: true,
             primaryKey: true
         },
-
-        nombre: {
+        nombre:{
             type: dataTypes.STRING(100),
             allowNull: false
         },
-        precio: {
+        precio:{
             type: dataTypes.INTEGER(11),
             allowNull: false
         },
-        descuento: {
-            type: dataTypes.INTEGER(11),
-            allowNull: false
-        },
-        descripcion: {
+        descripcion:{
             type: dataTypes.STRING(300),
             allowNull: false
         },
-        imagenes: {
+        imagenes:{
             type: dataTypes.STRING(100),
             allowNull: false
         }
-
+       
     }
+
     let config = {
-        tableName: "products",
+        tableName: 'productos',
         timestamps: true,
         underscored: true
     }
 
+<<<<<<< HEAD:site/database/models/Product.js
     const Product = sequelize.define(alias, cols, config);
 
     Product.associate = function(models) {
@@ -54,4 +53,9 @@ module.exports = function(sequelize, dataTypes) {
         })
     }
     return Product;
+=======
+    const Producto = sequelize.define(alias, cols, config);
+
+    return Producto;
+>>>>>>> 07838387a80e2343c7e81ba14fa6edcf2bdc8e6e:site/database/models/Producto.js
 }
