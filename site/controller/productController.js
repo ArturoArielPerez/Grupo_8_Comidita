@@ -105,7 +105,7 @@ module.exports ={
                 producto.id = Number(id);
                 producto.nombre = req.body.nombre.trim();
                 producto.precio = Number(req.body.precio);
-                producto.categoria = req.body.categoria.trim();
+                producto.categoria = req.body.categoria,
                 producto.descripcion = req.body.descripcion.trim();
                 producto.imagen = (req.files[0]? req.files[0].filename : producto.imagen);
 

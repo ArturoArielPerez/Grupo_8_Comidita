@@ -24,8 +24,6 @@ module.exports = [
     .isLength({
         min:20
     })
-    .withMessage('Debes ingresar una descpcion del producto'),
-    check("imagen")
-    
+    .withMessage('Debes ingresar una descpcion del producto')    
     
 ]
