@@ -9,7 +9,6 @@
     flex-wrap: wrap;
     flex-direction: column;
     align-self: center;
-    height: 120vh;
   }
 
   form .formulario{
@@ -72,7 +71,6 @@
       flex-wrap: wrap;
       flex-direction: column;
       align-self: center;
-      height: 100vh;
     }
   
     form .formulario{

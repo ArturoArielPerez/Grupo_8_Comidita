@@ -5,10 +5,15 @@
     border: solid 1px black;
 }
 
+.titulo{
+    margin-bottom: 18px;
+}
+
 .titulo-comida {
     text-align: center;
     background-color: var(--color-bordo);
-}
+    margin-bottom: 18px;
+ }
 
 a {
     color: black;
