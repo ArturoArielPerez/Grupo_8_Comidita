@@ -28,12 +28,16 @@ module.exports ={
         });
     },
     agregar:function(req,res){
-    
-        res.render('productAdd', {
-            title: 'agregar Producto',
-            css: 'productAdd.css',
-            user:req.session.user
-        });
+        db.Categorias.findAll()
+        .then(categorias=>{
+            res.render('productAdd', {
+                title: 'agregar Producto',
+                css: 'productAdd.css',
+                user:req.session.user,
+                categorias :categorias
+            });
+        })
+       
     },
     publicar: function(req,res,next){
 
@@ -41,14 +45,14 @@ module.exports ={
 
         if (errors.isEmpty()) {
             
-        db.Productos.create({
+            db.Productos.create({
 
-            id_categoria: req.body.id_categoria,
-            nombre: req.body.nombre.trim(),
-            precio: Number(req.body.precio),
-            descripcion: req.body.descripcion.trim(),
-            imagenes: (req.files[0]) ? req.files[0].filename : ''
-        })
+                id_categoria: req.body.id_categoria,
+                nombre: req.body.nombre.trim(),
+                precio: Number(req.body.precio),
+                descripcion: req.body.descripcion.trim(),
+                imagenes: (req.files[0]) ? req.files[0].filename : ''
+            })
 
         .then(result => {
                 console.log(result);
@@ -65,6 +69,7 @@ module.exports ={
                 errors: errors.mapped(),
                 old: req.body,
                 user: req.session.user
+                
             });
         }
 

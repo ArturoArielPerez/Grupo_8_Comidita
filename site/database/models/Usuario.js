@@ -9,7 +9,7 @@ module.exports = (sequelize, dataTypes)=>{
             autoIncrement: true,
             primaryKey: true
         },
-        nombre:{
+        nombe:{
             type: dataTypes.STRING(100),
             allowNull: false
         },

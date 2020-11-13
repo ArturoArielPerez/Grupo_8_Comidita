@@ -21,8 +21,7 @@ module.exports = {
         if (errors.isEmpty()) {
 
             db.Usuarios.create({
-
-                nombre: req.body.nombre.trim(),
+                nombe: req.body.nombre.trim(),
                 apellido: req.body.apellido.trim(),
                 email: req.body.email.trim(),
                 contraseña: bcrypt.hashSync(req.body.contraseña.trim(), 10),
