@@ -1,29 +1,29 @@
-const qs = function(element){
+const qs = function(element) {
     return document.querySelector(element)
 }
 
-window.addEventListener('load', function(){
+window.addEventListener('load', function() {
 
     let form = qs('form');
     let elementos = form.elements;
-    let inputCategoria = document.getElementById('categoria');
+    let selectCategoria = document.getElementById('categoria');
     let inputNombre = document.getElementById('nombre');
     let inputPrecio = document.getElementById('precio');
     let inputDescripcion = document.getElementById('descripcion');
     let inputImagen = document.getElementById('imagen');
     let allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
 
-    inputCategoria.addEventListener('blur', function(){
+    selectCategoria.addEventListener('blur', function() {
 
         switch (true) {
-            case this.value == '':
+            case this.value == ' ':
                 errorCategoria.innerHTML = 'Este campo es obligatorio';
-                this.classList.add('is-invalid'); 
+                this.classList.add('is-invalid');
                 break;
-            case this.value.trim().length <= 3:
-                errorCategoria.innerHTML = "Tenés que poner al menos 5 letras";
-                this.classList.add('is-invalid');                
-                break;         
+            case this.value.trim().length <= 4:
+                errorCategoria.innerHTML = "Debe poner una categoria";
+                this.classList.add('is-invalid');
+                break;
             default:
                 this.classList.remove('is-invalid')
                 this.classList.add('is-valid')
@@ -32,17 +32,17 @@ window.addEventListener('load', function(){
         }
     })
 
-    inputNombre.addEventListener('blur', function(){
+    inputNombre.addEventListener('blur', function() {
 
         switch (true) {
             case this.value == '':
                 errorNombre.innerHTML = 'Este campo es obligatorio';
-                this.classList.add('is-invalid'); 
+                this.classList.add('is-invalid');
                 break;
             case this.value.trim().length <= 1:
                 errorNombre.innerHTML = "Tenés que poner al menos 3 letras";
-                this.classList.add('is-invalid');                
-                break;         
+                this.classList.add('is-invalid');
+                break;
             default:
                 this.classList.remove('is-invalid')
                 this.classList.add('is-valid')
@@ -51,17 +51,17 @@ window.addEventListener('load', function(){
         }
     });
 
-    inputPrecio.addEventListener('blur', function(){
+    inputPrecio.addEventListener('blur', function() {
 
         switch (true) {
             case this.value == '':
                 errorPrecio.innerHTML = 'Este campo es obligatorio';
-                this.classList.add('is-invalid'); 
+                this.classList.add('is-invalid');
                 break;
             case this.value.trim().length <= 1:
                 errorPrecio.innerHTML = "Tenés que poner al menos 2 cifras";
-                this.classList.add('is-invalid');                
-                break;         
+                this.classList.add('is-invalid');
+                break;
             default:
                 this.classList.remove('is-invalid')
                 this.classList.add('is-valid')
@@ -70,17 +70,17 @@ window.addEventListener('load', function(){
         }
     });
 
-    inputDescripcion.addEventListener('keyup', function(){
+    inputDescripcion.addEventListener('keyup', function() {
 
         switch (true) {
             case this.value == '':
                 errorDescripcion.innerHTML = 'Este campo es obligatorio';
-                this.classList.add('is-invalid'); 
+                this.classList.add('is-invalid');
                 break;
             case this.value.trim().length <= 20:
                 errorDescripcion.innerHTML = "Tenés que poner al menos 20 caracteres";
-                this.classList.add('is-invalid');                
-                break;         
+                this.classList.add('is-invalid');
+                break;
             default:
                 this.classList.remove('is-invalid')
                 this.classList.add('is-valid')
@@ -89,13 +89,13 @@ window.addEventListener('load', function(){
         }
     });
 
-    inputImagen.addEventListener('blur', function(){
+    inputImagen.addEventListener('blur', function() {
 
         switch (true) {
             case this.value == '':
                 errorImagen.innerHTML = 'Este campo es obligatorio';
-                this.classList.add('is-invalid'); 
-                break;        
+                this.classList.add('is-invalid');
+                break;
             default:
                 this.classList.remove('is-invalid')
                 this.classList.add('is-valid')
@@ -104,35 +104,35 @@ window.addEventListener('load', function(){
         }
     });
 
-    inputImagen.addEventListener('change', function(){
+    inputImagen.addEventListener('change', function() {
 
         let filePath = inputImagen.value;
 
-        if(!allowedExtensions.exec(filePath)){
+        if (!allowedExtensions.exec(filePath)) {
             alert('La extencion del archivo no esta permitido. Los archivos deben tener extencion .jpeg/.jpg/.png/.gif');
             inputImagen.value = '';
             return false;
-        }else{
+        } else {
             this.classList.add('is-invalid')
         }
     })
 
 
-    form.addEventListener('submit', function(e){
+    form.addEventListener('submit', function(e) {
 
         e.preventDefault();
 
         let error = false;
 
-        for (let i = 0; i < elementos.length; i++) {
-           
-            if(elementos[1].value == 0){
-                elementos[1].classList.add('is-invalid')
+        for (let i = 0; i < elementos.length - 2; i++) {
+
+            if (elementos[i].value == 0) {
+                elementos[i].classList.add('is-invalid')
                 error = true
             }
 
         }
-        if(!error){
+        if (!error) {
             form.submit();
         }
     })

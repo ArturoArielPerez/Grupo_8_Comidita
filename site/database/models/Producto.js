@@ -28,6 +28,10 @@ module.exports = (sequelize, dataTypes)=>{
         id_categoria:{
             type: dataTypes.INTEGER(11),
             allowNull: false
+        },
+        id_usuario:{
+            type: dataTypes.INTEGER(11),
+            allowNull: false
         }
        
     }
@@ -42,7 +46,7 @@ module.exports = (sequelize, dataTypes)=>{
 
     Producto.associate = function(models){
         Producto.belongsTo(models.Categorias,{
-            as: 'categorias',
+            as: 'categoria',
             foreingKey: 'id_categoria'
         });
     }

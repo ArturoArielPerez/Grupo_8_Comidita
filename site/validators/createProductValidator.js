@@ -22,8 +22,8 @@ module.exports = [
     .withMessage('Ingresar precio de producto'),
     check('descripcion')
     .isLength({
-        min:20
+        min: 20
     })
-    .withMessage('Debes ingresar una descpcion del producto')    
-    
+    .withMessage('Debes ingresar una descpcion del producto')
+
 ]
