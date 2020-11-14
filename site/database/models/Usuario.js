@@ -1,37 +1,37 @@
-module.exports = (sequelize, dataTypes)=>{
+module.exports = (sequelize, dataTypes) => {
 
     let alias = 'Usuarios';
 
     let cols = {
-        id:{
+        id: {
             type: dataTypes.INTEGER(11),
             allowNull: false,
             autoIncrement: true,
             primaryKey: true
         },
-        nombe:{
+        nombre: {
             type: dataTypes.STRING(100),
             allowNull: false
         },
-        apellido:{
+        apellido: {
             type: dataTypes.STRING(100),
             allowNull: false
         },
-        email:{
+        email: {
             type: dataTypes.STRING(100),
             allowNull: false
         },
-        contraseña:{
+        contraseña: {
             type: dataTypes.STRING(100),
             allowNull: false
         },
-        avatar:{
-            type:dataTypes.STRING(100)
+        avatar: {
+            type: dataTypes.STRING(100)
         },
-        rol:{
-            type:dataTypes.STRING(100)
+        rol: {
+            type: dataTypes.STRING(100)
         }
-       
+
     }
 
     let config = {
@@ -42,6 +42,6 @@ module.exports = (sequelize, dataTypes)=>{
 
     const Usuario = sequelize.define(alias, cols, config);
 
-    
+
     return Usuario;
 }

@@ -2,40 +2,54 @@
  const productos = require('../data/products')
  const path = require('path');
  const { validationResult, body } = require('express-validator');
- const db = require('../database/models')
+ const db = require('../database/models');
+ const { brotliDecompress } = require('zlib');
 
  module.exports = {
      detalle: function(req, res) {
+         db.Productos.findByPk(req.params.id, {
+                 include: {
+                     association: 'categoria'
+                 }
+             })
+             .then(
+                 (producto) => {
+                     res.render('productDetail', {
+                         product: producto,
+                         title: 'Detalle del Producto',
+                         css: 'productDetail.css',
+                         user: req.session.user
+                     });
+                 }
 
-         let id = req.params.id;
-         let producto = productos.filter(producto => {
-             return producto.id == id
-         });
+             )
 
-         res.render('productDetail', {
-             product: producto[0],
-             title: 'Detalle del Producto',
-             css: 'productDetail.css',
-             user: req.session.user
-         });
+
+
      },
      listarProductos: function(req, res) {
          db.Productos.findAll({
-             include:{
-                 association:"categoria"
-             }
-         })
-         .then(productos=>{
-            res.render('carta', {
-                productos: productos,
-                title: 'Carta',
-                css: 'carta.css',
-                user: req.session.user
-            });
-         })
-         .catch(errores => {
-            res.send(errores)
-        })
+                 include: [{
+                         association: "categoria"
+                     },
+
+                 ]
+
+
+             })
+             .then(productos => {
+
+                 res.render('carta', {
+                     productos: productos,
+                     title: 'Carta',
+                     css: 'carta.css',
+                     user: req.session.user
+                 });
+
+             })
+             .catch(errores => {
+                 res.send(errores)
+             })
      },
      agregar: function(req, res) {
          db.Categorias.findAll()
@@ -61,22 +75,23 @@
 
              db.Productos.create({
 
-                 id_categoria: req.body.categoria,
+                 categoria_id: req.body.categoria,
+                 id_usuario: req.session.user.id,
                  nombre: req.body.nombre.trim(),
                  precio: Number(req.body.precio),
                  descripcion: req.body.descripcion.trim(),
                  imagenes: (req.files[0]) ? req.files[0].filename : '',
-                 id_usuario:req.session.user.id
+                 id_usuario: req.session.user.id
              })
 
              .then(result => {
                      console.log(result);
-                     return res.redirect('/products/carta')
+                     return res.redirect('/products')
 
-            })
-            .catch(errores => {
-                console.log(errores);
-            })
+                 })
+                 .catch(errores => {
+                     console.log(errores);
+                 })
 
          } else {
 
@@ -98,20 +113,39 @@
      eliminar: function(req, res) {
          let id = req.params.id;
          let producto;
+         db.Productos.destroy({
+                 where: {
+                     id: req.params.id
+                 }
+             })
+             /* productos.forEach(product => {
+                 if (product.id == id) {
+                     producto = productos.indexOf(product);
+                 }
+             }); */
 
-         productos.forEach(product => {
-             if (product.id == id) {
-                 producto = productos.indexOf(product);
-             }
-         });
+         /* productos.splice(producto, 1); */
 
-         productos.splice(producto, 1);
+         /* fs.writeFileSync(path.join(__dirname, '../data/products.json'), JSON.stringify(productos)) */
 
-         fs.writeFileSync(path.join(__dirname, '../data/products.json'), JSON.stringify(productos))
-
-         res.redirect('/products/carta');
+         res.redirect('/products');
      },
      formularioEdit: function(req, res) {
+
+         db.Productos.dinsByPk(req.params.id, {
+                 include: {
+                     association: 'categoria'
+                 }
+             })
+             .then(producto => {
+                 res.render('productEdit', {
+                     producto: resultado[0],
+                     title: 'Editar Producto',
+                     css: 'productEdit.css',
+                     user: req.session.user
+                 });
+             })
+             /*  */
          let id = req.params.id;
          let resultado = productos.filter(producto => {
              return producto.id == id
@@ -151,7 +185,7 @@
          })
 
 
-         Promise.all([pelicula, generos, actores])
+         /* Promise.all([pelicula, generos, actores])
              .then(([pelicula, generos, actores]) => {
 
                  res.render('moviesEdit', {
@@ -161,7 +195,7 @@
                      estreno: moment(pelicula.release_date).format('YYYY-MM-DD')
                  })
 
-             })
+             }) */
 
 
          res.render('productCart', {

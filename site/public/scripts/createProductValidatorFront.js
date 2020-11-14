@@ -16,14 +16,14 @@ window.addEventListener('load', function() {
     selectCategoria.addEventListener('blur', function() {
 
         switch (true) {
-            case this.value == ' ':
+            case this.value == '':
                 errorCategoria.innerHTML = 'Este campo es obligatorio';
                 this.classList.add('is-invalid');
                 break;
-            case this.value.trim().length <= 4:
-                errorCategoria.innerHTML = "Debe poner una categoria";
-                this.classList.add('is-invalid');
-                break;
+                /* case this.value.trim().length <= 4:
+                    errorCategoria.innerHTML = "Debe poner una categoria";
+                    this.classList.add('is-invalid');
+                    break; */
             default:
                 this.classList.remove('is-invalid')
                 this.classList.add('is-valid')

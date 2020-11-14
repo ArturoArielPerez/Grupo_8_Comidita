@@ -1,42 +1,49 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <%- include('partials/head') %> 
+    <%- include('partials/head') %>
 </head>
+
 <body>
-  <%- include('partials/header') %>
-  
-  <div class="shadow-lg p-3 mb-5 bg-white rounded titulo">Detalle del producto</div> 
-  
-    <div class="card mb-3" style="max-width: 70%;">
-      <div class="row no-gutters detalle">
-        <div class="col-lg-4 col-md-4">
-          <img src="<%= product.imagen %> " class="card-img" alt="...">
+    <%- include('partials/header') %>
+
+        <div class="shadow-lg p-3 mb-5 bg-white rounded titulo">Detalle del producto</div>
+
+        <div class="card mb-3" style="max-width: 70%;">
+            <div class="row no-gutters detalle">
+                <div class="col-lg-4 col-md-4">
+                    <img src="<%= product.imagen %> " class="card-img" alt="...">
+                </div>
+                <div class="col-lg-8 col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <%- product.nombre %>
+                        </h5>
+
+                        <p>
+                            <%= product.descripcion %>
+                        </p>
+
+                        <p class="card-text"><small class="text-muted">$<%= product.precio %> </small></p>
+
+                        <input type="number" name="" id="cantidad" value="0">
+                        <br>
+                        <br>
+                        <div class="botones">
+                            <button type="button" class="btn btn-primary"><i class="fas fa-cart-arrow-down"></i> Agragar al carrito</button>
+                            <form action="/products/delete/<%= product.id %>?_method=DELETE " method="POST">
+                                <button type="submit" class="btn btn-danger"> Eliminar</button>
+                            </form>
+                            <a href="/products/<%= product.id %>/edit" class="btn btn-info"> Editar</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-lg-8 col-md-8">
-          <div class="card-body">
-            <h5 class="card-title"><%- product.nombre %> </h5>
-  
-            <p><%= product.descripcion %> </p>
-            
-            <p class="card-text"><small class="text-muted">$<%= product.precio %> </small></p>
-           
-              <input type="number" name="" id="cantidad" value="0">
-              <br>
-              <br>
-              <div class="botones">
-                <button type="button" class="btn btn-primary"><i class="fas fa-cart-arrow-down"></i> Agragar al carrito</button>
-              <form action="/products/<%= product.id %>?_method=DELETE " method="POST">
-                <button type="submit" class="btn btn-danger"> Eliminar</button>
-              </form>            
-                <a href="/products/<%= product.id %>/edit" class="btn btn-info"> Editar</a>  
-              </div>        
-           
-          </div>
-        </div>
-      </div>
-    </div>
-  
-  <%- include('partials/footer') %> 
+
+        <%- include('partials/footer') %>
 </body>
+
 </html>
