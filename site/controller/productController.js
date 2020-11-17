@@ -1,5 +1,4 @@
  const fs = require('fs');
- const productos = require('../data/products')
  const path = require('path');
  const { validationResult, body } = require('express-validator');
  const db = require('../database/models');
@@ -15,7 +14,7 @@
              .then(
                  (producto) => {
                      res.render('productDetail', {
-                         product: producto,
+                         producto: producto,
                          title: 'Detalle del Producto',
                          css: 'productDetail.css',
                          user: req.session.user
@@ -111,71 +110,56 @@
 
      },
      eliminar: function(req, res) {
-         let id = req.params.id;
-         let producto;
+
          db.Productos.destroy({
                  where: {
                      id: req.params.id
                  }
              })
-             /* productos.forEach(product => {
-                 if (product.id == id) {
-                     producto = productos.indexOf(product);
-                 }
-             }); */
-
-         /* productos.splice(producto, 1); */
-
-         /* fs.writeFileSync(path.join(__dirname, '../data/products.json'), JSON.stringify(productos)) */
 
          res.redirect('/products');
      },
      formularioEdit: function(req, res) {
 
-         db.Productos.dinsByPk(req.params.id, {
+         db.Productos.findByPk(req.params.id, {
                  include: {
                      association: 'categoria'
                  }
              })
              .then(producto => {
                  res.render('productEdit', {
-                     producto: resultado[0],
+                     producto: producto,
                      title: 'Editar Producto',
                      css: 'productEdit.css',
                      user: req.session.user
                  });
              })
-             /*  */
-         let id = req.params.id;
-         let resultado = productos.filter(producto => {
-             return producto.id == id
-         });
-         res.render('productEdit', {
-             producto: resultado[0],
-             title: 'Editar Producto',
-             css: 'productEdit.css',
-             user: req.session.user
-         });
      },
      editar: function(req, res) {
-         let id = req.params.id;
 
-         productos.forEach(producto => {
-             if (producto.id == id) {
-                 producto.id = Number(id);
-                 producto.nombre = req.body.nombre.trim();
-                 producto.precio = Number(req.body.precio);
-                 producto.categoria = req.body.categoria,
-                     producto.descripcion = req.body.descripcion.trim();
-                 producto.imagen = (req.files[0] ? req.files[0].filename : producto.imagen);
+         db.Productos.update({
 
-             }
-         });
-         productosJSON = JSON.stringify(productos);
-
-         fs.writeFileSync(path.join(__dirname, '..', 'data', 'products.json'), productosJSON);
-
-         res.redirect('/products/carta');
+            nombre: req.body.nombre,
+            precio : Number(req.body.precio),
+            categoria : req.body.categoria,
+            descripcion : req.body.descripcion,
+            imagenes :  (req.files[0] ? req.files[0].filename : producto.imagenes),
+             
+         },
+         {
+            where : {
+                id: req.params.id
+            }
+         }
+         )
+         .then(result =>{
+            console.log(result);
+            return res.redirect('/product');
+        })
+        .catch(error =>{
+            console.log(error);
+        })
+       
      },
      vistaCart: function(req, res) {
          let categoria = db.Categorias.findAll({
