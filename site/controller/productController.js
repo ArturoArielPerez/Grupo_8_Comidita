@@ -142,9 +142,8 @@
             nombre: req.body.nombre,
             precio : Number(req.body.precio),
             categoria : req.body.categoria,
-            descripcion : req.body.descripcion,
-            imagenes :  (req.files[0] ? req.files[0].filename : producto.imagenes),
-             
+            descripcion : req.body.descripcion.trim(),
+            imagenes :  (req.files[0] ? req.files[0].filename : req.session.user.imagenes),
          },
          {
             where : {
@@ -154,12 +153,12 @@
          )
          .then(result =>{
             console.log(result);
-            return res.redirect('/product');
+            res.redirect('/products');
         })
         .catch(error =>{
             console.log(error);
         })
-       
+    
      },
      vistaCart: function(req, res) {
          let categoria = db.Categorias.findAll({

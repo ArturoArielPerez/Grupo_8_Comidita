@@ -21,7 +21,7 @@ module.exports = {
         if (errors.isEmpty()) {
 
             db.Usuarios.create({
-                nombe: req.body.nombre.trim(),
+                nombre: req.body.nombre.trim(),
                 apellido: req.body.apellido.trim(),
                 email: req.body.email.trim(),
                 contraseña: bcrypt.hashSync(req.body.contraseña.trim(), 10),
@@ -29,8 +29,8 @@ module.exports = {
                 rol: 'usuario'
             })
             .then(result => {
-                    
-                    return res.redirect('/users/login')
+                    console.log(result)
+                  res.redirect('/users/login')
 
                 })
                 .catch(errores => {
