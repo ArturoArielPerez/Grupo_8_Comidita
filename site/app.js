@@ -11,6 +11,7 @@ const localsUsersCheck = require('./middlewares/localsUsersCheck')
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const productsRouter = require('./routes/products');
+const carritoRouter = require('./routes/carrito');
 
 
 var app = express();
@@ -33,6 +34,7 @@ app.use(localsUsersCheck);
 app.use('/', indexRouter);
 app.use('/products', productsRouter);
 app.use('/users', usersRouter);
+app.use('/cart', carritoRouter);
 
 
 // catch 404 and forward to error handler

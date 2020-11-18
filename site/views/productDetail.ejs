@@ -30,13 +30,19 @@
                         <input type="number" name="" id="cantidad" value="0">
                         <br>
                         <br>
+                        <% if (typeof user == 'undefined' ) {%> 
                         <div class="botones">
                             <button type="button" class="btn btn-primary"><i class="fas fa-cart-arrow-down"></i> Agragar al carrito</button>
-                            <form action="/products/delete/<%= producto.id %>?_method=DELETE " method="POST">
-                                <button type="submit" class="btn btn-danger"> Eliminar</button>
-                            </form>
-                            <a href="/products/<%= producto.id %>/edit" class="btn btn-info"> Editar</a>
                         </div>
+                    <% }else if (user.rol == 'administrador') { %> 
+                        <button type="button" class="btn btn-primary"><i class="fas fa-cart-arrow-down"></i> Agragar al carrito</button>
+                        <form action="/products/delete/<%= producto.id %>?_method=DELETE " method="POST">
+                            <button type="submit" class="btn btn-danger"> Eliminar</button>
+                        </form>
+                        <a href="/products/<%= producto.id %>/edit" class="btn btn-info"> Editar</a>
+                    <% } else {%>
+                        <button type="button" class="btn btn-primary"><i class="fas fa-cart-arrow-down"></i> Agragar al carrito</button>
+                    <% } %> 
 
                     </div>
                 </div>

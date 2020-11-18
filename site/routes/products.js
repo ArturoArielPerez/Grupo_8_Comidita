@@ -25,7 +25,6 @@ router.get('/:id/edit', sessionUserCheck, controller.formularioEdit);
 router.put('/:id/edit', multerProduct.any(), sessionUserCheck, updateProductValidator, controller.editar);
 
 router.delete('/delete/:id', sessionUserCheck, controller.eliminar);
-router.get('/cart', sessionUserCheck, controller.vistaCart);
 
 router.get('/sucursal', controller.Sucursal);
 

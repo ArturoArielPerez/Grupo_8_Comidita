@@ -4,7 +4,7 @@ const qs = function(element){
 
 window.addEventListener('load', function(){
 
-    let form = qs('form');
+    let form = qs('#form');
     let elementos = form.elements;
     let inputNombre = document.getElementById('nombre')
     let inputPrecio = document.getElementById('precio');

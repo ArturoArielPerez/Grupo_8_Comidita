@@ -9,9 +9,6 @@ module.exports = (sequelize, dataTypes)=>{
             autoIncrement: true,
             primaryKey: true
         },
-        cantidad:{
-            type: dataTypes.INTEGER(11)
-        },
         fecha:{
             type: dataTypes.INTEGER(11),
         },

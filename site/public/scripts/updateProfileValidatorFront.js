@@ -4,7 +4,7 @@ const qs = function(element){
 
 window.addEventListener('load', function(){
 
-    let form = qs('form');
+    let form = qs('#formEditar');
     let elementos = form.elements;
     let inputAvatar= document.getElementById('avatar');
     let allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;

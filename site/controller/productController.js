@@ -160,35 +160,7 @@
         })
     
      },
-     vistaCart: function(req, res) {
-         let categoria = db.Categorias.findAll({
-             where: {
-                 id: 1
-             }
-         })
 
-
-         /* Promise.all([pelicula, generos, actores])
-             .then(([pelicula, generos, actores]) => {
-
-                 res.render('moviesEdit', {
-                     actores: actores,
-                     generos: generos,
-                     pelicula: pelicula,
-                     estreno: moment(pelicula.release_date).format('YYYY-MM-DD')
-                 })
-
-             }) */
-
-
-         res.render('productCart', {
-             title: 'Carrito',
-             css: 'productCart.css',
-             user: req.session.user
-         });
-
-
-     },
      Sucursal: function(req, res) {
          res.render('sucursal', {
              title: 'Sucursales',
