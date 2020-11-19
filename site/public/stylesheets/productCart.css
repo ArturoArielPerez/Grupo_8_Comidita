@@ -1,27 +1,32 @@
 @import 'style.css';
 
 footer{
-    margin-top: 100px;
+    margin-top: 150px;
+}
+
+.seccion2{
+    background-color: antiquewhite;
 }
 
 @media(min-width:769px) {
 
 .card{
     border: solid 1px black;
-
 }
 
 
 .titulo{
     text-align: center;
+    margin-top: 20px;
 }
       
 .card-img{
     margin-top: 20px;
+    margin-bottom: 20px;
     border: solid 1px black;
 }
 
-.comprar{
+.comprar{ 
     display: flex;
     flex-direction: column-reverse;
     justify-content: space-around;

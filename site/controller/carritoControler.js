@@ -18,7 +18,18 @@ module.exports = {
         });
     },
 
-    agregar : function(req, res){
-
+    agregar:function(req,res,next){        
+        db.Carrito.create({ 
+            id_usuario: req.session.id_usuario,
+            total:Number(req.body.precio),            
+            fecha: Date()
+        })
+        .then(result => {   
+            console.log(result);       
+            res.redirect('/cart');
+        })
+        .catch(err => {
+            res.send(err)
+        })        
     }
 }

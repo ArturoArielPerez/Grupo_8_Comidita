@@ -9,6 +9,12 @@ img{
     border: solid 1px black;
 }
 
+.precio{
+    color: green;
+    font-size: 30px;
+    font-weight: bold;
+}
+
 @media(min-width:768px){
 
 footer{

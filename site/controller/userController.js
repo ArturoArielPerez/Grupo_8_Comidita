@@ -29,8 +29,13 @@ module.exports = {
                 rol: 'usuario'
             })
             .then(result => {
-                    console.log(result)
-                  res.redirect('/users/login')
+                db.Carrito.create({
+                  id_usuario: result.id_usuario, // req.session.user.id,
+                  total: Number(0),
+                  fecha: Date()  
+                }),
+                console.log(result)
+                res.redirect('/users/login')
 
                 })
                 .catch(errores => {

@@ -9,6 +9,9 @@ module.exports = (sequelize, dataTypes)=>{
             autoIncrement: true,
             primaryKey: true
         },
+      id_usuario:{
+            type: dataTypes.INTEGER(11)
+        },
         fecha:{
             type: dataTypes.INTEGER(11),
         },
@@ -24,6 +27,8 @@ module.exports = (sequelize, dataTypes)=>{
     }
 
     const Carrito = sequelize.define(alias, cols, config);
+
+     
 
     return Carrito;
 }

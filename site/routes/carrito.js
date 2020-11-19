@@ -7,7 +7,7 @@ const sessionUserCheck = require('../middlewares/sessionUserCheck');
 
 router.get('/', sessionUserCheck, controller.vistaCart);
 
-router.post('/agregar', controller.agregar);
+router.post('/agregar/:id', controller.agregar);
 
 
 module.exports = router;
