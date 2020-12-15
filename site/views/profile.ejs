@@ -1,143 +1,145 @@
 <!DOCTYPE html>
 <html lang="es">
-<%- include('partials/head') %> 
-<body>
-    <%- include('partials/header') %> 
+<%- include('partials/head') %>
 
-    <div class="container">
-      <section class="perfilUsuario">
-          <div class="row perfil">
+    <body>
+        <%- include('partials/header') %>
 
-              <div class="titulo col-12">
-                  <h2>
-                      <%= title %>
-                  </h2>
-              </div>
-              <div class="col-12">
+            <div class="container">
+                <section class="perfilUsuario">
+                    <div class="row perfil">
 
-                  <div class="contenido">
+                        <div class="titulo col-12">
+                            <h2>
+                                <%= title %>
+                            </h2>
+                        </div>
+                        <div class="col-12">
+
+                            <div class="contenido">
 
 
-                      <ul class="nav nav-tabs " id="myTab" role="tablist">
-                          <li class="nav-item " role="presentation">
-                              <a class="nav-link " id="home-tab" data-toggle="tab" href="#datos" role="tab" aria-controls="home" aria-selected="true">Editar perfil</a>
-                          </li>
-                          <li class="nav-item " role="presentation">
-                              <a class="nav-link active" id="profile-tab" data-toggle="tab" href="#productos" role="tab" aria-controls="profile" aria-selected="false">Histotial de Compra</a>
-                          </li>
-                      </ul>
-                      <div class="tab-content" id="myTabContent">
+                                <ul class="nav nav-tabs " id="myTab" role="tablist">
+                                    <li class="nav-item " role="presentation">
+                                        <a class="nav-link " id="home-tab" data-toggle="tab" href="#datos" role="tab" aria-controls="home" aria-selected="true">Editar perfil</a>
+                                    </li>
+                                    <li class="nav-item " role="presentation">
+                                        <a class="nav-link active" id="profile-tab" data-toggle="tab" href="#productos" role="tab" aria-controls="profile" aria-selected="false">Histotial de Compra</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="myTabContent">
 
-                          <div class="tab-pane fade " id="datos" role="tabpanel" aria-labelledby="home-tab">
-                            <div class="card" style="width: 25rem;">
-                              <img src="/images/<%= usuario.avatar %> " class="card-img-top" alt="...">
-                              <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                              </div>
-                              <ul class="list-group list-group-flush">
-                                <li class="list-group-item">
-                                                                    <!-- Button trigger modal -->
-                                <div>
-                                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id='editar'>
+                                    <div class="tab-pane fade " id="datos" role="tabpanel" aria-labelledby="home-tab">
+                                        <div class="card" style="width: 25rem;">
+                                            <img src="/images/<%= usuario.avatar %> " class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                            </div>
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item">
+                                                    <!-- Button trigger modal -->
+                                                    <div>
+                                                        <button type="button" class="btn btn-primary editar" data-toggle="modal" data-target="#exampleModal" id='editar'>
                                     Editar
                                   </button>
 
-                                  <form action="/users/delete/<%= usuario.id %>?_method=DELETE" method="POST">
-                                    <button type="submit" class="btn-sm btn-danger">Darse de baja</button>
-                                  </form>
-                                </div>
+                                                        <form action="/users/delete/<%= usuario.id %>?_method=DELETE" method="POST">
+                                                            <button type="submit" class="btn-sm btn-danger">Darse de baja</button>
+                                                        </form>
+                                                    </div>
 
-                                  <!-- Modal -->
-                                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                      <div class="modal-content">
-                                        <div class="modal-header">
-                                          <h5 class="modal-title" id="exampleModalLabel">editar Usuario</h5>
-                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <!-- Modal -->
+                                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                        <div class="modal-dialog">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <h5 class="modal-title" id="exampleModalLabel">editar Usuario</h5>
+                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                           </button>
+                                                                </div>
+                                                                <form action="/users/updateProfile/<%= usuario.id %>?_method=PUT  " method="POST" enctype="multipart/form-data" id="formEditar">
+
+                                                                    <div class="modal-body">
+                                                                        <div class="form-group">
+                                                                            <label for="exampleFormControlInput1">email</label>
+                                                                            <input type="email" class="form-control" id="exampleFormControlInput1" name="email" value="<%- usuario.email %> " disabled>
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <label for="exampleFormControlInput1">Nombre</label>
+                                                                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="nombre" value="<%- usuario.nombre %>" disabled>
+                                                                        </div>
+
+                                                                        <div class="form-row">
+                                                                            <div class="col">
+                                                                                <label for="exampleFormControlInput1">apellido</label>
+                                                                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="apellido" value="<%- usuario.apellido %>" disabled>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-group mt-3">
+                                                                            <label for="">Elija una imagen</label>
+                                                                            <input type="file" class="form-control" name='avatar' id="avatar">
+                                                                            <small class="text-danger"><%= (typeof errors != 'undefined' && errors.avatar)?errors.avatar.msg: "" %> </small>
+                                                                            <div class="avatar invalid-feedback" id="errorAvatar"></div>
+                                                                        </div>
+
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                                        <button type="submit" class="btn btn-primary">Save changes</button>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
                                         </div>
-                                        <form action="/users/updateProfile/<%= usuario.id %>?_method=PUT  " method="POST" enctype="multipart/form-data" id="formEditar">
+                                    </div>
 
-                                        <div class="modal-body">
-                                                <div class="form-group">
-                                                    <label for="exampleFormControlInput1">email</label>
-                                                    <input type="email" class="form-control" id="exampleFormControlInput1" name="email" value="<%- usuario.email %> " disabled>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="exampleFormControlInput1">Nombre</label>
-                                                    <input  type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="nombre" value="<%- usuario.nombre %>" disabled>
-                                                </div>
+                                    <div class="tab-pane fade show active " id="productos" role="tabpanel" aria-labelledby="profile-tab">
 
-                                                <div class="form-row">
-                                                    <div class="col">
-                                                      <label for="exampleFormControlInput1">apellido</label>
-                                                      <input  type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="apellido" value="<%- usuario.apellido %>" disabled>
+                                        <div class="row productos p-4">
+
+
+                                            <div class="col-12 col-md-3 col-xl-2">
+
+                                                <div class="contenido">
+
+                                                    <figure>
+                                                        <a href=""><img src="/images/image-not-found.png " alt=" "></a>
+                                                    </figure>
+
+
+                                                    <p>
+
+                                                    </p>
+
+
+                                                    <div class="d-flex justify-content-around">
+                                                        <form action="/products/delete/?_method=DELETE" method="POST">
+                                                            <button class="btn btn-outline-light"> <h4 class="fas fa-trash-alt text-danger"></h4></button>
+                                                        </form>
                                                     </div>
                                                 </div>
-                                                <div class="form-group mt-3">
-                                                    <label for="">Elija una imagen</label>
-                                                    <input  type="file" class="form-control" name='avatar' id="avatar">
-                                                    <small class="text-danger"><%= (typeof errors != 'undefined' && errors.avatar)?errors.avatar.msg: "" %> </small>
-                                                    <div class="avatar invalid-feedback" id="errorAvatar"></div>
-                                                </div>
-                                            
+                                            </div>
+
+
                                         </div>
-                                        <div class="modal-footer">
-                                            <button type="" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                          <button type="submit" class="btn btn-primary">Save changes</button>                                                                                   
-                                        </div>
-                                     </form>
-                                      </div>
+                                        <!--finaliza el row-->
                                     </div>
-                                  </div>
-                                </li>
-                              </ul>
+                                </div>
                             </div>
-                          </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
 
-                          <div class="tab-pane fade show active " id="productos" role="tabpanel" aria-labelledby="profile-tab">
 
-                              <div class="row productos p-4">
-                                  
 
-                                      <div class="col-12 col-md-3 col-xl-2">
+            <%- include('partials/footer') %>
+                <script src="/scripts/updateProfileValidatorFront.js"></script>
 
-                                          <div class="contenido">
+    </body>
 
-                                              <figure>
-                                                  <a href=""><img src="/images/image-not-found.png " alt=" "></a>
-                                              </figure>
-
-                                              
-                                                  <p>
-                                                     
-                                                  </p>
-                                                
-
-                                                      <div class="d-flex justify-content-around">
-                                                          <form action="/products/delete/?_method=DELETE" method="POST">
-                                                              <button class="btn btn-outline-light"> <h4 class="fas fa-trash-alt text-danger"></h4></button>
-                                                          </form>
-                                                      </div>
-                                          </div>
-                                      </div>
-
-                                  
-                              </div>
-                              <!--finaliza el row-->
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </section>
-  </div>
-
-       
-
-    <%- include('partials/footer') %> 
-    <script src="/scripts/updateProfileValidatorFront.js"></script>
-    
-</body>
 </html>

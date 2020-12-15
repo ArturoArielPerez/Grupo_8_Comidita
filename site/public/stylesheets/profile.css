@@ -1,31 +1,33 @@
 @import 'style.css';
-
-.titulo{
+.titulo {
     text-align: center;
     color: white;
 }
 
-img{
-   width: 100%;
+img {
+    width: 100%;
 }
 
-.card{
+.card {
     margin-top: 30px;
     margin-bottom: 30px;
     border: solid 1px gray;
 }
 
-.nav-tabs{
+.nav-tabs {
     background-color: whitesmoke;
 }
- 
-.tab-content{
-    background-color: white ;
+
+.tab-content {
+    background-color: white;
 }
 
-.contenido{
+.contenido {
     background-color: white;
     border: solid 1px black;
     margin-bottom: 10px;
 }
 
+.editar {
+    margin-bottom: 10px;
+}
