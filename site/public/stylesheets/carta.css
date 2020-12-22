@@ -1,19 +1,30 @@
 @import 'style.css';
-.media {
-    background-color: rgb(214, 214, 207);
-    padding-top: 10px;
-    border: solid 1px black;
+.btn-group {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    display: flex;
 }
 
-.titulo{
-    margin-bottom: 18px;
+.btn-group a {
+    width: 100%;
+    padding: 5px 0;
+    display: block;
+    border-bottom: 1px solid black;
+}
+
+.btn-group a:hover {
+    background-color: rosybrown;
 }
 
 .titulo-comida {
     text-align: center;
     background-color: var(--color-bordo);
-    margin-bottom: 18px;
- }
+    margin: 18px auto;
+    color: whitesmoke;
+    padding: 100%;
+}
 
 a {
     color: black;
@@ -26,6 +37,26 @@ a:hover {
 
 p {
     font-weight: normal;
+}
+
+.media {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 90%;
+    margin: 20px auto;
+    padding: 10px;
+    height: 400px;
+}
+
+.media img {
+    width: 90%;
+}
+
+.media-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 #bebida {
@@ -42,53 +73,4 @@ p {
 
 #postre {
     margin-top: 30px;
-}
-
-@media(min-width:769px) {
-    /*Section */
-    .titulo {
-        text-align: center;
-        position: relative;
-        bottom: 0px;
-    }
-    .container img {
-        width: 10%;
-        margin-bottom: 30px;
-        border: solid 1px black;
-    }
-}
-
-@media(min-width: 571px) and (max-width: 768px) {
-    /* section */
-    .titulo {
-        text-align: center;
-        position: relative;
-        bottom: 0px;
-    }
-    .container img {
-        width: 10%;
-        margin-bottom: 30px;
-        border: solid 1px black;
-    }
-}
-
-@media(max-width:570px) {
-    /* section */
-    .titulo {
-        text-align: center;
-        position: relative;
-        bottom: 0px;
-    }
-    .titulo-comida {
-        padding: 100px;
-        background-color: white;
-    }
-    .container img {
-        width: 30%;
-        margin-bottom: 30px;
-        border: solid 1px black;
-    }
-    .btn-secondary {
-        padding: 2px 2px 2px 2px;
-    }
 }

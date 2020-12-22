@@ -7,7 +7,7 @@ module.exports = [
 
     check('nombre')
     .isLength({
-        min: 5
+        min: 1
     })
     .withMessage('Debes ingresar tu nombre'),
 

@@ -24,6 +24,6 @@ module.exports = [
     .isLength({
         min: 20
     })
-    .withMessage('Debes ingresar una descpcion del producto')
+    .withMessage('La descripción debe tener un minimo de 20 caracteres')
 
 ]
