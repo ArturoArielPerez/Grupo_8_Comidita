@@ -1,45 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
-  <%- include('partials/head') %> 
-<body>
-  <%- include('partials/header') %> 
-  
-     <section class="container">
-        <div class="row">
-          <article class="col-12 col-md-12 col-lg-10">
-            <h1>Eventos</h1>
-            <p>En Comidita contamos con eventos. Contactanos para enterarte de las promociones
-                y mucho más. Completa el formulario y en la brevedad nos estaremos contactando. 
-            </p>
-          </article>
-        </div>
-     </section>
-     <section class="container">
-       <div class="row">
-         <form action="arturoperez997@gmail.com?subject=asunto" enctype = "text/plain" method="POST" class="col-10 col-md-8 col-lg-6">
+<%- include('partials/head') %>
 
-          <label for="">Nombre</label> <br>   
-          <input type="text" name="nombre" id="nombre" class="form-control <%= (typeof old != 'undefined' && old.nombre)?"is-valid":(typeof errors != 'undefined' && errors.nombre)?"is-invalid": ""  %>" value="<%= (typeof old != 'undefined' && old.nombre)?old.nombre:'' %>" ><br>
-          <small class="text-danger"><%= (typeof errors != 'undefined' && errors.nombre)?errors.nombre.msg: "" %> </small>
-          <div class="nombre invalid-feedback" id="errorNombre"></div>
+    <body>
+        <%- include('partials/header') %>
 
-          <label for="">Apellido</label><br>
-          <input type="text" name="apellido" id="apellido" class="form-control <%= (typeof old != 'undefined' && old.apellido)?"is-valid":(typeof errors != 'undefined' && errors.apellido)?"is-invalid": ""  %>" value="<%= (typeof old != 'undefined' && old.apellido)?old.apellido:'' %>"><br>
-          <small class="text-danger"><%= (typeof errors != 'undefined' && errors.apellido)?errors.apellido.msg: "" %> </small>
-          <div class="apellido invalid-feedback" id="errorApellido"></div>
+            <section class="container">
+                <div class="row">
+                    <article class="col-12 col-md-12 col-lg-10">
+                        <h1>Eventos</h1>
+                        <p>En Comidita contamos con eventos. Contactanos para enterarte de las promociones y mucho más. Completa el formulario y en la brevedad nos estaremos contactando.
+                        </p>
+                    </article>
+                </div>
+            </section>
+            <section class="container">
+                <div class="row mx-auto p-3">
+                    <form action="arturoperez997@gmail.com?subject=asunto" enctype="text/plain" method="POST" class="col-12 col-md-8 col-lg-6 ">
 
-          <label for="">Telefono</label><br>
-          <input type="number" name="telefono" id="telefono" class="form-control "><br>
-          <small class="text-danger"><%= (typeof errors != 'undefined' && errors.telefono)?errors.telefono.msg: "" %> </small>
-          <div class="telefono invalid-feedback" id="errorTelefono"></div>
+                        <label for="">Nombre</label> <br>
+                        <input type="text" name="nombre" id="nombre" class="form-control <%= (typeof old != 'undefined' && old.nombre)?" is-valid ":(typeof errors != 'undefined' && errors.nombre)?"is-invalid ": " "  %>" value="<%= (typeof old != 'undefined' && old.nombre)?old.nombre:'' %>"><br>
+                        <small class="text-danger"><%= (typeof errors != 'undefined' && errors.nombre)?errors.nombre.msg: "" %> </small>
+                        <div class="nombre invalid-feedback" id="errorNombre"></div>
 
-          <label for="">Email</label><br>
-          <input type="email" name="email" id="email" class="form-control <%= (typeof old != 'undefined' && old.email && !errors.email)?"is-valid":(typeof errors != 'undefined' && errors.email)?"is-invalid": ""  %>" value="<%= (typeof old != 'undefined' && old.email)?old.email:'' %>" ><br>
-          <small class="text-danger"><%= (typeof errors != 'undefined' && errors.email)?errors.email.msg: "" %> </small>
-          <div class="email invalid-feedback" id="errorEmail"></div>
+                        <label for="">Apellido</label><br>
+                        <input type="text" name="apellido" id="apellido" class="form-control <%= (typeof old != 'undefined' && old.apellido)?" is-valid ":(typeof errors != 'undefined' && errors.apellido)?"is-invalid ": " "  %>" value="<%= (typeof old != 'undefined' && old.apellido)?old.apellido:'' %>"><br>
+                        <small class="text-danger"><%= (typeof errors != 'undefined' && errors.apellido)?errors.apellido.msg: "" %> </small>
+                        <div class="apellido invalid-feedback" id="errorApellido"></div>
 
-          <span>Dia</span>
-          <select name="dia" id="dia" class="form-control <%= (typeof old != 'undefined' && old.dia && !errors.dia)?"is-valid":(typeof errors != 'undefined' && errors.dia)?"is-invalid": ""  %>" value="<%= (typeof old != 'undefined' && old.dia)?old.dia:'' %>">
+                        <label for="">Telefono</label><br>
+                        <input type="number" name="telefono" id="telefono" class="form-control "><br>
+                        <small class="text-danger"><%= (typeof errors != 'undefined' && errors.telefono)?errors.telefono.msg: "" %> </small>
+                        <div class="telefono invalid-feedback" id="errorTelefono"></div>
+
+                        <label for="">Email</label><br>
+                        <input type="email" name="email" id="email" class="form-control <%= (typeof old != 'undefined' && old.email && !errors.email)?" is-valid ":(typeof errors != 'undefined' && errors.email)?"is-invalid ": " "  %>" value="<%= (typeof old != 'undefined' && old.email)?old.email:'' %>"><br>
+                        <small class="text-danger"><%= (typeof errors != 'undefined' && errors.email)?errors.email.msg: "" %> </small>
+                        <div class="email invalid-feedback" id="errorEmail"></div>
+
+                        <span>Dia</span>
+                        <select name="dia" id="dia" class="form-control <%= (typeof old != 'undefined' && old.dia && !errors.dia)?" is-valid ":(typeof errors != 'undefined' && errors.dia)?"is-invalid ": " "  %>" value="<%= (typeof old != 'undefined' && old.dia)?old.dia:'' %>">
             <option class="form-control "></option>
             <option value="lunes">Lunes</option>
             <option value="marts">Martes</option>
@@ -49,11 +49,11 @@
             <option value="sabado">Sabado</option>
             <option value="domingo">Domingo</option>
           </select><br>
-          <small class="text-danger"><%= (typeof errors != 'undefined' && errors.dia)?errors.dia.msg: "" %> </small>
-          <div class="dia invalid-feedback" id="errorDia"></div>
+                        <small class="text-danger"><%= (typeof errors != 'undefined' && errors.dia)?errors.dia.msg: "" %> </small>
+                        <div class="dia invalid-feedback" id="errorDia"></div>
 
-          <span>¿Horario que desea llegar?</span>
-          <select name="horario" id="horario" class="form-control <%= (typeof old != 'undefined' && old.horario && !errors.horario)?"is-valid":(typeof errors != 'undefined' && errors.horario)?"is-invalid": ""  %>" value="<%= (typeof old != 'undefined' && old.horario)?old.horario:'' %>">
+                        <span>¿Horario que desea llegar?</span>
+                        <select name="horario" id="horario" class="form-control <%= (typeof old != 'undefined' && old.horario && !errors.horario)?" is-valid ":(typeof errors != 'undefined' && errors.horario)?"is-invalid ": " "  %>" value="<%= (typeof old != 'undefined' && old.horario)?old.horario:'' %>">
             <option class="form-control "></option>
             <option value="9">9hs</option>
             <option value="10">10hs</option>
@@ -70,26 +70,27 @@
             <option value="21">21hs</option>
             <option value="22">22hs</option>
           </select> <br>
-          <small class="text-danger"><%= (typeof errors != 'undefined' && errors.horario)?errors.horario.msg: "" %> </small>
-          <div class="horario invalid-feedback" id="errorHorario"></div>
-          
-          <span>dejanos un comentario</span><br>
-          <textarea name="comentario" id="comentario" cols="10" rows="5" class="form-control <%= (typeof old != 'undefined' && old.comentario && !errors.comentario)?"is-valid":(typeof errors != 'undefined' && errors.comentario)?"is-invalid": ""  %>" value="<%= (typeof old != 'undefined' && old.comentario)?old.comentario:'' %>"></textarea><br>
-          <small class="text-danger"><%= (typeof errors != 'undefined' && errors.comentario)?errors.comentario.msg: "" %> </small>
-          <div class="comentario invalid-feedback" id="errorComentario"></div>
+                        <small class="text-danger"><%= (typeof errors != 'undefined' && errors.horario)?errors.horario.msg: "" %> </small>
+                        <div class="horario invalid-feedback" id="errorHorario"></div>
 
-          <div>
-            <button type="reset" class="btn btn-danger">Cancelar</button> 
-            <button type="submit" class="btn btn-primary">Enviar</button>
+                        <span>dejanos un comentario</span><br>
+                        <textarea name="comentario" id="comentario" cols="10" rows="5" class="form-control <%= (typeof old != 'undefined' && old.comentario && !errors.comentario)?" is-valid ":(typeof errors != 'undefined' && errors.comentario)?"is-invalid ": " "  %>" value="<%= (typeof old != 'undefined' && old.comentario)?old.comentario:'' %>"></textarea><br>
+                        <small class="text-danger"><%= (typeof errors != 'undefined' && errors.comentario)?errors.comentario.msg: "" %> </small>
+                        <div class="comentario invalid-feedback" id="errorComentario"></div>
 
-          </div>
-          
-         </form>
-       </div>
-     </section>
-    
+                        <div>
+                            <button type="reset" class="btn btn-danger">Cancelar</button>
+                            <button type="submit" class="btn btn-primary">Enviar</button>
 
-     <%- include('partials/footer') %>
-     <script src="/scripts/eventosValidatorFront.js"></script>
-</body>
+                        </div>
+
+                    </form>
+                </div>
+            </section>
+
+
+            <%- include('partials/footer') %>
+                <script src="/scripts/eventosValidatorFront.js"></script>
+    </body>
+
 </html>

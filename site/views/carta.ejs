@@ -5,19 +5,25 @@
 
 
     <body>
+        <div id="inicio"></div>
 
         <%- include('partials/header') %>
             <!--CARRITO-->
-            <!-- <div class="sticky-top bg-dark"><a href="/cart" class="carrito"><i class="fas fa-cart-arrow-down mr-4 c-success"></i></a></div>
- -->
+            <!-- <div class="sticky-top bg-dark"><a href="/cart" class="carrito"><i class="fas fa-cart-arrow-down mr-4 c-success"></i></a></div> -->
+
             <!--NAV DE MENU-->
-            <div class="shadow-lg  bg-white p-3  rounded titulo">
+            <div class="shadow-lg  bg-white p-3 col-sm-4 col-md-12 rounded titulo">
                 <div class="btn-group" role="group" aria-label="Basic example">
+                    <!--  <a href="#pasta"><button type="button" class="btn btn-dark mx-3 ">Pasta</button></a>
+                    <a href="#pizza"><button type="button" class="btn btn-dark mx-3 ">pizzas</button></a>
+                    <a href="#hamburguesa"><button type="button" class="btn btn-dark mx-3">hamburguesa</button></a>
+                    <a href="#postre"><button type="button" class="btn btn-dark mx-3">Postres</button></a>
+                    <a href="#bebida"><button type="button" class="btn btn-dark mx-3">Bebidas</button></a> -->
+                    <a href="#pasta">Pasta</button></a>
                     <a href="#pizza">Pizzas</button></a>
                     <a href="#hamburguesa">Hamburguesas</button></a>
                     <a href="#postre">Postres</button></a>
                     <a href="#bebida">Bebidas</button></a>
-
                 </div>
 
             </div>
@@ -25,117 +31,167 @@
             </div>
             <!--CATALOGO-->
             <div class="titulo-comida" id="pasta">Pastas</div>
+            <div class="row contentMedia mx-0">
 
-            <% productos.forEach(producto => { %>
-                <% if(producto.categoria.nombre == 'pasta') {%>
-                    <div class="media container col-sm-4 col-md-8 col-lg-6">
-                        <img src="/images/<%= producto.imagenes %>" class="align-self-center mr-3" alt="...">
-                        <div class="media-body">
-                            <a href="/products/detail/<%= producto.id %>">
-                                <h5 class="mt-0">
+                <% productos.forEach(producto => { %>
+                    <% if(producto.categoria.nombre == 'pasta') {%>
+                        <div class="col-12 col-md-6 col-lg-3">
 
-                                    <%= producto.nombre %>
+                            <div class="media">
+                                <img src="/images/<%= producto.imagenes %>" class="align-self-center mr-3" alt="...">
+                                <div class="media-body">
+                                    <a href="/products/detail/<%= producto.id %>">
+                                        <h5 class="mt-0">
 
-                                </h5>
-                            </a>
-                            <p class="mb-0">
-                                <%= producto.descripcion %>
-                            </p>
+                                            <%= producto.nombre %>
+
+                                        </h5>
+                                    </a>
+                                    <p class="mb-0">
+                                        <%= producto.descripcion %>
+                                    </p>
+                                    <a href="/produc"> <button class="btn btn-sm btn-success">Más info</button></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <% } %>
+                            <% }) %>
+            </div>
+            <div class="d-flex justify-content-center">
+                <a href="#inicio">Volver arriba</a>
+
+            </div>
+
+            <div class="titulo-comida" id="pizza">Pizzas</div>
+            <div class="row contentMedia mx-0">
+                <% productos.forEach(producto => { %>
+                    <% if(producto.categoria.nombre == 'pizza') {%>
+
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="media ">
+                                <img src='/images/<%= producto.imagenes %>' class="" alt="...">
+                                <div class="media-body">
+                                    <a href="/products/detail/<%= producto.id %>">
+                                        <h5 class="mt-0">
+                                            <%= producto.nombre %>
+                                        </h5>
+                                    </a>
+                                    <p class="mb-0">
+                                        <%= producto.descripcion %>
+                                    </p>
+
+                                </div>
+
+
+                            </div>
 
                         </div>
-                    </div>
+                        <% } %>
+                            <% }) %>
+            </div>
+            <div class="d-flex justify-content-center">
+                <a href="#inicio">Volver arriba</a>
 
-                    <% } %>
-                        <% }) %>
-
-                            <div class="shadow-lg p-2  col-sm-4 col-md-8 col-lg-6 rounded titulo-comida" id="pizza">Pizzas</div>
-
-                            <% productos.forEach(producto => { %>
-                                <% if(producto.categoria.nombre == 'pizza') {%>
-                                    <div class="media container col-sm-4 col-md-8 col-lg-6 ">
-                                        <img src='/images/<%= producto.imagenes %>' class="align-self-center mr-3" alt="...">
-                                        <div class="media-body">
-                                            <a href="/products/detail/<%= producto.id %>">
-                                                <h5 class="mt-0">
-                                                    <%= producto.nombre %>
-                                                </h5>
-                                            </a>
-                                            <p class="mb-0">
-                                                <%= producto.descripcion %>
-                                            </p>
-
-                                        </div>
-                                    </div>
-                                    <% } %>
-                                        <% }) %>
-
-                                            <div class="shadow-lg p-2  col-sm-4 col-md-8 col-lg-6 rounded titulo-comida" id="hamburguesa">Hamburguesas</div>
-
-                                            <% productos.forEach(producto => { %>
-                                                <% if(producto.categoria.nombre == 'hamburguesa') {%>
-                                                    <div class="media container col-sm-4 col-md-8 col-lg-6 ">
-                                                        <img src='/images/<%= producto.imagenes %>' class="align-self-center mr-3" alt="...">
-                                                        <div class="media-body">
-                                                            <a href="/products/detail/<%= producto.id %>">
-                                                                <h5 class="mt-0">
-                                                                    <%= producto.nombre %>
-                                                                </h5>
-                                                            </a>
-                                                            <p class="mb-0">
-                                                                <%= producto.descripcion %>
-                                                            </p>
-
-                                                        </div>
-                                                    </div>
-                                                    <% } %>
-                                                        <% }) %>
-                                                            <div class="shadow-lg p-2  col-sm-4 col-md-8 col-lg-6 rounded titulo-comida" id="postre">Postres</div>
-
-                                                            <% productos.forEach(producto => { %>
-                                                                <% if(producto.categoria.nombre == 'postre') {%>
-                                                                    <div class="media container col-sm-4 col-md-8 col-lg-6 ">
-                                                                        <img src='/images/<%= producto.imagenes %>' class="align-self-center mr-3" alt="...">
-                                                                        <div class="media-body">
-                                                                            <a href="/products/detail/<%= producto.id %>">
-                                                                                <h5 class="mt-0">
-                                                                                    <%= producto.nombre %>
-                                                                                </h5>
-                                                                            </a>
-                                                                            <p class="mb-0">
-                                                                                <%= producto.descripcion %>
-                                                                            </p>
-
-                                                                        </div>
-                                                                    </div>
-                                                                    <% } %>
-                                                                        <% }) %>
-
-                                                                            <div class="shadow-lg p-2  col-sm-4 col-md-8 col-lg-6 rounded titulo-comida" id="bebida">Bebidas</div>
-
-                                                                            <% productos.forEach(producto => { %>
-                                                                                <% if(producto.categoria.nombre == 'bebida') {%>
-                                                                                    <div class="media container col-sm-4 col-md-8 col-lg-6 ">
-                                                                                        <img src='/images/<%= producto.imagenes %>' class="align-self-center mr-3" alt="...">
-                                                                                        <div class="media-body">
-                                                                                            <a href="/products/detail/<%= producto.id %>">
-                                                                                                <h5 class="mt-0">
-                                                                                                    <%= producto.nombre %>
-                                                                                                </h5>
-                                                                                            </a>
-                                                                                            <p class="mb-0">
-                                                                                                <%= producto.descripcion %>
-                                                                                            </p>
-
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <% } %>
-                                                                                        <% }) %>
+            </div>
 
 
+            <div class="titulo-comida" id="hamburguesa">Hamburguesas</div>
+            <div class="row contentMedia mx-0">
+
+                <% productos.forEach(producto => { %>
+                    <% if(producto.categoria.nombre == 'hamburguesa') {%>
+                        <div class="col-12 col-md-6 col-lg-3">
+
+                            <div class="media">
+                                <img src='/images/<%= producto.imagenes %>' class="" alt="...">
+                                <div class="media-body">
+                                    <a href="/products/detail/<%= producto.id %>">
+                                        <h5 class="mt-0">
+                                            <%= producto.nombre %>
+                                        </h5>
+                                    </a>
+                                    <p class="mb-0">
+                                        <%= producto.descripcion %>
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <% } %>
+                            <% }) %>
+            </div>
+            <div class="d-flex justify-content-center">
+                <a href="#inicio">Volver arriba</a>
+
+            </div>
+
+            <div class="titulo-comida" id="postre">Postres</div>
+            <div class="row contentMedia mx-0">
+
+                <% productos.forEach(producto => { %>
+                    <% if(producto.categoria.nombre == 'postre') {%>
+                        <div class="col-12 col-md-6 col-lg-3">
+
+                            <div class="media">
+                                <img src='/images/<%= producto.imagenes %>' class="" alt="...">
+                                <div class="media-body">
+                                    <a href="/products/detail/<%= producto.id %>">
+                                        <h5 class="mt-0">
+                                            <%= producto.nombre %>
+                                        </h5>
+                                    </a>
+                                    <p class="mb-0">
+                                        <%= producto.descripcion %>
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <% } %>
+                            <% }) %>
+            </div>
+            <div class="d-flex justify-content-center">
+                <a href="#inicio">Volver arriba</a>
+
+            </div>
+
+            <div class="titulo-comida" id="bebida">Bebidas</div>
+            <div class="row contentMedia mx-0">
+
+                <% productos.forEach(producto => { %>
+                    <% if(producto.categoria.nombre == 'bebida') {%>
+                        <div class="col-12 col-md-6 col-lg-3">
+
+                            <div class="media">
+                                <img src='/images/<%= producto.imagenes %>' class="" alt="...">
+                                <div class="media-body">
+                                    <a href="/products/detail/<%= producto.id %>">
+                                        <h5 class="mt-0">
+                                            <%= producto.nombre %>
+                                        </h5>
+                                    </a>
+                                    <p class="mb-0">
+                                        <%= producto.descripcion %>
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <% } %>
+                            <% }) %>
+            </div>
+            <div class="d-flex justify-content-center">
+                <a href="#inicio">Volver arriba</a>
+
+            </div>
 
 
 
-                                                                                            <%- include('partials/footer') %>
+
+
+
+            <%- include('partials/footer') %>
 
     </body>
 

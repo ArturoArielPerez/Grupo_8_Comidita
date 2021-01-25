@@ -8,53 +8,48 @@
 <body>
     <%- include('partials/header') %>
 
-        <div class="shadow-lg p-3 mb-5 bg-white rounded titulo">Detalle del producto</div>
+        <div class="shadow-lg p-3 mb-5 bg-white rounded text-center">Detalle del producto</div>
 
-        <div class="card mb-3" style="max-width: 70%;">
+        <div class="card mb-3" style="max-width: 300px;">
             <div class="row no-gutters detalle">
-                <div class="col-lg-4 col-md-4">
-                    <img src="/images/<%= producto.imagenes %>" class="card-img" alt="...">
+
+                <img src="/images/<%= producto.imagenes %>" class="card-img" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <%= producto.nombre %>
+                    </h5>
+
+                    <p>
+                        <%= producto.descripcion %>
+                    </p>
+
+                    <p class="card-text"><small class="precio">$<%= producto.precio %> </small></p>
+
+                    <!-- <input type="number" name="" id="cantidad" value="0"><br><br> -->
                 </div>
-                <div class="col-lg-8 col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            <%= producto.nombre %>
-                        </h5>
 
-                        <p>
-                            <%= producto.descripcion %>
-                        </p>
+                <% if (typeof user == 'undefined' ) {%>
+                    <form action="/cart/agregar" method="post">
+                        <div class="d-flex justify-content-between ">
+                            <a href="/products"> <button class="btn-sm m-1 btn-success" type="button">seguir comprando</button></a>
+                            <button type="submit" class="btn btn-primary btn-sm m-1"><i class="fas fa-cart-arrow-down"></i> Agragar al carrito</button>
+                        </div>
+                        <!-- <script src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js" data-preference-id="240907466-077d4e19-0d78-4969-a95c-92cb41918c35">
+                        </script> -->
 
-                        <p class="card-text"><small class="precio">$<%= producto.precio %> </small></p>
+                    </form>
+                    <% }
+                    else if (user.rol == 'administrador')
+                     { %>
 
-                        <!-- <input type="number" name="" id="cantidad" value="0"><br><br> -->
+                        <form action="/products/delete/<%= producto.id %>?_method=DELETE " method="POST">
+                            <a href="/products/<%= producto.id %>/edit" class="btn btn-info"> Editar</a>
+                            <button type="submit" class="btn btn-danger ml-3"> Eliminar</button>
 
-                        <% if (typeof user == 'undefined' ) {%>
-                            <form action="/cart/agregar" method="post">
-                                <!-- <div class="botones">
-                                    <button type="submit" class="btn btn-primary btn-sm"><i class="fas fa-cart-arrow-down"></i> Agragar al carrito</button>
-                                </div> -->
-                                <script src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js" data-preference-id="240907466-077d4e19-0d78-4969-a95c-92cb41918c35">
-                                </script>
-
-                            </form>
-                            <% }
-                            else if (user.rol == 'administrador')
-                             { %>
-
-                                <form action="/products/delete/<%= producto.id %>?_method=DELETE " method="POST">
-                                    <a href="/products/<%= producto.id %>/edit" class="btn btn-info"> Editar</a>
-                                    <button type="submit" class="btn btn-danger ml-3"> Eliminar</button>
-                                    <% }  %>
-                                </form>
-
-
-
-
-                    </div>
-
-                </div>
+                        </form>
+                        <% }  %>
             </div>
+
         </div>
 
         <%- include('partials/footer') %>

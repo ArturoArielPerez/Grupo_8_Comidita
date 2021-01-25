@@ -1,86 +1,43 @@
 @import 'style.css';
-
-  @media(min-width:769px){
-    
+@media(min-width:769px) {
     /*Section */
-    section .sucursal{
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-      color: white;
-      align-self: center;
-      }
-  
-      section h1{
-          display: flex;
-          justify-content: center;
-          color: white;
-          margin-top: 20px;
-          margin-bottom: 30px;
-          font-weight: bold;
-      }
-  
-      section h4{
-          text-align: center;
-      }
-  
-      section p{
-          font-size: 100%;
-      }
-  
-      section .mapa iframe{
-          width: 100%;
-          margin-bottom: 20px;
-          border: solid 1px black;
-      }
-  
-   
-  }
-  @media(min-width: 571px) and (max-width: 768px) {
-    
-   /* section */
-   section .sucursal{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    color: white
+    section .sucursal {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        color: white;
+        align-self: center;
     }
-
-    section h1{
+    section h1 {
         display: flex;
         justify-content: center;
-        font-size: 130%;
         color: white;
         margin-top: 20px;
+        margin-bottom: 30px;
         font-weight: bold;
     }
-
-    section h4{
-        font-size: 100%;
+    section h4 {
         text-align: center;
     }
-
-    section p{
-        font-size: 80%;
+    section p {
+        font-size: 100%;
     }
-
-    section .mapa iframe{
+    section .mapa iframe {
         width: 100%;
         margin-bottom: 20px;
         border: solid 1px black;
-
     }
-  }
-  
-@media(max-width:570px){
+}
+
+@media(min-width: 571px) and (max-width: 768px) {
     /* section */
-    section .sucursal{
+    section .sucursal {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
         color: white
     }
-    section h1{
+    section h1 {
         display: flex;
         justify-content: center;
         font-size: 130%;
@@ -88,17 +45,47 @@
         margin-top: 20px;
         font-weight: bold;
     }
-
-    section h4{
+    section h4 {
         font-size: 100%;
         text-align: center;
     }
-
-    section p{
+    section p {
         font-size: 80%;
     }
+    section .mapa iframe {
+        width: 100%;
+        margin-bottom: 20px;
+        border: solid 1px black;
+    }
+}
 
-    section .mapa iframe{
+@media(max-width:570px) {
+    /* section */
+    section .sucursal {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        color: white
+    }
+    section h1 {
+        display: flex;
+        justify-content: center;
+        font-size: 130%;
+        color: white;
+        margin-top: 20px;
+        font-weight: bold;
+        text-shadow: 3px 3px 0px black;
+    }
+    section h4 {
+        font-size: 100%;
+        text-align: center;
+        text-shadow: 2px 2px 2px black;
+    }
+    section p {
+        font-size: 80%;
+        text-shadow: 2px 2px 2px black;
+    }
+    section .mapa iframe {
         width: 100%;
         margin-bottom: 20px;
         border: solid 1px black;

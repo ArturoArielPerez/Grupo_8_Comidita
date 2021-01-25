@@ -12,7 +12,7 @@ header nav {
 }
 
 header .avatar {
-    width: 20%;
+    width: 100%;
 }
 
 @media(min-width:768px) {
@@ -38,10 +38,9 @@ header .avatar {
 
 @media(max-width:570px) {
     /*Header*/
-    header{
+    header {
         margin-bottom: 20px;
     }
-
     header img {
         width: 20%;
         border-radius: 90%;

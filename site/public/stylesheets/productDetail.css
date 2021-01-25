@@ -1,103 +1,17 @@
-@import 'style.css';
-
-img{
-    border: solid 1px gray;
-}
-
-.card{
-    margin-top: 100px;
-    border: solid 1px black;
-}
-
-.precio{
-    color: green;
-    font-size: 30px;
-    font-weight: bold;
-}
-
-@media(min-width:768px){
-
-footer{
-    margin-top: 100px;
-}
-
-.carrito{
-    position: relative;
-    left: 95%;
-    color: black;
-    font-size: 150%;
-}
-
-h2{
-    text-align: center;
-    color: white;
-}
-
-p{
-    font-weight: normal;
-    font-family: serif;
-}
-
-.detalle{
-    height: 50vh;
-}
-
-.detalle img{
-    margin: 8px 0px 0px 8px;
-}
-
-.titulo{
-    text-align: center;
-}
-
-.botones{
-    display: flex;
-    flex-wrap: wrap;
-} 
- 
-}
-
-@media(min-width: 571px) and (max-width: 768px) {
- 
-
-.btn{
- padding: 5px 5px 5px 5px;
-}
-
-.detalle{
-    height: 55vh;
-}
-
-p{
-    font-weight: normal;
-    font-family: serif;
-}
-
-}
-
-@media(max-width:570px){
-.titulo{
-   text-align: center;
- }
-
- .card-img{
-     width: 75%;
-     margin-left: 12%;
-     margin-top: 10px;
- }
-
-.botones{
-    display: flex;
-    flex-direction: column;
- } 
-
-.btn{
-    margin-top: 10px;
-} 
-
-p{
-    font-weight: normal;
-    font-family: serif;
-}
-
-}
+    @import 'style.css';
+    .card {
+        border-radius: 10px;
+        padding: 10px;
+    }
+    
+    .card img {
+        border: solid 1px gray
+    }
+    
+    .precio {
+        color: green;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    
+    @media(min-width:768px) {}

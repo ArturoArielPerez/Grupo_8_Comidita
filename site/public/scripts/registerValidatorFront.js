@@ -1,8 +1,8 @@
-const qs = function(element){
+const qs = function(element) {
     return document.querySelector(element)
 }
 
-window.addEventListener('load', function(){
+window.addEventListener('load', function() {
 
     let form = qs('form');
     let elementos = form.elements;
@@ -13,20 +13,20 @@ window.addEventListener('load', function(){
     let inputContraseña2 = document.getElementById('contraseña2');
 
     let regexEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    let regexContraseña =  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/;
+    let regexContraseña = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/;
 
 
-    inputNombre.addEventListener('keyup', function(){
+    inputNombre.addEventListener('keyup', function() {
 
         switch (true) {
             case this.value == '':
                 errorNombre.innerHTML = 'Este campo es obligatorio';
-                this.classList.add('is-invalid'); 
+                this.classList.add('is-invalid');
                 break;
             case this.value.trim().length <= 2:
                 errorNombre.innerHTML = "Tenés que poner al menos 3 letras";
-                this.classList.add('is-invalid');                
-                break;         
+                this.classList.add('is-invalid');
+                break;
             default:
                 this.classList.remove('is-invalid')
                 this.classList.add('is-valid')
@@ -35,17 +35,17 @@ window.addEventListener('load', function(){
         }
     });
 
-    inputApellido.addEventListener('keyup', function(){
+    inputApellido.addEventListener('keyup', function() {
 
         switch (true) {
             case this.value == '':
                 errorApellido.innerHTML = 'Este campo es obligatorio'
-                this.classList.add('is-invalid')  
+                this.classList.add('is-invalid')
                 break;
             case this.value.trim().length <= 2:
                 errorApellido.innerHTML = "Tenés que poner al menos 3 letras"
-                this.classList.add('is-invalid')                
-                break;         
+                this.classList.add('is-invalid')
+                break;
             default:
                 this.classList.remove('is-invalid')
                 this.classList.add('is-valid')
@@ -54,11 +54,11 @@ window.addEventListener('load', function(){
         }
     })
 
-    inputEmail.addEventListener('keyup', function(){
+    inputEmail.addEventListener('keyup', function() {
         switch (true) {
             case this.value == '':
-            errorEmail.innerHTML = 'El campo es obligarorio'
-            this.classList.add('is-invalid')                
+                errorEmail.innerHTML = 'El campo es obligarorio'
+                this.classList.add('is-invalid')
                 break;
             case !regexEmail.test(this.value):
                 errorEmail.innerHTML = 'Debes escribir un email valido'
@@ -71,13 +71,13 @@ window.addEventListener('load', function(){
                 break;
         }
     })
-    inputContraseña.addEventListener('keyup', function(){
+    inputContraseña.addEventListener('keyup', function() {
         switch (true) {
             case this.value == '':
-            errorContraseña.innerHTML = 'El campo es obligarorio'
-            this.classList.add('is-invalid')                
+                errorContraseña.innerHTML = 'El campo es obligarorio'
+                this.classList.add('is-invalid')
                 break;
-            case!regexContraseña.test(this.value):
+            case !regexContraseña.test(this.value):
                 errorContraseña.innerHTML = 'La contraseña debe tener entre 6 y 12 caracteres, una mayuscula, una minuscula y un número'
                 this.classList.add('is-invalid')
                 break;
@@ -89,15 +89,15 @@ window.addEventListener('load', function(){
         }
     })
 
-    inputContraseña.addEventListener('mouseover', function(){
+    inputContraseña.addEventListener('mouseover', function() {
         this.setAttribute('title', 'La contraseña debe tener entre 6 y 12 caracteres, una mayuscula, una minuscula y un número')
     })
 
-    inputContraseña2.addEventListener('keyup', function(){
+    inputContraseña2.addEventListener('keyup', function() {
         switch (true) {
             case this.value == '':
-            errorContraseña2.innerHTML = 'El campo es obligarorio'
-            this.classList.add('is-invalid')                
+                errorContraseña2.innerHTML = 'El campo es obligarorio'
+                this.classList.add('is-invalid')
                 break;
             case this.value != inputContraseña.value:
                 errorContraseña2.innerHTML = 'Las contraseñas no coinciden. Reitentar'
@@ -111,21 +111,22 @@ window.addEventListener('load', function(){
         }
     })
 
-    form.addEventListener('submit', function(e){
+    form.addEventListener('submit', function(e) {
 
         e.preventDefault();
 
         let error = false;
 
-        for (let i = 0; i < elementos.length; i++) {
-           
-            if(elementos[1].value == 0){
-                elementos[1].classList.add('is-invalid')
+        for (let i = 0; i < elementos.length - 2; i++) {
+
+            if (elementos[i].value == 0) {
+                elementos[i].classList.add('is-invalid')
                 error = true
             }
 
         }
-        if(!error){
+        errorSubmit.innerText = 'Todos los camposm son obligatorios'
+        if (!error) {
             form.submit();
         }
     })
